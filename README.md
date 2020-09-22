@@ -5,20 +5,20 @@
 Indumentaria dedicada al deporte en general, orientada a mujeres y hombres de distintas edades.
 Consideramos que la ropa deportiva hoy cumple un rol importante y va imponiéndose día a día en el mercado textil, donde el rango etario no genera un obstáculo ni una restricción, solo es una prenda de vestir mas en la vida cotidiana.
 
-**Proyecto:
+**Proyecto:**
 
 •	https://trello.com/b/EOT0Sjy7/proyecto-integrador 
 
-**Objetivo:
+**Objetivo:**
 
 El objetivo principal es crear un sitio amigable, dinámico y de fácil acceso para facilitar la experiencia al usuario.
 
-**Audiencia:
+**Audiencia:**
 
 •	Apuntamos a mujeres y hombres mayores de 14 años.
 •	A futuro incluiremos también bebes y niñas/os.
 
-**Webs de referencia
+**Webs de referencia**
 
 •   https://shop.lululemon.com/
 •   https://www.adidas.com.ar/
@@ -26,7 +26,7 @@ El objetivo principal es crear un sitio amigable, dinámico y de fácil acceso p
 •   https://www.netshoes.com.ar
 •   https://www.netshoes.com.ar
 
-**Desarrolladores
+**Desarrolladores:**
 
 > *Joaquín Garayzabal, 22 años, estudiante de Arquitectura
 
