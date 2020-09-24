@@ -21,9 +21,13 @@ El objetivo principal es crear un sitio amigable, dinámico y de fácil acceso p
 **Webs de referencia**
 
 •   https://shop.lululemon.com/
+
 •   https://www.adidas.com.ar/
+
 •   https://www.gucci.com/us/en/
+
 •   https://www.netshoes.com.ar
+
 •   https://www.netshoes.com.ar
 
 **Desarrolladores:**
