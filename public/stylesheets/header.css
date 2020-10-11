@@ -4,12 +4,11 @@
   box-sizing: border-box;
   font-family: 'Roboto';
   text-decoration: none;
-
 }
+
 body{
   background: grey;
 }
-
 header{
   background: white;
 }
@@ -20,7 +19,9 @@ header nav{
   align-items: center;
 }
 
-/* MENU IZQUIERDA */
+/*! HEADER STICKY */
+
+/** MENU IZQUIERDA */
 header nav .menu{
   display: flex;
   flex-direction: row;
@@ -42,7 +43,7 @@ header nav .menu .link a{
   color: black;
 }
 
-/* MENU DERECHA */
+/** MENU DERECHA */
 header nav .auth{
   display: flex;
   flex-direction: row;
@@ -89,24 +90,88 @@ header nav .auth .reg{
   box-shadow: 2px 1px 9px #bebebe;
 }
 
-/* Menu Desplegable */
+
+/*! MENU DESPLEGABLE */
 header .menu_mujer{
   height: 365px;
   background-color: red;
+  display: flex;
   align-items: center;
 }
 
+/* Posicion fondo */
+
+/*tamaños*/
 header .menu_mujer .sec1{
-  background-color: saddlebrown;
-  width: 300px;
-  display: inline-block;
+  background-color: white;
   height: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 header .menu_mujer .sec2{
-  background-color: saddlebrown;
-  width: 600px;
-  display: inline-block;
+  background-color: white;
   height: 100%;
+  flex-grow: 3;
+  flex-basis: 0;
+}
+header .menu_mujer .sec3{
+  background-color: white;
+  height: 100%;
+  flex-grow: 2;
+  flex-basis: 0;
 }
 
+header .menu_mujer div div ul li{
+  list-style: none;
+  padding-left: 3em;
+  padding-bottom: 1em;
+}
 
+header .menu_mujer div div ul li a{
+  color: black;
+  text-decoration: none;
+}
+header .menu_mujer div div ul .h_null{
+  padding-top: 3em;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+.column.left{
+  width: 60%;
+}
+.column.right{
+  width: 40%;
+}
+header .menu_mujer .sec3 div img{
+  width: 50%;
+  padding-top: 20px;
+}
+header .menu_mujer .sec3 div ul h3{
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 10px;
+}
+header .menu_mujer .sec3 div ul p{
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+header .menu_mujer .sec3 div ul a{
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+.flist{
+  font-weight: 700;
+  padding-top: 1em;
+}
+.flist2{
+  padding-top: 3em;
+}
+.leftlink ul li a{
+  padding-left: 3em;
+}
