@@ -2,26 +2,72 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/header.css' />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-            <img src="images/logo 500x500.png" alt="logo" class="logo">
-            <ul class="div__links">
-              <li><a href="#">MUJER</a></li>
-              <li><a href="#">HOMBRE</a></li>
-              <li><a href="#">ACCESORIOS</a></li>
-              <li><a href="#">NOVEDADES</a></li>
+    
+    <header>
+      <nav>
+        <!-- MENU IZQUIERDA -->
+        <div class="menu">
+          <div class="brand">
+            <img src="/images/logo 500x500.png" alt="">
+          </div>
+          <div class="link">
+            <a href="#">MUJER</a>
+            <a href="#">HOMBRE</a>
+            <a href="#">ACCESORIOS</a>
+            <a href="#">NOVEDADES</a>
+          </div>
+        </div>
+        <!-- MENU DERECHA -->
+        <div class="auth">
+          <div class="reg search">
+            <label for="name" class="btn_search">
+              <i class="fas fa-search"></i>
+            </label>
+            <input type="text" name="search" class="input_search" placeholder="Buscar">
+          </div>
+          <a href="#" class="reg">Registrate</a>
+          <a href="#" class="reg">Ingresar</a>
+        </div>
+      </nav>
+
+
+      <!-- MENU DESPLEGABLE -->
+      <div class="menu_mujer">
+          <div class="sec1">
+            <ul>
+            <a href="#">Novedades</a>
+            <a href="#">Los más vendidos</a>
+            <a href="#">Deportes</a>
+            <a href="#">Outlet</a>
             </ul>
-          <div class="div__reg">
-            <li><i class="fas fa-search"></i><input type="text" placeholder="Buscar"></li>
-            <li><a class="reg" href="">Registrate</a></li>
-            <li><a class="reg" href="">Ingresa</a></li>
+          </div>
+          <div class="sec2">
+            <div class="list">
+              <a href="#">Novedades</a>
+              <a href="#">Los más vendidos</a>
+              <a href="#">Deportes</a>
+              <a href="#">Outlet</a>
+            </div>
+            <div class="list">
+              <a href="#">Novedades</a>
+              <a href="#">Los más vendidos</a>
+              <a href="#">Deportes</a>
+              <a href="#">Outlet</a>
+            </div>
+          </div>
+          <div class="sec1">
+            <a href="#">Novedades</a>
+            <a href="#">Los más vendidos</a>
+            <a href="#">Deportes</a>
+            <a href="#">Outlet</a>
           </div>
       </div>
-    </div>
+    </header>
+
   </body>
 </html>

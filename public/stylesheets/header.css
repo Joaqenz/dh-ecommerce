@@ -1,0 +1,112 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  text-decoration: none;
+
+}
+body{
+  background: grey;
+}
+
+header{
+  background: white;
+}
+header nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MENU IZQUIERDA */
+header nav .menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 6em;
+}
+header nav .menu .brand img{
+  width: 92px;
+}
+header nav .menu .link{
+  display: flex;
+  padding-left: 2em;
+}
+header nav .menu .link a{
+  font-size: 20px;
+  font-weight: 700;
+  padding: 16px 22px;
+  color: black;
+}
+
+/* MENU DERECHA */
+header nav .auth{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 6em;
+}
+header nav .auth div{
+  display: flex;
+  flex-direction: row;
+}
+header nav .auth .reg{
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  align-items: center;
+  margin-right: 4em;
+}
+header nav .auth .reg.search{
+  background-color: white;
+  height: 50%;
+}
+header nav .auth .reg.search div{
+}
+
+header nav .auth .reg.search input{
+  width: 150%;
+	top: 0;
+	left: 0;
+	padding: 5px;
+	border-radius: 3px;
+  font-size: 18px;
+  border: none; 
+}
+
+header nav .auth .reg{
+  cursor: pointer;
+  padding: 10px 30px;
+  font-weight: 500;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background: white;
+  box-shadow: 2px 1px 9px #bebebe;
+}
+
+/* Menu Desplegable */
+header .menu_mujer{
+  height: 365px;
+  background-color: red;
+  align-items: center;
+}
+
+header .menu_mujer .sec1{
+  background-color: saddlebrown;
+  width: 300px;
+  display: inline-block;
+  height: 100%;
+}
+header .menu_mujer .sec2{
+  background-color: saddlebrown;
+  width: 600px;
+  display: inline-block;
+  height: 100%;
+}
+
+
