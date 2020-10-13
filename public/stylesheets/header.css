@@ -8,6 +8,8 @@
 
 body{
   background: grey;
+  display: flex;
+  flex-direction: column;
 }
 header{
   background: white;
@@ -92,7 +94,7 @@ header nav .auth .reg{
 
 
 /*! MENU DESPLEGABLE */
-header .menu_mujer{
+header .menu_desplegable{
   height: 365px;
   background-color: red;
   display: flex;
@@ -102,36 +104,36 @@ header .menu_mujer{
 /* Posicion fondo */
 
 /*tamaños*/
-header .menu_mujer .sec1{
+header .menu_desplegable .sec1{
   background-color: white;
   height: 100%;
   flex-grow: 1;
   flex-basis: 0;
 }
-header .menu_mujer .sec2{
+header .menu_desplegable .sec2{
   background-color: white;
   height: 100%;
   flex-grow: 3;
   flex-basis: 0;
 }
-header .menu_mujer .sec3{
+header .menu_desplegable .sec3{
   background-color: white;
   height: 100%;
   flex-grow: 2;
   flex-basis: 0;
 }
 
-header .menu_mujer div div ul li{
+header .menu_desplegable div div ul li{
   list-style: none;
   padding-left: 3em;
   padding-bottom: 1em;
 }
 
-header .menu_mujer div div ul li a{
+header .menu_desplegable div div ul li a{
   color: black;
   text-decoration: none;
 }
-header .menu_mujer div div ul .h_null{
+header .menu_desplegable div div ul .h_null{
   padding-top: 3em;
 }
 .column {
@@ -144,22 +146,22 @@ header .menu_mujer div div ul .h_null{
 .column.right{
   width: 40%;
 }
-header .menu_mujer .sec3 div img{
+header .menu_desplegable .sec3 div img{
   width: 50%;
   padding-top: 20px;
 }
-header .menu_mujer .sec3 div ul h3{
+header .menu_desplegable .sec3 div ul h3{
   font-size: 24px;
   font-weight: 700;
   padding-top: 10px;
 }
-header .menu_mujer .sec3 div ul p{
+header .menu_desplegable .sec3 div ul p{
   font-size: 14px;
   font-weight: 300;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-header .menu_mujer .sec3 div ul a{
+header .menu_desplegable .sec3 div ul a{
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
@@ -174,4 +176,8 @@ header .menu_mujer .sec3 div ul a{
 }
 .leftlink ul li a{
   padding-left: 3em;
+}
+
+.menu_desplegable.hombre{
+  display: none;
 }
