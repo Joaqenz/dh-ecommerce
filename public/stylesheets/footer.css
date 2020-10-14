@@ -67,3 +67,33 @@
     text-decoration: none;
     color: black;
 }
+
+.f_col3_content h3{
+    padding-bottom: 0.5em;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.f_col3_content div{
+    padding-bottom: 0.5em;
+}
+
+.f_col3_content div a{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+}
+
+.f_col3_content div i{
+    font-size: 40px;
+    padding-right: 0.5em;
+}
+
+.f_link a{
+    display: flex;
+    align-items: center;
+}
