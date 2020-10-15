@@ -179,3 +179,8 @@ button:hover {
         transform: translateY(5px);
     }
 }
+
+.body_container{
+    height: 100vh;
+    background-image: url(/images/form.png);
+}
