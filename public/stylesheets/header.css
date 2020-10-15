@@ -6,11 +6,6 @@
   text-decoration: none;
 }
 
-body{
-  background: grey;
-  display: flex;
-  flex-direction: column;
-}
 header{
   background: white;
 }
@@ -181,3 +176,6 @@ header .menu_desplegable .sec3 div ul a{
 .menu_desplegable.hombre{
   display: none;
 }
+.menu_desplegable.mujer{
+  display: none;
+} 

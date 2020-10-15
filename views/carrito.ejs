@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/header.css' />
     <link rel='stylesheet' href='/stylesheets/body.css' />
+    <link rel='stylesheet' href='/stylesheets/body_carrito.css' />
     <link rel='stylesheet' href='/stylesheets/footer.css' />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -176,11 +177,110 @@
     </div>
     </header>
     <!-- BODY -->
+    <nav>
       <div class="body_container">
         <div class="body_content">
-          <h2>Titulo</h2>
+          <!-- ·* Titulo  -->
+          <div class="tittle_conteiner">
+            <div class="tittle">
+              <h1>MI CARRITO</h1>
+            </div>
+          </div>
+          <!-- ·* Productos y Resumen  -->
+          <div class="prod_sum_conteiner">
+            <!-- ·* Productos  -->
+            <div class="products">
+               <div class="product_content">
+                 <div class="product_imgbox">
+                  <img src="/images/top.jpeg" alt="">
+                 </div>
+                 <div class="product_desc">
+                    <ul class="product_desc_info">
+                      <h2>Remera top sierna</h2>
+                      <ul>
+                        <li>Sexo: Mujer</li>
+                        <li>Color: Negro</li>
+                        <li>Talle: M</li>
+                      </ul>
+                      <p>Disponible</p>
+                      <p>Mover a lista de deseados</p>
+                 </div>
+                 <div class="product_end">
+                   <div class="product_end_cant">
+                     <input type="number" name="quantity" id="quantity" min="0" class="quantity_btn" placeholder="Cantidad">
+                     <label for="quantity" class="btn_search"><i class="fas fa-arrow-down"></i></label>
+                   </div>
+                   <div class="product_end_price">
+                      <p>2.499</p>
+                   </div>
+                 </div>
+               </div>
+            </div>
+            <!-- ·* Resumen  -->
+            <div class="summary_acc_container">
+              <div class="summary_acc">
+                <div class="summary_tittle">
+                  <h3>Resumen de cuenta:</h3>
+                </div>
+                <div class="summary_content">
+                  <div class="summary_products">
+                    <p>3 Productos</p>
+                  </div>
+                  <div class="summary_cash">
+                    <div class="sleft">
+                      <p>Monto de la compra</p>
+                    </div>
+                    <div class="sright">
+                      <p>18.497,00</p>
+                    </div>
+                  </div>
+                  <div class="summary_ship">
+                    <div class="sleft">
+                      <p>Envío</p>
+                    </div>
+                    <div class="sright">
+                      <p>Gratis</p>
+                    </div>
+                  </div>
+                  <div class="summary_total">
+                    <div class="sleft">
+                      <p>Total</p>
+                    </div>
+                    <div class="sright">
+                      <p>18.497,00</p>
+                    </div>
+                  </div>
+                  <div class="summary_fac">
+                    <div class="sleft">
+                      <p>Opciones de financiacion</p>
+                    </div>
+                    <div class="sright">
+                      <p>3 cuotas sin interes de $6165,66</p>
+                    </div>
+                  </div>
+                  <div class="summary_dir">
+                    <div class="dir_top">
+                      <p>Dirección de entrega:</p>
+                    </div>
+                    <div class="dir_bot">
+                      <p>Av. Alvarez Thomas 1121,7to "A" Caba - CP 1427 - Argentina</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="summary_continue">
+                  <button>Continuar</button>
+                </div>
+                <div class="summary_extra">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sunt quis molestiae debitis, blanditiis natus laudantium enim et cum nihil earum ipsum facere ratione aperiam molestias praesentium porro quaerat vel.</p>
+                </div>
+              </div>
+            </div>          
+          </div>
         </div>
       </div>
+    </nav>
+
     <!-- FOOTER -->
     <footer>
       <nav>

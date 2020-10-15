@@ -1,0 +1,54 @@
+
+.body_container{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    height: 100vh;
+
+}
+.body_content{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    height: 100vh;
+}
+.prod_sum_conteiner{
+    display: flex;
+    flex-direction: row;
+}
+.products{
+    display: flex;
+    flex-grow: 3;
+    flex-basis: 0;
+}
+.summary_acc_container{
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    background: #AFE6F8;
+    border-radius: 20px;
+}
+.product_content{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.product_imgbox{
+    width: 176px;
+    height: 176px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: solid 1px #000;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.product_imgbox img{
+    width: 100%;
+}
