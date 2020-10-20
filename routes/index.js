@@ -18,5 +18,9 @@ router.get('/register', function(req, res, next) {
   res.render('login', { title: 'SportLand' });
 });
 
+router.get('/product', function(req, res, next) {
+  res.render('product', { title: 'SportLand' });
+});
+
 
 module.exports = router;
