@@ -1,6 +1,3 @@
-*{
-    box-sizing: border-box;
-}
 .body_content{
     display: flex;
     padding: 38px 8em;
@@ -9,16 +6,16 @@
 }
 
 .feedback_container{
-    flex-grow: 0.25;
+    width: 350px;
     height: 100vh;
 }
 .info_container{
-    flex-grow: 0.25;
+    width: 350px;
     height: 100vh;
 }
 
 .photo_container{
-    flex-grow: .5;
+    flex-grow: 1;
 }
 
 /* ·* Feedback  */
@@ -26,6 +23,7 @@
     display: flex;
     flex-direction: column;
 }
+/* ! Boton */
 .fb_btn{
     display: flex;
     flex-direction: row;
@@ -34,9 +32,8 @@
     border-radius: 10px;
     align-items: center;
     justify-content: space-around;
-    
+    margin-bottom: 10px;
 }
-
 .fb_btn_score h2{
     font-size: 50px;
     font-weight: 700;
@@ -55,6 +52,99 @@
     font-weight: 300;
 }
 
+/* ! Barras */
+
+.fb_bars{
+    display: flex;
+    flex-direction: column;
+}
+
+.fb_bar5,
+.fb_bar4,
+.fb_bar3,
+.fb_bar2,
+.fb_bar1{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.fb_text{
+    width: 50%;
+}
+.fb_text p{
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+
+}
+.fb_bar_container{
+    height: 10px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fb_bar_complete{
+    height: 10px;
+    border-radius: 10px;
+    background-color: #7443FE;
+}
+
+.fb_bar5 .fb_bar_complete{
+    width: 70%;
+}
+.fb_bar4 .fb_bar_complete{
+    width: 90%;
+}
+.fb_bar3 .fb_bar_complete{
+    width: 35%;
+}
+.fb_bar2 .fb_bar_complete{
+    width: 20%;
+}
+.fb_bar1 .fb_bar_complete{
+    width: 10%;
+}
+
+/* ! Boton */
+
+.fb_btn_2{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    background: #7443FE;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.fb_btn_percent{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+.fb_btn_percent h2{
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+.fb_btn_recom{
+    width: 60%;
+    margin: 5px 0px;
+}
+.fb_btn_recom p{
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* ! Imagen */
 .photo_container img{
     width: 600px;
 }
