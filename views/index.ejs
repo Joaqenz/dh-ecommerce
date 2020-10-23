@@ -1,262 +1,267 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
     <link rel='stylesheet' href='/stylesheets/header.css' />
     <link rel='stylesheet' href='/stylesheets/body.css' />
     <link rel='stylesheet' href='/stylesheets/footer.css' />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- HEADER -->
     <header>
-      <nav>
+        <nav>
 
-        <!-- MENU IZQUIERDA -->
-        <div class="menu">
-          <div class="brand">
-            <img src="/images/logo 500x500.png" alt="">
-          </div>
-          <div class="link">
-            <a href="#">MUJER</a>
-            <a href="#">HOMBRE</a>
-            <a href="#">ACCESORIOS</a>
-            <a href="#">NOVEDADES</a>
-          </div>
-        </div>
-        <!-- MENU DERECHA -->
-        <div class="auth">
-          <div class="reg search">
-            <label for="search" class="btn_search"><i class="fas fa-search"></i></label>
-            <input type="text" name="search" id="search" class="input_search" placeholder="Buscar">
-          </div>
-          <a href="#" class="reg">Registrate</a>
-          <a href="#" class="log">Ingresar</a>
-        </div>
-      </nav>
+            <!-- MENU IZQUIERDA -->
+            <div class="menu">
+                <div class="brand">
+                    <img src="/images/logo 500x500.png" alt="">
+                </div>
+                <div class="link">
+                    <a href="#">MUJER</a>
+                    <a href="#">HOMBRE</a>
+                    <a href="#">ACCESORIOS</a>
+                    <a href="#">NOVEDADES</a>
+                </div>
+            </div>
+            <!-- MENU DERECHA -->
+            <div class="auth">
+                <div class="reg search">
+                    <label for="search" class="btn_search"><i class="fas fa-search"></i></label>
+                    <input type="text" name="search" id="search" class="input_search" placeholder="Buscar">
+                </div>
+                <a href="/register" class="reg">Registrate</a>
+                <a href="/login" class="log">Ingresar</a>
+            </div>
+        </nav>
 
 
-      <!-- MENU DESPLEGABLE -->
-      <div class="menu_desplegable mujer">
-          <!-- Seccion 1 -->
-          <div class="sec1">
-            <div class="leftlink">
-              <ul>
-                <li class="flist"><a href="#">Novedades</a></li>
-                <li><a href="#">Los más vendidos</a></li>
-                <li><a href="#">Deportes</a></li>
-                <li><a href="#">Outlet</a></li>
-              </ul>
+        <!-- MENU DESPLEGABLE -->
+        <div class="menu_desplegable mujer">
+            <!-- Seccion 1 -->
+            <div class="sec1">
+                <div class="leftlink">
+                    <ul>
+                        <li class="flist"><a href="#">Novedades</a></li>
+                        <li><a href="#">Los más vendidos</a></li>
+                        <li><a href="#">Deportes</a></li>
+                        <li><a href="#">Outlet</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <!-- Seccion 2 -->
-          <div class="sec2">
-            <div class="column left">
-              <div class="column">
-                <ul>
-                  <li class="flist"><a href="#">ROPA DE MUJER <i class="fas fa-arrow-right"></i></a></li>
-                  <li><a href="#">Calzas</a></li>
-                  <li><a href="#">Abrigos/Camperas</a></li>
-                  <li><a href="#">Zapatillas</a></li>
-                  <li><a href="#">Buzos</a></li>
-                  <li><a href="#">Joggers</a></li>
-                  <li><a href="#">Pantalones</a></li>
-                  <li><a href="#">Remeras</a></li>
-                </ul>
-              </div>
-              <div class="column">
-                <ul>
-                  <li class="flist2"><a href="#">Shorts</a></li>
-                  <li><a href="#">Faldas</a></li>
-                  <li><a href="#">Medias</a></li>
-                  <li><a href="#">Corpiños deportivos</a></li>
-                  <li><a href="#">Sweaters</a></li>
-                  <li><a href="#">Traje de baño</a></li>
-                  <li><a href="#">Ropa interior</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="column right">
-              <div class="column">
-                <ul>
-                  <li class="flist"><a href="#">ACCESORIOS <i class="fas fa-arrow-right"></i></a></li>
-                  <li><a href="#">Calzas</a></li>
-                  <li><a href="#">Abrigos/Camperas</a></li>
-                  <li><a href="#">Zapatillas</a></li>
-                  <li><a href="#">Buzos</a></li>
-                  <li><a href="#">Joggers</a></li>
-                  <li><a href="#">Pantalones</a></li>
-                  <li><a href="#">Remeras</a></li>
-                </ul>
-            </div>
-            </div>
+            <!-- Seccion 2 -->
+            <div class="sec2">
+                <div class="column left">
+                    <div class="column">
+                        <ul>
+                            <li class="flist"><a href="#">ROPA DE MUJER <i class="fas fa-arrow-right"></i></a></li>
+                            <li><a href="#">Calzas</a></li>
+                            <li><a href="#">Abrigos/Camperas</a></li>
+                            <li><a href="#">Zapatillas</a></li>
+                            <li><a href="#">Buzos</a></li>
+                            <li><a href="#">Joggers</a></li>
+                            <li><a href="#">Pantalones</a></li>
+                            <li><a href="#">Remeras</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li class="flist2"><a href="#">Shorts</a></li>
+                            <li><a href="#">Faldas</a></li>
+                            <li><a href="#">Medias</a></li>
+                            <li><a href="#">Corpiños deportivos</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                            <li><a href="#">Traje de baño</a></li>
+                            <li><a href="#">Ropa interior</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="column">
+                        <ul>
+                            <li class="flist"><a href="#">ACCESORIOS <i class="fas fa-arrow-right"></i></a></li>
+                            <li><a href="#">Calzas</a></li>
+                            <li><a href="#">Abrigos/Camperas</a></li>
+                            <li><a href="#">Zapatillas</a></li>
+                            <li><a href="#">Buzos</a></li>
+                            <li><a href="#">Joggers</a></li>
+                            <li><a href="#">Pantalones</a></li>
+                            <li><a href="#">Remeras</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-          </div>
-          <!-- Seccion 3 -->
-          <div class="sec3">
-            <div>
-              <ul>
-                <img src="/images/header.jpeg" alt="">
-                <h3>Tu dia es para entrenar.</h3>
-                <p>Pantalones con innovación atlética para la vida cotidiana.</p>
-                <a href="">Comprar pantalon <i class="fas fa-arrow-right"></i></a>
-              </ul>
             </div>
-          </div>
-      
-      </div>
-      <div class="menu_desplegable hombre">
-        <!-- Seccion 1 -->
-        <div class="sec1">
-          <div class="leftlink">
-            <ul>
-              <li class="flist"><a href="#">Novedades</a></li>
-              <li><a href="#">Los más vendidos</a></li>
-              <li><a href="#">Deportes</a></li>
-              <li><a href="#">Outlet</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- Seccion 2 -->
-        <div class="sec2">
-          <div class="column left">
-            <div class="column">
-              <ul>
-                <li class="flist"><a href="#">ROPA DE MUJER <i class="fas fa-arrow-right"></i></a></li>
-                <li><a href="#">Calzas</a></li>
-                <li><a href="#">Abrigos/Camperas</a></li>
-                <li><a href="#">Zapatillas</a></li>
-                <li><a href="#">Buzos</a></li>
-                <li><a href="#">Joggers</a></li>
-                <li><a href="#">Pantalones</a></li>
-                <li><a href="#">Remeras</a></li>
-              </ul>
+            <!-- Seccion 3 -->
+            <div class="sec3">
+                <div>
+                    <ul>
+                        <img src="/images/header.jpeg" alt="">
+                        <h3>Tu dia es para entrenar.</h3>
+                        <p>Pantalones con innovación atlética para la vida cotidiana.</p>
+                        <a href="">Comprar pantalon <i class="fas fa-arrow-right"></i></a>
+                    </ul>
+                </div>
             </div>
-            <div class="column">
-              <ul>
-                <li class="flist2"><a href="#">Shorts</a></li>
-                <li><a href="#">Faldas</a></li>
-                <li><a href="#">Medias</a></li>
-                <li><a href="#">Corpiños deportivos</a></li>
-                <li><a href="#">Sweaters</a></li>
-                <li><a href="#">Traje de baño</a></li>
-                <li><a href="#">Ropa interior</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="column right">
-            <div class="column">
-              <ul>
-                <li class="flist"><a href="#">ACCESORIOS <i class="fas fa-arrow-right"></i></a></li>
-                <li><a href="#">Calzas</a></li>
-                <li><a href="#">Abrigos/Camperas</a></li>
-                <li><a href="#">Zapatillas</a></li>
-                <li><a href="#">Buzos</a></li>
-                <li><a href="#">Joggers</a></li>
-                <li><a href="#">Pantalones</a></li>
-                <li><a href="#">Remeras</a></li>
-              </ul>
-          </div>
-          </div>
 
         </div>
-        <!-- Seccion 3 -->
-        <div class="sec3">
-          <div>
-            <ul>
-              <img src="/images/header.jpeg" alt="">
-              <h3>Tu dia es para entrenar.</h3>
-              <p>Pantalones con innovación atlética para la vida cotidiana.</p>
-              <a href="">Comprar pantalon <i class="fas fa-arrow-right"></i></a>
-            </ul>
-          </div>
+        <div class="menu_desplegable hombre">
+            <!-- Seccion 1 -->
+            <div class="sec1">
+                <div class="leftlink">
+                    <ul>
+                        <li class="flist"><a href="#">Novedades</a></li>
+                        <li><a href="#">Los más vendidos</a></li>
+                        <li><a href="#">Deportes</a></li>
+                        <li><a href="#">Outlet</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Seccion 2 -->
+            <div class="sec2">
+                <div class="column left">
+                    <div class="column">
+                        <ul>
+                            <li class="flist"><a href="#">ROPA DE MUJER <i class="fas fa-arrow-right"></i></a></li>
+                            <li><a href="#">Calzas</a></li>
+                            <li><a href="#">Abrigos/Camperas</a></li>
+                            <li><a href="#">Zapatillas</a></li>
+                            <li><a href="#">Buzos</a></li>
+                            <li><a href="#">Joggers</a></li>
+                            <li><a href="#">Pantalones</a></li>
+                            <li><a href="#">Remeras</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li class="flist2"><a href="#">Shorts</a></li>
+                            <li><a href="#">Faldas</a></li>
+                            <li><a href="#">Medias</a></li>
+                            <li><a href="#">Corpiños deportivos</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                            <li><a href="#">Traje de baño</a></li>
+                            <li><a href="#">Ropa interior</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="column">
+                        <ul>
+                            <li class="flist"><a href="#">ACCESORIOS <i class="fas fa-arrow-right"></i></a></li>
+                            <li><a href="#">Calzas</a></li>
+                            <li><a href="#">Abrigos/Camperas</a></li>
+                            <li><a href="#">Zapatillas</a></li>
+                            <li><a href="#">Buzos</a></li>
+                            <li><a href="#">Joggers</a></li>
+                            <li><a href="#">Pantalones</a></li>
+                            <li><a href="#">Remeras</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Seccion 3 -->
+            <div class="sec3">
+                <div>
+                    <ul>
+                        <img src="/images/header.jpeg" alt="">
+                        <h3>Tu dia es para entrenar.</h3>
+                        <p>Pantalones con innovación atlética para la vida cotidiana.</p>
+                        <a href="">Comprar pantalon <i class="fas fa-arrow-right"></i></a>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-    
-    </div>
     </header>
     <!-- BODY -->
-      <div class="body_container">
+    <div class="body_container">
         <div class="body_content">
-          <div class="prod_dest_container">
-            <div class="product_container">
-              <div class="prod_prod">
-                
-              </div>
-              <div class="prod_prod">
+            <div class="prod_dest_container">
+                <div class="product_container">
+                    <div class="prod_prod">
 
-              </div>
-              <div class="prod_prod">
+                    </div>
+                    <div class="prod_prod">
 
-              </div>
-              <div class="prod_prod">
+                    </div>
+                    <div class="prod_prod">
 
-              </div>
-              <div class="prod_prod">
+                    </div>
+                    <div class="prod_prod">
 
-              </div>
+                    </div>
+                    <div class="prod_prod">
+
+                    </div>
+                </div>
+
             </div>
-
-          </div>
         </div>
-      </div>
+    </div>
     <!-- FOOTER -->
     <footer>
-      <nav>
-        <div class="footer">
-          <div class="footer_content">
+        <nav>
+            <div class="footer">
+                <div class="footer_content">
 
-            <!-- ·* Columna 1 -->
-            <div class="f_col1">
-              <div class="f_col1_top">
-                <h3>Mas informacion de la pagina</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, exercitationem libero incidunt eius dolore possimus facere ut consequuntur nisi esse. Labore ut nisi a assumenda? Ipsam, alias quas. Ex, adipisci?</p>
-              </div>
-              <div class="f_col1_bot">
-                <div class="f_col1_bot_content">
-                  <h3>Comunicate con nosotros</h3>
-                  <p><i class="fas fa-phone-alt"></i> +54 9 221 592-7586</p>
+                    <!-- ·* Columna 1 -->
+                    <div class="f_col1">
+                        <div class="f_col1_top">
+                            <h3>Mas informacion de la pagina</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, exercitationem libero incidunt eius dolore possimus facere ut consequuntur nisi esse. Labore ut nisi a assumenda? Ipsam, alias quas. Ex, adipisci?</p>
+                        </div>
+                        <div class="f_col1_bot">
+                            <div class="f_col1_bot_content">
+                                <h3>Comunicate con nosotros</h3>
+                                <p><i class="fas fa-phone-alt"></i> +54 9 221 592-7586</p>
+                            </div>
+                            <div class="f_col1_bot_content">
+                                <h3>Locales mas cercanos</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Calle 47 n1621</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Calle 47 n1621</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Calle 47 n1621</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ·* Columna 2 -->
+                    <div class="f_col2">
+                        <div class="f_col2_content">
+                            <h3>Seguinos en redes sociales</h3>
+                            <div class="f_link">
+                                <a href=""><i class="fab fa-facebook-square"></i>Facebook</a>
+                            </div>
+                            <div class="f_link">
+                                <a href=""><i class="fab fa-instagram-square"></i>Instagram</a>
+                            </div>
+                            <div class="f_link">
+                                <a href=""><i class="fab fa-twitter-square"></i>Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ·* Columna 3 -->
+                    <div class="f_col3">
+                        <div class="f_col3_content">
+                            <h3>TÉRMINOS Y CONDICIONES</h3>
+                            <ul>
+                                <li><a href="#">Términos y Condiciones</a></li>
+                                <li><a href="#">Política de Privacidad</a></li>
+                                <li><a href="#">Política de Cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="f_col1_bot_content">
-                  <h3>Locales mas cercanos</h3>
-                  <p><i class="fas fa-map-marker-alt"></i> Calle 47 n1621</p>
-                  <p><i class="fas fa-map-marker-alt"></i> Calle 47 n1621</p>
-                  <p><i class="fas fa-map-marker-alt"></i> Calle 47 n1621</p>
-                </div>
-              </div>
             </div>
-
-            <!-- ·* Columna 2 -->
-            <div class="f_col2">
-              <div class="f_col2_content">
-                <h3>Seguinos en redes sociales</h3>
-                <div class="f_link">
-                  <a href=""><i class="fab fa-facebook-square"></i>Facebook</a>
-                </div>
-                <div class="f_link">
-                  <a href=""><i class="fab fa-instagram-square"></i>Instagram</a>
-                </div>
-                <div class="f_link">
-                  <a href=""><i class="fab fa-twitter-square"></i>Twitter</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- ·* Columna 3 -->
-            <div class="f_col3">
-              <div class="f_col3_content">
-                <h3>TÉRMINOS Y CONDICIONES</h3>
-                <ul>
-                  <li><a href="#">Términos y Condiciones</a></li>
-                  <li><a href="#">Política de Privacidad</a></li>
-                  <li><a href="#">Política de Cookies</a></li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </nav>
+        </nav>
     </footer>
-  </body>
+</body>
+
 </html>
