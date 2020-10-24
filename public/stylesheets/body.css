@@ -68,11 +68,10 @@ html body header{
     position: relative;
     box-sizing: border-box;
     box-shadow:7px 7px 8px whitesmoke;
-    width: 260px;
+    width: 240px;
     height: 360px;
-    padding: 20px;
-    align-items: center;
     border-radius: 16px;
+    margin-inline: 3.5%;
     
 }
 .far.fa-heart{
@@ -82,26 +81,47 @@ html body header{
     padding:10px;
 }
 .imagen {
-	margin: auto;
-	padding: 12%;
+	height: 60%;
+    display: flex;
 }
 
 .art .imagen img {
     margin: auto;
-    width: 100%;
+    
 }
 
 .art .textos {
 	display: flex;
 	flex-direction: column;
-	align-content: center;
+    align-content: center;
+    margin:0;
 }
 .art .textos .nombreart {
 	padding: 3px;
-	/* align-content: center; */
 	position: relative;
     align-self: center;
+    font-weight: bold;
+    font-family: "roboto condensed";
+    font-size: x-large;
 }    
+.art .textos .precioart{
+    padding: 3px;
+    position: relative;
+    align-self: center;
+    font-weight: lighter;
+    font-family: "roboto condensed";
+    font-size: xx-large;
+}
+.art .textos .addbasket{
+    width: 90%;
+    align-self: center;
+    text-align: center;
+    background-color: #b5bcd7;
+    padding: 4%;
+    border-radius: 4px;
+    color: white;
+}
+
 /* Hombre*/
 .body_contentM{
     display: flex;
@@ -135,22 +155,70 @@ html body header{
 }    
 .producthombrebloque{
     position: relative;
-    flex-wrap: wrap;
     justify-content: space-between;
     background-color: white;
-    
+
 }
 .producthombre{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
     height: 420px;
     padding: 0px 5em;
     margin-top: 3em;
-}
+    overflow-x: scroll;
+}    
 
 .bannerpromo{
+    display: flex;
+    justify-content: center;
     box-sizing: content-box;
     height:200px;
+    background-color: #D1DAF9;
+}
+
+.bannerpromo h1 {
+	width: 50%;
+	align-self: center;
+    padding-left: 4%;
+    font-size: 150%;
+}
+.bannerpromo .boxemail{
+    display: flex;
+    width: 50%;
+    align-self: center;
+    padding-right: 4%;
+}
+
+form{
+    width: 80%;
+    padding-left: 15%;
+}
+
+.boxemail p {
+	display: flex;
+	align-content: center;
+}
+
+#email {
+	width: 100%;
+	height: 35px;
+    display: flex;
+    font-size: large;
+}
+
+.fas.fa-arrow-right{
+    width: 50px;
+    height: 34px;
     background-color: #B5BCD7;
+    align-self: center;
+    display: flex;
+}
+
+.fa-arrow-right::before {
+	content: "\f061";
+	align-items: center;
+	display: flex;
+	padding: 32%;
 }
