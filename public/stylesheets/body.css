@@ -198,7 +198,7 @@ form{
 
 .boxemail p {
 	display: flex;
-	align-content: center;
+	
 }
 
 #email {
@@ -207,18 +207,18 @@ form{
     display: flex;
     font-size: large;
 }
-
-.fas.fa-arrow-right{
+.enviar {
+	display: flex;
+	justify-content: center;
+}
+.enviar button{
     width: 50px;
     height: 34px;
     background-color: #B5BCD7;
     align-self: center;
-    display: flex;
+}
+.fas.fa-arrow-right{
+    position: absolute;
+    align-self: center;
 }
 
-.fa-arrow-right::before {
-	content: "\f061";
-	align-items: center;
-	display: flex;
-	padding: 32%;
-}
