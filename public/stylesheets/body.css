@@ -1,11 +1,156 @@
-html, body{
-    height:100%;
+html body header{
+    /* height:100%;*/
     margin: 0;
     display: flex;
     flex-direction: column;
+    overflow: scroll;
 }
 
 .body_container{
-    height: 100vh;
     background-color: turquoise;
+    flex-direction: column;
+    display:flex;
+    
+}
+
+.body_contentW{
+    display: flex;
+    flex-direction: column;
+}
+.mujer{
+    height:40%;
+    overflow: hidden;
+    position: relative;
+    margin:-4px;
+    
+}
+.mujer img{
+    width: 100%;
+    margin:0;
+    
+}
+
+.mujer h2{
+    position: absolute;
+    z-index:1;
+    top: 17%;
+    left: 11%;
+    font-size: xx-large;
+}
+.mujer p{
+    position: absolute;
+    z-index:1;
+    top:31%;
+    left: 11.3%;
+    font-size: small;
+    padding-right: 50%;
+}
+.productmujerbloque{
+    position: relative;
+    justify-content: space-between;
+    background-color: white;
+
+}
+
+.productmujer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 420px;
+    padding: 0px 5em;
+    margin-top: 3em;
+    overflow-x: scroll;
+    
+    
+}
+.art{
+    position: relative;
+    box-sizing: border-box;
+    box-shadow:7px 7px 8px whitesmoke;
+    width: 260px;
+    height: 360px;
+    padding: 20px;
+    align-items: center;
+    border-radius: 16px;
+    
+}
+.far.fa-heart{
+    position: absolute;
+    font-size: 140%;
+    right:3%;
+    padding:10px;
+}
+.imagen {
+	margin: auto;
+	padding: 12%;
+}
+
+.art .imagen img {
+    margin: auto;
+    width: 100%;
+}
+
+.art .textos {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+.art .textos .nombreart {
+	padding: 3px;
+	/* align-content: center; */
+	position: relative;
+    align-self: center;
+}    
+/* Hombre*/
+.body_contentM{
+    display: flex;
+    flex-direction: column;
+}
+.hombre{
+    height:40%;
+    position: relative;
+    margin-bottom: -4px;
+}
+.hombre img{
+    width: 100%;
+    margin:0;
+}
+
+.hombre h2{
+    position: absolute;
+    z-index:1;
+    top: 29%;
+    left: 61%;
+    font-size: xx-large;
+}
+
+.hombre p{
+    position: absolute;
+    z-index:1;
+    top:42%;
+    left: 61.3%;
+    font-size: small;
+    padding-right: 10px;
+}    
+.producthombrebloque{
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    
+}
+.producthombre{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 420px;
+    padding: 0px 5em;
+    margin-top: 3em;
+}
+
+.bannerpromo{
+    box-sizing: content-box;
+    height:200px;
+    background-color: #B5BCD7;
 }
