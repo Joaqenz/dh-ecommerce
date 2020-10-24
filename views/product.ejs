@@ -4,18 +4,15 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/header.css' />
     <link rel='stylesheet' href='/stylesheets/body.css' />
-    <link rel='stylesheet' href='/stylesheets/body_carrito.css' />
+    <link rel='stylesheet' href='/stylesheets/product.css' />
     <link rel='stylesheet' href='/stylesheets/footer.css' />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   </head>
   <body>
     <!-- HEADER -->
     <header>
       <nav>
-
         <!-- MENU IZQUIERDA -->
         <div class="menu">
           <div class="brand">
@@ -179,184 +176,173 @@
     </div>
     </header>
     <!-- BODY -->
-    <nav>
       <div class="body_container">
         <div class="body_content">
-          <!-- ·* Titulo  -->
-          <div class="tittle_conteiner">
-            <div class="tittle">
-              <h1>MI CARRITO</h1>
+          <!-- Menu Feedback -->
+          <div class="feedback_container">
+            <!-- Boton Estrellas -->
+            <div class="fb_btn">
+              <div class="fb_btn_score">
+                <h2>4.7</h2>
+              </div>
+              <div class="fb_btn_stars_container">
+                <div class="fb_btn_stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="fb_btn_opi">
+                  <p>246 Opiniones</p>
+                </div>
+              </div>
+            </div>
+            <!-- Barras Estrellas -->
+            <div class="fb_bars">
+              <div class="fb_bar5">
+                <div class="fb_text">
+                  <p>5 Estrellas</p>
+                </div>
+                <div class="fb_bar_container">
+                  <div class="fb_bar_complete">
+                  </div>
+                </div>
+              </div>
+              <div class="fb_bar4">
+                <div class="fb_text">
+                  <p>4 Estrellas</p>
+                </div>
+                <div class="fb_bar_container">
+                  <div class="fb_bar_complete">
+                  </div>
+                </div>
+              </div>
+              <div class="fb_bar3">
+                <div class="fb_text">
+                  <p>3 Estrellas</p>
+                </div>
+                <div class="fb_bar_container">
+                  <div class="fb_bar_complete">
+                  </div>
+                </div>
+              </div>
+              <div class="fb_bar2">
+                <div class="fb_text">
+                  <p>2 Estrellas</p>
+                </div>
+                <div class="fb_bar_container">
+                  <div class="fb_bar_complete">
+                  </div>
+                </div>
+              </div>
+              <div class="fb_bar1">
+                <div class="fb_text">
+                  <p>1 Estrellas</p>
+                </div>
+                <div class="fb_bar_container">
+                  <div class="fb_bar_complete">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Boton Recomendado -->
+            <div class="fb_btn_2">
+              <div class="fb_btn_percent">
+                <h2>96%</h2>
+              </div>
+              <div class="fb_btn_recom">
+                <p>de los consumidores recomiendan este producto</p>
+              </div>
+            </div>
+            <!-- Barras Especificaciones -->
+            <div class="spec_container">
+              <div class="spec1">
+                <div class="spec_tittle_container">
+                  <h3>Talle</h3>
+                </div>
+                <div class="spec_bar_container">
+                  <div class="spec_bar"></div>
+                  <div class="spec_bar_dot"></div>
+                </div>
+                <div class="spec_text_container">
+                  <p>pequeño</p>
+                  <p>perfecto</p>
+                  <p>grande</p>
+                </div>
+              </div>
+              <div class="spec2">
+                <div class="spec_tittle_container">
+                  <h3>Ancho</h3>
+                </div>
+                <div class="spec_bar_container">
+                  <div class="spec_bar"></div>
+                  <div class="spec_bar_dot"></div>
+                </div>
+                <div class="spec_text_container">
+                  <p>estrecho</p>
+                  <p>perfecto</p>
+                  <p>ancho</p>
+                </div>
+              </div>
+              <div class="spec3">
+                <div class="spec_tittle_container">
+                  <h3>Comodidad</h3>
+                </div>
+                <div class="spec_bar_container">
+                  <div class="spec_bar"></div>
+                  <div class="spec_bar_dot"></div>
+                </div>
+                <div class="spec_text_container">
+                  <p>deficiente</p>
+                  <p>normal</p>
+                  <p>perfecto</p>
+                </div>
+              </div>
+              <div class="spec4">
+                <div class="spec_tittle_container">
+                  <h3>Calidad</h3>
+                </div>
+                <div class="spec_bar_container">
+                  <div class="spec_bar"></div>
+                  <div class="spec_bar_dot"></div>
+                </div>
+                <div class="spec_text_container">
+                  <p>deficiente</p>
+                  <p>normal</p>
+                  <p>perfecto</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Menu Foto -->
+          <div class="photo_container">
+            <img src="images/pexels-photo-3799312.jpeg" alt="">
+          </div>
+          <!-- Menu Info -->
+          <div class="info_container">
+            <div class="fb_btn">
+              <div class="fb_btn_score">
+                <h2>4.7</h2>
+              </div>
+              <div class="fb_btn_stars_container">
+                <div class="fb_btn_stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="fb_btn_opi">
+                  <p>246 Opiniones</p>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- ·* Productos y Resumen  -->
-          <div class="prod_sum_conteiner">
-            <!-- ·* Productos  -->
-            <div class="products">
-               <div class="product_content">
-                 <div class="product_left">
-                     <div class="product_imgbox">
-                      <img src="/images/top.jpeg" alt="">
-                     </div>
-                     <div class="product_desc">
-                        <h2>Remera top sierna</h2>
-                        <ul>
-                          <li>Sexo: Mujer</li>
-                          <li>Color: Negro</li>
-                          <li>Talle: M</li>
-                        </ul>
-                        <p>Disponible</p>
-                        <p class="product_love">Mover a lista de deseados</p>
-                     </div>
-                 </div>
-                 <div class="product_right">
-                   <div class="product_right_content">
-                     <div class="product_end_cant">
-                       <input type="number" name="quantity" id="quantity" min="0" class="quantity_btn" placeholder="Cantidad">
-                       <label for="quantity" class="btn_search"><i class="fas fa-arrow-down"></i></label>
-                     </div>
-                     <div class="product_end_price">
-                        <p>2.499</p>
-                     </div>
-                   </div>
-                 </div>
-                 <div class="cross_container">
-                  <div class="crossbox">
-                    <i class="fas fa-times"></i>
-                  </div>
-               </div>
-               </div>
-               <div class="product_content">
-                 <div class="product_left">
-                     <div class="product_imgbox">
-                      <img src="/images/top.jpeg" alt="">
-                     </div>
-                     <div class="product_desc">
-                        <h2>Remera top sierna</h2>
-                        <ul>
-                          <li>Sexo: Mujer</li>
-                          <li>Color: Negro</li>
-                          <li>Talle: M</li>
-                        </ul>
-                        <p>Disponible</p>
-                        <p class="product_love">Mover a lista de deseados</p>
-                     </div>
-                 </div>
-                 <div class="product_right">
-                   <div class="product_right_content">
-                     <div class="product_end_cant">
-                       <input type="number" name="quantity" id="quantity" min="0" class="quantity_btn" placeholder="Cantidad">
-                       <label for="quantity" class="btn_search"><i class="fas fa-arrow-down"></i></label>
-                     </div>
-                     <div class="product_end_price">
-                        <p>2.499</p>
-                     </div>
-                   </div>
-                 </div>
-                 <div class="cross_container">
-                  <div class="crossbox">
-                    <i class="fas fa-times"></i>
-                  </div>
-               </div>
-               </div>
-               <div class="product_content">
-                <div class="product_left">
-                    <div class="product_imgbox">
-                     <img src="/images/top.jpeg" alt="">
-                    </div>
-                    <div class="product_desc">
-                       <h2>Remera top sierna</h2>
-                       <ul>
-                         <li>Sexo: Mujer</li>
-                         <li>Color: Negro</li>
-                         <li>Talle: M</li>
-                       </ul>
-                       <p>Disponible</p>
-                       <p class="product_love">Mover a lista de deseados</p>
-                    </div>
-                </div>
-                <div class="product_right">
-                  <div class="product_right_content">
-                    <div class="product_end_cant">
-                      <input type="number" name="quantity" id="quantity" min="0" class="quantity_btn" placeholder="Cantidad">
-                      <label for="quantity" class="btn_search"><i class="fas fa-arrow-down"></i></label>
-                    </div>
-                    <div class="product_end_price">
-                       <p>2.499</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="cross_container">
-                 <div class="crossbox">
-                   <i class="fas fa-times"></i>
-                 </div>
-              </div>
-              </div>
-            </div>
-            <!-- ·* Resumen  -->
-            <div class="summary_acc_container">
-              <div class="summary_acc">
-                <div class="summary_tittle">
-                  <h3>Resumen de cuenta</h3>
-                </div>
-                <div class="summary_content">
-                  <div class="summary_products">
-                    <p>3 Productos</p>
-                  </div>
-                  <div class="summary_cash">
-                    <div class="sleft">
-                      <p>Monto de la compra</p>
-                    </div>
-                    <div class="sright">
-                      <p>18.497,00</p>
-                    </div>
-                  </div>
-                  <div class="summary_ship">
-                    <div class="sleft">
-                      <p>Envío</p>
-                    </div>
-                    <div class="sright">
-                      <p>Gratis</p>
-                    </div>
-                  </div>
-                  <div class="summary_total">
-                    <div class="sleft">
-                      <p>Total</p>
-                    </div>
-                    <div class="sright">
-                      <p>18.497,00</p>
-                    </div>
-                  </div>
-                  <div class="summary_fac">
-                    <div class="sleft">
-                      <p>Opciones de financiacion</p>
-                    </div>
-                    <div class="sright">
-                      <p>3 cuotas sin interes de $6165,66</p>
-                    </div>
-                  </div>
-                  <div class="summary_dir">
-                    <div class="dir_top">
-                      <p>Dirección de entrega:</p>
-                    </div>
-                    <div class="dir_bot">
-                      <p>Av. Alvarez Thomas 1121,7to "A" Caba - CP 1427 - Argentina</p>
-                    </div>
-                  </div>
-                  
-                </div>
-                <div class="summary_btn">
-                  <a href="" class="summary_continue">Continuar</a>
-                </div>
-                <div class="summary_extra">
-                  <p>Debido a la contingencia por el virus COVID-19 y los esfuerzoz para mantener segura nuestra comunidad, los tiempos de envío podrán extenderse  2  días  adicionales  para CABA y 8 días para el resto del país a  nuestros  tiempos regulares de envío. El plazo para CAMBIOS y DEVOLUCIONES se extiende a 90 días.<br>Más información aquí.</p>
-                </div>
-              </div>
-            </div>          
           </div>
         </div>
       </div>
-    </nav>
-
     <!-- FOOTER -->
     <footer>
       <nav>

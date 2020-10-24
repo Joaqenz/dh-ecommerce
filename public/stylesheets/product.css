@@ -1,0 +1,208 @@
+.body_content{
+    display: flex;
+    padding: 38px 8em;
+    height: 100vh;
+    flex-direction: row;
+}
+
+.feedback_container{
+    width: 350px;
+    height: 100vh;
+}
+.info_container{
+    width: 350px;
+    height: 100vh;
+}
+
+.photo_container{
+    flex-grow: 1;
+}
+
+/* ·* Feedback  */
+.feedback_container{
+    display: flex;
+    flex-direction: column;
+}
+/* ! Boton */
+.fb_btn{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    background: #7443FE;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.fb_btn_score h2{
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+.fb_btn_stars_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.fb_btn_stars i{
+    color:white;
+}
+.fb_btn_opi p{
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* ! Barras */
+
+.fb_bars{
+    display: flex;
+    flex-direction: column;
+}
+
+.fb_bar5,
+.fb_bar4,
+.fb_bar3,
+.fb_bar2,
+.fb_bar1{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.fb_text{
+    width: 50%;
+}
+.fb_text p{
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+
+}
+.fb_bar_container{
+    height: 10px;
+    width: 100%;
+    background-color: #C4C4C4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fb_bar_complete{
+    height: 10px;
+    border-radius: 10px;
+    background-color: #7443FE;
+}
+
+/* ·* fb_bar Position */
+
+.fb_bar5 .fb_bar_complete{
+    width: 70%;
+}
+.fb_bar4 .fb_bar_complete{
+    width: 90%;
+}
+.fb_bar3 .fb_bar_complete{
+    width: 35%;
+}
+.fb_bar2 .fb_bar_complete{
+    width: 20%;
+}
+.fb_bar1 .fb_bar_complete{
+    width: 10%;
+}
+
+/* ! Boton */
+
+.fb_btn_2{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    background: #7443FE;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.fb_btn_percent{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+.fb_btn_percent h2{
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+.fb_btn_recom{
+    width: 60%;
+    margin: 5px 0px;
+}
+.fb_btn_recom p{
+    color: white;
+    text-align: center;
+}
+
+/* ! Especificaciones */
+.spec_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.spec1,
+.spec2,
+.spec3,
+.spec4{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.spec_tittle_container{
+    margin-bottom: 5px;
+}
+.spec_bar_container{
+    margin: 5px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.spec_text_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.spec_tittle_container h3{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+}
+.spec_bar{
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #C4C4C4;
+}
+.spec_bar_dot{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #7443FE;
+    position: absolute;
+}
+/* ·* Spec_bar_dot Position */
+
+.spec1 div .spec_bar_dot{
+    left: 45%;
+}
+.spec2 div .spec_bar_dot{
+    left: 65%;
+}
+.spec3 div .spec_bar_dot{
+    left: 50%;
+}
+.spec4 div .spec_bar_dot{
+    left: 85%;
+}
+
+/* ! Imagen */
+.photo_container img{
+    width: 600px;
+}

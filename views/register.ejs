@@ -1,11 +1,134 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/header.css' />
+    <link rel='stylesheet' href='/stylesheets/footer.css' />
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body id="fondo2">
+    <header>
+        <nav>
+            <!-- MENU IZQUIERDA -->
+            <div class="menu">
+                <div class="brand">
+                    <a href="/">
+                        <img src="/images/logo 500x500.png" alt="" />
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="#">MUJER</a>
+                    <a href="#">HOMBRE</a>
+                    <a href="#">ACCESORIOS</a>
+                    <a href="#">NOVEDADES</a>
+                </div>
+            </div>
+            <!-- MENU DERECHA -->
+            <!-- <div class="auth">
+                <div class="reg search">
+                    <label for="name" class="btn_search">
+                        <i class="fas fa-search"></i>
+                    </label>
+                    <input type="text" name="search" class="input_search" placeholder="Buscar">
+                </div>
+                <a href="register" class="reg">Registrate</a>
+                <a href="login" class="reg">Ingresar</a>
+            </div> -->
+        </nav>
+    </header>
+    <!-- Form -->
+    <div class="body_container">
+        <div class="form_login">
+            <!-- Formulario Login y Registro -->
+            <form>
+                <div class="con">
+                    <section class="head-form">
+                        <h2>Crea tu cuenta</h2>
+                    </section>
+                    <!--     End  header Content  -->
+                    <br />
+                    <div class="field-config">
+                        <!--   user name -->
+
+                        <input class="form-input" id="txt-input" required="" type="text" placeholder="Nombre" id="txt-input" />
+                        <input class="form-input" id="txt-input" required="" type="text" placeholder="Apellido" />
+                        <input class="form-input" id="txt-input" required="" type="tel" placeholder="Celular" />
+                        <input class="form-input" id="txt-input" required="" type="email" placeholder="E-mail" />
+                        <input class="form-input" id="txt-input" required="" type="password" placeholder="Contraseña" />
+                        <input class="form-input" id="txt-input" required="" type="email" placeholder="Repita contraseña" />
+                        <br />
+
+                        <span>
+                        </span>
+                        <br />
+                    </div>
+
+                    <!--      button LogIn --><button class="log-in" style="padding-bottom: 0px">
+                        Ingresar
+                    </button>
+                </div>
+                <!-- End Form -->
+            </form>
+        </div>
+    </div>
+    <!-- FOOTER  -->
+    <footer>
+        <nav>
+            <div class="footer">
+                <div class="footer_content">
+                    <div class="f_col1">
+                        <div class="f_col1_top">
+                            <h3>Mas informacion de la pagina</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, exercitationem libero incidunt eius dolore possim facere ut consequuntur nisi esse. Labore ut nisi a assumenda? Ipsam, alias quas. Ex, adipisci?
+                            </p>
+                        </div>
+                        <div class="f_col1_bot">
+                            <div class="f_col1_bot_content">
+                                <h3>Comunicate con nosotros</h3>
+                                <p><i class="fas fa-phone-alt"></i> +54 9 221 592-7586</p>
+                            </div>
+                            <div class="f_col1_bot_content">
+                                <h3>Locales mas cercanos</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Calle 47 n1621</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Calle 47 n1621</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Calle 47 n1621</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_col3">
+                        <div class="f_col3_content">
+                            <h3>Seguinos en redes sociales</h3>
+                            <div class="f_link">
+                                <a href=""><i class="fab fa-facebook-square"></i>Facebook</a>
+                            </div>
+                            <div class="f_link">
+                                <a href=""><i class="fab fa-instagram-square"></i>Instagram</a>
+                            </div>
+                            <div class="f_link">
+                                <a href=""><i class="fab fa-twitter-square"></i>Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_col4">
+                        <h3>TÉRMINOS Y CONDICIONES</h3>
+                        <ul>
+                            <li><a href="#">Términos y Condiciones</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Política de Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <script src="/Js/log_reg.js"></script>
+</body>
+
 </html>

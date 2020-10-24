@@ -41,33 +41,55 @@ header nav .menu .link a{
 }
 
 /** MENU DERECHA */
-header nav .auth{
+.auth{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-right: 6em;
+  width: 50em;
 }
-header nav .auth div{
-  display: flex;
-  flex-direction: row;
-}
-header nav .auth .reg{
+.auth .reg{
+  cursor: pointer;
+  padding: 10px 30px;
+  font-weight: 300;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background: white;
+  box-shadow: 2px 1px 9px #bebebe;
   font-size: 18px;
-  font-weight: 700;
   color: black;
   text-decoration: none;
   align-items: center;
-  margin-right: 4em;
 }
-header nav .auth .reg.search{
+.auth .log{
+  cursor: pointer;
+  padding: 10px 30px;
+  font-weight: 300;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background: white;
+  box-shadow: 2px 1px 9px #bebebe;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  align-items: center;
+}
+.auth_search{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.auth_search{
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: white;
+  border-bottom: #C4C4C4 solid 2px;
   background-color: white;
   height: 50%;
 }
-header nav .auth .reg.search div{
-}
-
-header nav .auth .reg.search input{
+.auth_search input{
   width: 150%;
 	top: 0;
 	left: 0;
@@ -76,17 +98,6 @@ header nav .auth .reg.search input{
   font-size: 18px;
   border: none; 
 }
-
-header nav .auth .reg{
-  cursor: pointer;
-  padding: 10px 30px;
-  font-weight: 500;
-  border-radius: 5px;
-  text-transform: uppercase;
-  background: white;
-  box-shadow: 2px 1px 9px #bebebe;
-}
-
 
 /*! MENU DESPLEGABLE */
 header .menu_desplegable{
