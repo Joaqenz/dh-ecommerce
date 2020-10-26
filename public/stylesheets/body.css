@@ -1,11 +1,3 @@
-html body header{
-    /* height:100%;*/
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: scroll;
-}
-
 .body_container{
     background-color: turquoise;
     flex-direction: column;
