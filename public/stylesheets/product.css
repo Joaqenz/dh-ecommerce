@@ -206,3 +206,14 @@
 .photo_container img{
     width: 600px;
 }
+
+.photo_container{
+    display: flex;
+    background-color: red;
+}
+
+.photo_box{
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+}
