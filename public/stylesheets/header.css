@@ -7,7 +7,7 @@
 }
 
 header{
-  height: 90px;
+  height: 94px;
 }
 header nav{
   display: flex;
@@ -36,11 +36,28 @@ header nav .menu .link{
   display: flex;
   padding-left: 16px;
 }
-header nav .menu .link a{
+header nav .menu .link .link_m,
+header nav .menu .link .link_h,
+header nav .menu .link .link_acc,
+header nav .menu .link .link_nov{
   font-size: 20px;
   font-weight: 500;
   padding: 16px 22px;
   color: black;
+}
+
+/* ? Hovers y Focus */
+.link_m:hover ~ .menu_desplegable._mujer{
+  z-index: 99;
+}
+.link_m:focus ~ .menu_desplegable._mujer{
+  z-index: 99;
+}
+.link_h:hover ~ .menu_desplegable._hombre{
+  z-index: 99;
+}
+.link_h:focus ~ .menu_desplegable._hombre{
+  z-index: 99;
 }
 
 /** MENU DERECHA */
@@ -98,6 +115,9 @@ header nav .menu .link a{
   background-color: red;
   display: flex;
   align-items: center;
+  position: absolute;
+  top: 90px;
+  left: 0px;
 }
 /*tamaños*/
 .menu_desplegable .sec1{
@@ -165,10 +185,10 @@ header nav .menu .link a{
 }
 .flist{
   font-weight: 700;
-  padding-top: 1em;
+  padding-top: 16px;
 }
 .flist2{
-  padding-top: 3em;
+  padding-top: 48px;
 }
 .leftlink ul li a{
   padding-left: 3em;

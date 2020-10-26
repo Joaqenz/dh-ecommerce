@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-html body header{
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-=======
->>>>>>> 243da26f8585fcb03fd8192264fabcb469b32086
 .body_container{
     background-color: turquoise;
     flex-direction: column;
     display:flex;
-    
 }
 
 .body_contentW{

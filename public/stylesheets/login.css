@@ -1,14 +1,3 @@
-/* Start Global rules */
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-
-/* //////////////////////////////////////////// */
-
 form {
     width: 450px;
     min-height: 500px;
@@ -20,7 +9,6 @@ form {
     background-color: rgba(223, 214, 229, 0.5);
     /* background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%); */
 }
-
 
 /* form Container */
 
@@ -55,10 +43,6 @@ section p {
     letter-spacing: 0.05em;
 }
 
-
-/* //////////////////////////////////////////// */
-
-
 /* .input-item {
     background: #fff;
     color: #333;
@@ -84,9 +68,7 @@ section p {
     cursor: pointer;
 }
 
-
 /* inputs form  */
-
 input[class="form-input"] {
     width: 255px;
     height: 40px;
@@ -188,6 +170,12 @@ button:hover {
 }
 
 .body_container {
+    position: absolute;
+    width: 100%;
     height: 100vh;
     background-image: url(/images/Bground_register.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
