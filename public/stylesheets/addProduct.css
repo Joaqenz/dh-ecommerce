@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    text-decoration: none;
+}
+
+.body_ADD {
+    position: absolute;
+    width: 100%;
+    /* height: 100vh; */
+    background-image: url(/images/Bground_register.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form_add {
+    width: 90%;
+    min-height: 509px;
+    height: initial;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-color: rgba(223, 214, 229, 0.5);
+    /* background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%); */
+}
+
+.addPro {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    width: 95%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.addPro div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.addPro div label {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 35%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    justify-content: left;
+}
+
+.addPro div input {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    justify-content: left;
+    border-radius: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+button.agregarProducto .button.reset {
+    width: 40%;
+    height: 8vh;
+    font-size: 1.2rem;
+    color: white;
+    background-color: black;
+    font-family: montserrat;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Tablets en horizonal y escritorios normales */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .esp div label {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: -moz-available;
+        margin-top: 0px;
+        padding: 30px;
+        margin-bottom: 0px;
+        width: 28%;
+    }
+    .esp {
+        text-align: center;
+    }
+    .esp div input {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: -moz-available;
+        margin-bottom: 20px;
+        padding: 10px;
+        justify-content: left;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .esp div input {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 45%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        justify-content: left;
+        border-radius: 5px;
+        background-color: lavender;
+    }
+}

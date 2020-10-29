@@ -26,5 +26,8 @@ router.get('/products', function(req, res, next) {
     res.render('products', { title: 'SportLand' });
 });
 
+router.get('/addProduct', function(req, res, next) {
+    res.render('addProduct', { title: 'SportLand' });
+});
 
 module.exports = router;
