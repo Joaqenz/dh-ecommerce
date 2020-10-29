@@ -22,5 +22,9 @@ router.get('/product', function(req, res, next) {
     res.render('product', { title: 'SportLand' });
 });
 
+router.get('/products', function(req, res, next) {
+    res.render('products', { title: 'SportLand' });
+});
+
 
 module.exports = router;

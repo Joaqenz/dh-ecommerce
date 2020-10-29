@@ -1,0 +1,7 @@
+.body_container{
+    position: absolute;
+    display: flex;
+    background-color: red;
+    height: 100vh;
+    width: 100%;
+}

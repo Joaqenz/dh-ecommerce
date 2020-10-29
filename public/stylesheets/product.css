@@ -10,17 +10,23 @@
 }
 
 /* ! Feedback  */
-.feedback_container{
+.overflow_feedback{
     width: 400px;
     height: 700px;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
 }
-.feedback_container::-webkit-scrollbar {
+.overflow_feedback::-webkit-scrollbar {
     width: 8px;
     height: 8px;
     display: none;
+}
+.feedback_container{
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ? Rating */
@@ -210,17 +216,20 @@
     justify-content: center;
     background-color: red;
 }
-.photo_container img{
-    height: 60px;
-    width: auto;
-}
 
 .photo_box{
+    display: flex;
+    justify-content: center;
     width: 550px;
     height: 100%;
     border-radius: 10px;
     background-color: blue;
     overflow: hidden;
+}
+
+.photo_container img{
+    height: 100%;
+    object-fit: cover;
 }
 
 
