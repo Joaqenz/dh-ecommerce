@@ -51,7 +51,7 @@
     height: 420px;
     padding: 0px 5em;
     margin-top: 3em;
-    overflow-x: hidden;
+    overflow-x: scroll;
     
     
 }
@@ -107,7 +107,7 @@
     width: 90%;
     align-self: center;
     text-align: center;
-    background-color: #b5bcd7;
+    background-color: #7443FE;
     padding: 4%;
     border-radius: 4px;
     color: white;
