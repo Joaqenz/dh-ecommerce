@@ -1,7 +1,79 @@
 .body_container{
     position: absolute;
     display: flex;
-    background-color: red;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
+}
+.h_filter_diagram{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    border-bottom: solid 2px #c4c4c4;
+
+}
+.h_filter_left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+
+}
+
+.h_filter_right{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.h_filter_pos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h_filter_left a,
+.h_filter_pos a,
+.h_filter_pos p,
+.h_filter_article p{
+    text-decoration: none;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: black;
+    margin-right: 5px;
+}
+
+.h_filter_article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.filter{
+    height: 100vh;
+    width: 300px;
+}
+
+.products_container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.products{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.art{
+    margin: 50px 40px;
+}
+
+
+.filter{
+    border-right: solid 2px #c4c4c4;
 }
