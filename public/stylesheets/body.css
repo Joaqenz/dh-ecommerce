@@ -51,7 +51,7 @@
     height: 420px;
     padding: 0px 5em;
     margin-top: 3em;
-    overflow-x: hidden;
+    overflow-x: scroll;
     
     
 }
