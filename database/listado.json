@@ -1,0 +1,43 @@
+[
+	{
+		"id": 1,
+		"nombre": "Remera top sirena",
+		"categoria": "Remera top",
+		"marca": "Adidas",
+		"talleS": "Augusta Ada King",
+		"talleM": "Augusta Ada King",
+		"talleXL": "Augusta Ada King",
+		"color": "Reino Unido",
+		"precio": 1500
+	},{
+		"id": 2,
+		"nombre": "pepito",
+		"categoria": "Pantalon",
+		"marca": "Nike",
+		"talleS": true,
+		"talleM": false,	
+		"talleXL": true,
+		"color": "rojo",
+		"precio": 3500
+	},{
+		"id": 3,
+		"nombre": "Remera Top Sirena",
+		"categoria": "Top",
+		"marca": "Adidas",
+		"talleS": "Augusta Ada King",
+		"talleM": "Augusta Ada King",
+		"talleXL": "Augusta Ada King",
+		"color": "Reino Unido",
+		"precio": 1500
+	},{
+		"id": 4,
+		"nombre": "Remera Top Sirena",
+		"categoria": "Top",
+		"marca": "Adidas",
+		"talleS": "Augusta Ada King",
+		"talleM": "Augusta Ada King",
+		"talleXL": "Augusta Ada King",
+		"color": "Reino Unido",
+		"precio": 1500
+	}
+]
