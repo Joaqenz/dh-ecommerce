@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SportLand</title>
+    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/header.css' />
     <link rel='stylesheet' href='/stylesheets/body.css' />
     <link rel='stylesheet' href='/stylesheets/product.css' />
@@ -457,10 +457,10 @@
           <!-- Menu Info -->
           <div class="info_container">
             <div class="info_tittle">
-              <h2><%= items[1].nombre %></h2>
+              <h2><%= items[idProduct].nombre %></h2>
             </div>
             <div class="info_price">
-              <h3>$<%= items[1].precio %>,00</h3>
+              <h3>$<%= items[idProduct].precio %>,00</h3>
             </div>
             <div class="info_disponible">
               <p>Disponible <i class="fas fa-check"></i></p>
