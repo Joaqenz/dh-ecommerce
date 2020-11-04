@@ -1,13 +1,5 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto';
-  text-decoration: none;
-}
-
 header{
-  height: 94px;
+  height: 90px;
 }
 header nav{
   display: flex;
@@ -116,7 +108,7 @@ header nav .menu .link .link_nov{
   display: flex;
   align-items: center;
   position: absolute;
-  top: 90px;
+  top: 86px;
   left: 0px;
 }
 /*tamaños*/

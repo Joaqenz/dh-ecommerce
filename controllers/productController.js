@@ -8,10 +8,14 @@ const productController = {
     },
     id: function (req, res, next){
         let idProduct = req.params.id-1
-        res.render('product', { title, items: dataProducts, idProduct})
+        res.render('product', {title, items: dataProducts, idProduct})
     },
+    add: function (req, res, next){
+        res.render('addProduct', {title})
+    },
+
     carrito: function (req, res, next){
-        res.render('carrito', { title: 'SportLand' })
+        res.render('carrito', {title})
     }
 }
 module.exports = (productController)

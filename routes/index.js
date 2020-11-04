@@ -5,8 +5,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'SportLand' });
 });
-router.get('/addProduct', function(req, res, next) {
-    res.render('addProduct', { title: 'SportLand' });
+router.get('/template', function(req, res, next) {
+    res.render('template', { title: 'SportLand' });
 });
 
 module.exports = router;
