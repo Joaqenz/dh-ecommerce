@@ -1,43 +1,63 @@
 [
 	{
 		"id": 1,
-		"nombre": "Remera top sirena",
-		"categoria": "Remera top",
+		"nombre": "Remera Top Sirena",
+		"categoria": "Top",
 		"marca": "Adidas",
-		"talleS": "Augusta Ada King",
-		"talleM": "Augusta Ada King",
-		"talleXL": "Augusta Ada King",
-		"color": "Reino Unido",
+		"talle": ["S","M","L","XL"],
+		"disp": true,
+		"color": ["Black","Red","Blue","Green"],
+		"calce": "Skinny",
 		"precio": 1500
 	},{
 		"id": 2,
-		"nombre": "pepito",
-		"categoria": "Pantalon",
-		"marca": "Nike",
-		"talleS": true,
-		"talleM": false,	
-		"talleXL": true,
-		"color": "rojo",
-		"precio": 3500
+		"nombre": "Remera Top Sirena",
+		"categoria": "Top",
+		"marca": "Adidas",
+		"talle": ["S","M","L","XL"],
+		"disp": true,
+		"color": ["White","Red","Blue","Green"],
+		"calce": "Oversize",
+		"precio": 1500
 	},{
 		"id": 3,
 		"nombre": "Remera Top Sirena",
 		"categoria": "Top",
 		"marca": "Adidas",
-		"talleS": "Augusta Ada King",
-		"talleM": "Augusta Ada King",
-		"talleXL": "Augusta Ada King",
-		"color": "Reino Unido",
+		"talle": ["S","M","L","XL"],
+		"disp": true,
+		"color": ["Black","Red","Blue","Green"],
+		"calce": "Oversize",
 		"precio": 1500
 	},{
 		"id": 4,
 		"nombre": "Remera Top Sirena",
 		"categoria": "Top",
 		"marca": "Adidas",
-		"talleS": "Augusta Ada King",
-		"talleM": "Augusta Ada King",
-		"talleXL": "Augusta Ada King",
-		"color": "Reino Unido",
+		"talle": ["S","M","L","XL"],
+		"disp": true,
+		"color": ["Black","Red","Blue","Green"],
+		"calce": "Oversize",
+		"precio": 1500
+	},{
+		"id": 5,
+		"nombre": "Remera Top Sirena",
+		"categoria": "Top",
+		"marca": "Adidas",
+		"talle": ["S","M","L","XL"],
+		"disp": true,
+		"color": ["Black","Red","Blue","Green"],
+		"calce": "Oversize",
+		"precio": 1500
+	},{
+		"id": 6,
+		"nombre": "Remera Top Sirena",
+		"categoria": "Top",
+		"marca": "Adidas",
+		"talle": ["S","M","L","XL"],
+		"disp": true,
+		"color": ["Black","Red","Blue","Green"],
+		"calce": "Oversize",
 		"precio": 1500
 	}
 ]

@@ -218,7 +218,7 @@
           <!-- Menu Foto -->
           <div class="photo_container">
             <div class="photo_box">
-              <img src="images/pexels-photo-3799312.jpeg" alt="">
+              <img src="/images/top.jpeg" alt="">
             </div>
           </div>
           <!-- Menu Info -->
@@ -230,17 +230,32 @@
               <h3>$<%= items[idProduct].precio %>,00</h3>
             </div>
             <div class="info_disponible">
-              <p>Disponible <i class="fas fa-check"></i></p>
+              <% if (items[idProduct].disp == true){ %>
+                <p>Disponible <i class="fas fa-check"></i></p>
+              <% } else { %>
+                <p>Disponible <i class="fas fa-times"></i></p>
+              <% } %>
             </div>
             <div class="info_color_container">
               <div class="info_color_tittle">
                 <p>Color:</p>
               </div>
               <div class="info_color_boxes">
-                <div class="color_box1"></div>
-                <div class="color_box2"></div>
-                <div class="color_box3"></div>
-                <div class="color_box4"></div>
+                <% if (items[idProduct].color.includes('Black')) { %>
+                  <div class="color_box1"></div>
+                <% } %>
+                <% if (items[idProduct].color.includes('White')) { %>
+                  <div class="color_box2"></div>
+                <% } %>
+                <% if (items[idProduct].color.includes('Red')) { %>
+                  <div class="color_box3"></div>
+                <% } %>
+                <% if (items[idProduct].color.includes('Blue')) { %>
+                  <div class="color_box4"></div>
+                <% } %>
+                <% if (items[idProduct].color.includes('Green')) { %>
+                  <div class="color_box5"></div>
+                <% } %>
               </div>
             </div>
             <div class="info_size_container">
@@ -248,18 +263,26 @@
                 <p>Selecciona tu talle</p>
               </div>
               <div class="info_size_boxes">
+                <% if (items[idProduct].talle.includes('S')) { %>
                 <div class="size_box1">
                   <p>S</p>
                 </div>
+                <% } %>
+                <% if (items[idProduct].talle.includes('M')) { %>
                 <div class="size_box2">
                   <p>M</p>
                 </div>
+                <% } %>
+                <% if (items[idProduct].talle.includes('L')) { %>
                 <div class="size_box3">
                   <p>L</p>
                 </div>
+                <% } %>
+                <% if (items[idProduct].talle.includes('XL')) { %>
                 <div class="size_box4">
                   <p>XL</p>
                 </div>
+                <% } %>
               </div>
             </div>
             <div class="info_fit_container">
@@ -268,25 +291,41 @@
               </div>
               <div class="info_fit_boxes">
                 <div class="fit_box1">
-                  <div class="fit_bar"></div>
+                  <% if (items[idProduct].calce == 'Skinny'){ %>                
+                    <div class="fit_bar_active"></div>
+                  <% } else { %> 
+                    <div class="fit_bar"></div>  
+                  <% } %>               
                   <div class="fit_bar_tittle">
                     <p>Skinny</p>
                   </div>
                 </div>
                 <div class="fit_box2">
-                  <div class="fit_bar_active"></div>
+                  <% if (items[idProduct].calce == 'Slim'){ %>                
+                    <div class="fit_bar_active"></div>
+                  <% } else { %> 
+                    <div class="fit_bar"></div>  
+                  <% } %>               
                   <div class="fit_bar_tittle">
                     <p>Slim</p>
                   </div>
                 </div>
                 <div class="fit_box3">
-                  <div class="fit_bar"></div>
+                  <% if (items[idProduct].calce == 'Regular'){ %>                
+                    <div class="fit_bar_active"></div>
+                  <% } else { %> 
+                    <div class="fit_bar"></div>  
+                  <% } %>               
                   <div class="fit_bar_tittle">
                     <p>Regular</p>
                   </div>
                 </div>
                 <div class="fit_box4">
-                  <div class="fit_bar"></div>
+                  <% if (items[idProduct].calce == 'Oversize'){ %>                
+                    <div class="fit_bar_active"></div>
+                  <% } else { %> 
+                    <div class="fit_bar"></div>  
+                  <% } %>               
                   <div class="fit_bar_tittle">
                     <p>Oversize</p>
                   </div>
