@@ -16,31 +16,33 @@
     <div class="body_container">
         <div class="form_login">
             <!-- Formulario Login y Registro -->
-            <form>
+            <form action="/user/register" method="POST"> 
                 <div class="con">
                     <section class="head-form">
                         <h2>Crea tu cuenta</h2>
                     </section>
                     <!--     End  header Content  -->
-                    <br />
+                    <br/>
                     <div class="field-config">
                         <!--   user name -->
 
-                        <input class="form-input" id="txt-input" required="" type="text" placeholder="Nombre" id="txt-input" />
-                        <input class="form-input" id="txt-input" required="" type="text" placeholder="Apellido" />
-                        <input class="form-input" id="txt-input" required="" type="tel" placeholder="Celular" />
-                        <input class="form-input" id="txt-input" required="" type="email" placeholder="E-mail" />
-                        <input class="form-input" id="txt-input" required="" type="password" placeholder="Contraseña" />
-                        <input class="form-input" id="txt-input" required="" type="email" placeholder="Repita contraseña" />
-                        <br />
+                        <input class="form-input" id="txt-input" name="id" type="text" placeholder="id" id="txt-input"/>
+                        <input class="form-input" id="txt-input" name="username" type="text" placeholder="Nombre" id="txt-input" />
+                        <input class="form-input" id="txt-input" name="lastname" type="text" placeholder="Apellido" />
+                        <input class="form-input" id="txt-input" name="cel" type="tel" placeholder="Celular" />
+                        <input class="form-input" id="txt-input" name="email" type="email" placeholder="E-mail" />
+                        <input class="form-input" id="txt-input" name="password" type="password" placeholder="Contraseña" />
+                        <input class="form-input" id="txt-input" name="cpassword" type="password" placeholder="Repita contraseña" />
+                        <br/>
 
                         <span>
                         </span>
-                        <br />
+                        <br/>
                     </div>
 
-                    <!--      button LogIn --><button class="log-in" style="padding-bottom: 0px">
-                        Ingresar
+                    <!--      button LogIn -->
+                    <button type="submit" class="log-in" style="padding-bottom: 0px">
+                    Crear Cuenta
                     </button>
                 </div>
                 <!-- End Form -->
