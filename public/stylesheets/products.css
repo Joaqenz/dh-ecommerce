@@ -1,5 +1,4 @@
 .body_container{
-    position: absolute;
     display: flex;
     flex-direction: column;
     height: 100vh;
