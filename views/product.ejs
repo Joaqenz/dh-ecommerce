@@ -227,7 +227,7 @@
               <h2><%= producto.nombre %></h2>
             </div>
             <div class="info_price">
-              <h3>$<%= producto.precio %></h3>
+              <h3>$<%= toThousand(producto.precio) %></h3>
             </div>
             <div class="info_disponible">
               <% if (producto.disp == true){ %>

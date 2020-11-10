@@ -70,7 +70,12 @@ header nav .menu .link .link_nov{
   padding-left: 40px;
   color: black;
 }
-
+.search_bar{
+  margin-right: 50px;
+}
+.user_user_container{
+  margin-right: 5px;
+}
 .input_search{
 	padding: 5px;
   font-size: 18px;
@@ -101,6 +106,81 @@ header nav .menu .link .link_nov{
   border-radius: 0;
   background-position: 100% center;
 }
+/** MENU DERECHA USER */
+.user_container{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: auto;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+.user_user_container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.user_photobox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  background-color: #E5E6EB;
+  border-radius: 50px;
+  margin-left: 10px;
+  overflow: hidden;
+}
+.user_photobox img{
+  width: 100%;
+}
+.user_user_container p{
+  padding-left: 10px;
+  font-weight: 500;
+}
+.user_btn_container{
+  display: flex;
+  align-items: center; 
+}
+.user_btn_shop,
+.user_btn_notif,
+.user_btn_arrow{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color:#E5E6EB;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+.user_btn_shop i,
+.user_btn_notif i,
+.user_btn_arrow i{
+  text-align: center;
+  font-size: 18px;
+  color: #66676B;
+
+}
+.notification{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  top: -5px;
+  left: 25px;
+  border-radius: 50px;
+  background-color: #DE3F4F;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+}
+
 /*! MENU DESPLEGABLE */
 .menu_desplegable{
   height: 365px;
