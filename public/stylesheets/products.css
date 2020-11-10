@@ -50,10 +50,41 @@
 
 
 .filter{
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    width: 300px;
+    width: 350px;
 }
 
+.filter_head{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 12px;
+    border-bottom: solid 2px #c4c4c4;
+}
+
+.filter_head h3{
+    text-transform: uppercase;
+}
+.filter_head a{
+    color: black;
+    text-decoration:underline;
+}
+.filter_bot{
+    display: flex;
+    flex-direction: column;
+}
+
+.filter_sec{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 12px;
+}
+.filter_sec li{
+    text-transform: uppercase;
+}
 .products_container{
     display: flex;
     width: 100%;
@@ -68,8 +99,64 @@
     flex-wrap: wrap;
 }
 
+/** Productos */
 .art{
+    position: relative;
+    box-sizing: border-box;
+    box-shadow:7px 7px 8px whitesmoke;
+    width: 240px;
+    height: 360px;
+    border-radius: 16px;
     margin: 50px 40px;
+    margin-inline: 3.5%;
+    
+}
+.far.fa-heart{
+    position: absolute;
+    font-size: 140%;
+    right:3%;
+    padding:10px;
+}
+.imagen {
+	height: 60%;
+    display: flex;
+}
+
+.art .imagen img {
+    margin: auto;
+    
+}
+
+.art .textos {
+	display: flex;
+	flex-direction: column;
+    align-content: center;
+    margin:0;
+}
+.art .textos .nombreart {
+	padding: 3px;
+	position: relative;
+    align-self: center;
+    font-weight: bold;
+    font-family: "roboto condensed";
+    font-size: x-large;
+}    
+.art .textos .precioart{
+    padding: 3px;
+    position: relative;
+    align-self: center;
+    font-weight: lighter;
+    font-family: "roboto condensed";
+    font-size: xx-large;
+}
+.art .textos .addbasket{
+    width: 90%;
+    align-self: center;
+    text-align: center;
+    background-color: #7443FE;
+    padding: 4%;
+    border-radius: 4px;
+    color: white;
 }
 
 
