@@ -6,11 +6,9 @@ form {
     margin: 2% auto;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding: 2%;
-    background-color: rgba(223, 214, 229, 0.5);
     /* background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%); */
 }
 
-/* form Container */
 
 form .con {
     display: -webkit-flex;
