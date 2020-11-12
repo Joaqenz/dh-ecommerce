@@ -3,14 +3,13 @@ form {
     min-height: 500px;
     height: auto;
     border-radius: 5px;
-    margin: 2% auto;
+    margin: 40px;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding: 2%;
-    /* background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%); */
 }
 
 
-form .con {
+.con{
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: space-around;
@@ -32,9 +31,11 @@ section {
 /* Login title  */
 
 section h2 {
-    font-size: 250%;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 40px;
     font-family: 'Roboto';
-    color: #3e403f;
+    color: black;
 }
 
 section p {
@@ -168,11 +169,8 @@ button:hover {
 }
 
 .body_container {
-    width: 100%;
-    height: 100vh;
-    background-image: url(/images/Bground_register.PNG);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    justify-content: center;
+    height: 75vh;
 }
+
+.form_login

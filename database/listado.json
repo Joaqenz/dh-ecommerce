@@ -11,12 +11,12 @@
 		"precio": 1500
 	},{
 		"id": 2,
-		"nombre": "Remera Top Sirena",
-		"categoria": "Top",
+		"nombre": "Zapatilla Top Sirena",
+		"categoria": "Zapatillas",
 		"marca": "Adidas",
-		"talle": ["S","M","L","XL"],
+		"talle": ["S","L","XL"],
 		"disp": true,
-		"color": ["White","Red","Blue","Green"],
+		"color": ["White","Green"],
 		"calce": "Oversize",
 		"precio": 1500
 	},{
