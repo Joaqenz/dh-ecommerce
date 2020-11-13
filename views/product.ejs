@@ -228,13 +228,13 @@
           <!-- Menu Info -->
           <div class="info_container">
             <div class="info_tittle">
-              <h2><%= producto.nombre %></h2>
+              <h2><%= producto.name %></h2>
             </div>
             <div class="info_price">
-              <h3>$<%= toThousand(producto.precio) %></h3>
+              <h3>$<%= toThousand(producto.price) %></h3>
             </div>
             <div class="info_disponible">
-              <% if (producto.disp == true){ %>
+              <% if (producto.quant > 0){ %>
                 <p>Disponible <i class="fas fa-check"></i></p>
               <% } else { %>
                 <p>Disponible <i class="fas fa-times"></i></p>

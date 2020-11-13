@@ -15,7 +15,7 @@
     <div class="body_container">
         <div class="body_content">
             <h1>Carga de Productos</h1>
-            <form class="form_add" action="post">
+            <form class="form_add" enctype="multipart/form-data" action="/products/addproduct" method="POST">
                 <div class="addPro">
                     <div><label for="id">ID</label><input type="text" name="id" id="id" placeholder="Ingresa el ID"></div>
                     <div><label for="name">Nombre</label><input type="text" name="name" id="name" placeholder="Ingresa el nombre"></div>
