@@ -6,7 +6,7 @@
         <%= title %>
     </title>
     <%- include('./templates/cssbasic') %>
-    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/register.css">
 </head>
 
 <body>
@@ -23,24 +23,20 @@
                     </section>
                     <!--     End  header Content  -->
                     <div class="field-config">
-                        <!--   user name -->
-
-                        <input class="form-input" id="txt-input" name="id" type="text" placeholder="id" id="txt-input"/>
-                        <input class="form-input" id="txt-input" name="username" type="text" placeholder="Nombre" id="txt-input" />
-                        <input class="form-input" id="txt-input" name="lastname" type="text" placeholder="Apellido" />
-                        <input class="form-input" id="txt-input" name="cel" type="tel" placeholder="Celular" />
-                        <input class="form-input" id="txt-input" name="email" type="email" placeholder="E-mail" />
-                        <input class="form-input" id="txt-input" name="password" type="password" placeholder="Contraseña" />
-                        <input class="form-input" id="txt-input" name="cpassword" type="password" placeholder="Repita contraseña" />
+                        <input name="id" type="text" placeholder="id" required/>
+                        <input name="username" type="text" placeholder="Usuario" required/>
+                        <input name="firstname" type="text" placeholder="Nombre" required/>
+                        <input name="lastname" type="text" placeholder="Apellido" />
+                        <input name="cel" type="tel" placeholder="Celular" />
+                        <input name="email" type="email" placeholder="E-mail" />
+                        <input name="password" type="password" placeholder="Contraseña" required/>
+                        <input name="cpassword" type="password" placeholder="Repita contraseña" required/>
                     </div>
-
-                    <!--      button LogIn -->
-                    <button type="submit" class="log-in" style="padding-bottom: 0px">
-                    Crear Cuenta
-                    </button>
+                    <button type="submit" class="log-in">Registrate</button>
                 </div>
                 <!-- End Form -->
             </form>
+
         </div>
     </div>
   <!-- HEADER -->

@@ -1,3 +1,7 @@
+.body_container{
+    justify-content: center;
+    height: 75vh;
+}
 form {
     width: 450px;
     min-height: 500px;
@@ -5,8 +9,6 @@ form {
     border-radius: 5px;
     margin: 40px;
 }
-
-
 .con{
     display: -webkit-flex;
     display: flex;
@@ -16,6 +18,7 @@ form {
     flex-wrap: wrap;
     margin: 0 auto;
 }
+
 .head-form{
     margin: 2% auto 10% auto;
     text-align: center;
@@ -27,19 +30,8 @@ form {
     font-family: 'Roboto';
     color: black;
 }
-.head-form p {
-    letter-spacing: 0.05em;
-}
-#eye {
-    color: #333;
-}
-
-/* inputs form  */
-.field{
-    position: relative;
-}
-.field input{
-    width: 100%;
+.field-config input {
+    width: 275px;
     height: 40px;
     margin-top: 2%;
     padding: 15px;
@@ -50,15 +42,9 @@ form {
     border: none;
     border-radius: 5px;
     transition: 0.2s linear;
-    box-shadow: 10px 10px 45px -18px rgba(0,0,0,1);
-}
+    box-shadow: 10px 10px 45px -19px rgba(0,0,0,1);
 
-.field i{
-    position: absolute;
-    top: 18px;
-    right: 15px;
 }
-
 .field-config {
     display: flex;
     flex-wrap: inherit;
@@ -68,38 +54,24 @@ form {
     border-bottom-style: solid;
     padding-bottom: -1px;
 }
-
 input:focus {
     transform: translateX(-2px);
     border-radius: 5px;
 }
 
-.log-in {
-    color: #252537;
-    width: 100%;
-    height: 50px;
-    padding: 0 20px;
+
+/* //////////////////////////////////////////// */
+
+
+/* buttons  */
+
+button {
+    display: inline-block;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 18px;
     color: white;
-    background: #7443FE;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.2s linear;
-    margin: 7% auto;
-    letter-spacing: 0.05em;
-}
-
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 150px;
+    width: 280px;
     height: 50px;
     padding: 0 20px;
     background: #7443FE;
@@ -113,30 +85,12 @@ input:focus {
     letter-spacing: 0.05em;
 }
 
-.other{
-    display: flex;
-    justify-content: space-between;
-    width: 320px;
-}
-
-
-.btn:hover {
+button:hover {
     transform: translatey(3px);
     box-shadow: none;
     animation: ani9 0.4s ease-in-out infinite alternate;
 }
 
-button:hover {
-    transform: translatey(3px);
-    box-shadow: none;
-}
-
-
-/* Animacion de los botones */
-
-button:hover {
-    animation: ani9 0.4s ease-in-out infinite alternate;
-}
 
 @keyframes ani9 {
     0% {
@@ -147,7 +101,3 @@ button:hover {
     }
 }
 
-.body_container {
-    justify-content: center;
-    height: 75vh;
-}

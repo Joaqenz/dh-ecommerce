@@ -11,7 +11,7 @@
 
 <body>
   <!-- HEADER -->
-  <%- include('./templates/header') %>
+  <%- include('./templates/header_login') %>
     <!-- Form -->
   <div class="body_container">
     <div class="form_login">
@@ -20,38 +20,30 @@
             <div class="con">
                 <section class="head-form">
                     <h2>Iniciar sesión</h2>
-                    <!--     Mensaje de login -->
                     <p>Ingresa tu usuario y contraseña por favor.</p>
                 </section>
-                <br>
                 <div class="field-set">
-                    <!--   user name Input-->
-                    <input class="form-input" id="txt-input" type="text" placeholder="Usuario" required>
-                    <br>
-                    <!--   Password Input-->
-                    <input class="form-input" type="password" placeholder="Contraseña" id="pwd" name="password" required>
-                    <!--      mostrar / ocultar password  -->
-                    <span>
+                    <div class="field">
+                        <input name="username" type="text" placeholder="Usuario" required>
+                    </div>
+                    <div class="field">
+                        <input name="password" type="password" placeholder="Contraseña" id="pwd" required>
                         <i class="fa fa-eye" aria-hidden="true" type="button" id="eye"></i>
-                    </span>
-                    <br>
-                    <!--      button LogIn -->
-                    <button class="log-in"> Ingresar </button>
-                </div>
-                <!--      button olvide mi password -->
-                <div class="other">
-                    <!--      Forgot Password button-->
-                    <button class="btn submits frgt-pass">Olvide mi Password</button>
-                    <!--     Sign Up button -->
-                    <a href="user/register">
-                        <button class="btn submits sign-up">Registrarse
-                        <!--         Sign Up font icon -->
-                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="field">
+                        <button class="log-in"> Ingresar </button>
+                    </div>
+                    <div class="other">
+                        <a class="btn" href="">
+                            Olvide mi Password
                         </a>
-                    </button>
-                        <!--      End Other the Division -->
+                        <a class="btn" href="/user/register">
+                           Registrarse 
+                           <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
-                <!--   End Conrainer  -->
+
             </div>
             <!-- End Form -->
         </form>
@@ -63,4 +55,3 @@
 <script src="/javascripts/log_reg.js"></script>
 
 </html>
-
