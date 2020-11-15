@@ -34,7 +34,7 @@ const userController = {
             }
         }
         if(userFound){
-            res.render("edit",{userFound, title})
+            res.render("editUserForm",{userFound, title})
         }else{
             res.send("Usuario invalido");
         }

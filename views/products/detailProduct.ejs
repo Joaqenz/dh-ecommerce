@@ -2,12 +2,12 @@
 <html>
   <head>
     <title><%= title %></title>
-    <%- include('./templates/cssbasic') %>
+    <%- include('../templates/cssbasic') %>
     <link rel='stylesheet' href='/stylesheets/product.css' />
   </head>
   <body>
   <!-- HEADER -->
-  <%- include('./templates/header') %>
+  <%- include('../templates/header') %>
     <!-- BODY -->
       <div class="body_container">
         <div class="body_content">
@@ -218,7 +218,7 @@
           <!-- Menu Foto -->
           <div class="photo_container">
             <div class="photo_box">
-              <img src="/images/top.jpeg" alt="">
+              <img src="/images/products/<%=producto.image %> " alt="">
             </div>
             <div class="arrows_container">
               <i class="fas fa-chevron-left"></i>
@@ -267,22 +267,22 @@
                 <p>Selecciona tu talle</p>
               </div>
               <div class="info_size_boxes">
-                <% if (producto.talle.includes('S')) { %>
+                <% if (producto.size.includes('S')) { %>
                 <div class="size_box1">
                   <p>S</p>
                 </div>
                 <% } %>
-                <% if (producto.talle.includes('M')) { %>
+                <% if (producto.size.includes('M')) { %>
                 <div class="size_box2">
                   <p>M</p>
                 </div>
                 <% } %>
-                <% if (producto.talle.includes('L')) { %>
+                <% if (producto.size.includes('L')) { %>
                 <div class="size_box3">
                   <p>L</p>
                 </div>
                 <% } %>
-                <% if (producto.talle.includes('XL')) { %>
+                <% if (producto.size.includes('XL')) { %>
                 <div class="size_box4">
                   <p>XL</p>
                 </div>
@@ -295,7 +295,7 @@
               </div>
               <div class="info_fit_boxes">
                 <div class="fit_box1">
-                  <% if (producto.calce == 'Skinny'){ %>                
+                  <% if (producto.fit == 'Skinny'){ %>                
                     <div class="fit_bar_active"></div>
                   <% } else { %> 
                     <div class="fit_bar"></div>  
@@ -305,7 +305,7 @@
                   </div>
                 </div>
                 <div class="fit_box2">
-                  <% if (producto.calce == 'Slim'){ %>                
+                  <% if (producto.fit == 'Slim'){ %>                
                     <div class="fit_bar_active"></div>
                   <% } else { %> 
                     <div class="fit_bar"></div>  
@@ -315,7 +315,7 @@
                   </div>
                 </div>
                 <div class="fit_box3">
-                  <% if (producto.calce == 'Regular'){ %>                
+                  <% if (producto.fit == 'Regular'){ %>                
                     <div class="fit_bar_active"></div>
                   <% } else { %> 
                     <div class="fit_bar"></div>  
@@ -325,7 +325,7 @@
                   </div>
                 </div>
                 <div class="fit_box4">
-                  <% if (producto.calce == 'Oversize'){ %>                
+                  <% if (producto.fit == 'Oversize'){ %>                
                     <div class="fit_bar_active"></div>
                   <% } else { %> 
                     <div class="fit_bar"></div>  
@@ -352,6 +352,6 @@
         </div>
       </div>
   <!-- FOOTER -->
-  <%- include('./templates/footer') %>
+  <%- include('../templates/footer') %>
   </body>
 </html>

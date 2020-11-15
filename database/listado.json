@@ -1,1 +1,28 @@
-[{"id":"1","name":"Zapatilla Nlaksdj","cat":"Zapatillas","brand":"Adidas","talle":"S","color":"White","quant":"10","price":"1500","desc":"aaaaa"}]
+[
+  {
+    "id": 1,
+    "name": "producto prueba",
+    "cat": "Pruebas",
+    "brand": "prueba",
+    "size": "M",
+    "color": "White",
+    "quant": "14",
+    "price": "5000",
+    "fit": "Skinny",
+    "desc": "asdasdasdaasd",
+    "image": "img-1605464966983.jpg"
+  },
+  {
+    "id": 2,
+    "name": "producto prueba",
+    "cat": "Pruebas",
+    "brand": "prueba",
+    "size": "M",
+    "color": "White",
+    "quant": "14",
+    "price": "5000",
+    "fit": "Skinny",
+    "desc": "asdasdasdaasd",
+    "image": "img-1605464966983.jpg"
+  }
+]

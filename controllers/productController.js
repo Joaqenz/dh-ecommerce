@@ -1,17 +1,41 @@
 const fs = require('fs');
-const dataProducts = JSON.parse(fs.readFileSync('./database/listado.json', 'utf-8'));
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
+const path = require('path');
 const title = 'SportLand'
 
+
+const productsFilePath = path.join(__dirname, '../database/listado.json');
+const dataProducts = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
+
 const productController = {
+    index: (req, res) => {
+		const dataProducts = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		return res.render('products/products', { dataProducts, title });
+    },
+    ver: (req, res) => {
+		let id = req.params.id;
+		for (let i = 0; i < dataProducts.length; i++) {
+			console.log("id producto: " + dataProducts[i].id + " id parametro; " + id)
+			if (dataProducts[i].id == id) {
+				return res.render('products/detailProduct', { producto: dataProducts[i], toThousand, title })
+			}
+		}
+		return res.send("producto no encontrado");
+	},
     create: function (req, res, next){
-        res.render('addProduct', {title})
+        res.render('products/addProduct', {title})
     },
     store : function(req, res, next){
-        dataProducts.push(req.body);
-        let dataProductsJSON = JSON.stringify(dataProducts);
-        fs.writeFileSync(__dirname + "/../database/listado.json", dataProductsJSON);
-        res.send("Producto Creado")
+        let datosProducto = {
+			id: Number(dataProducts[dataProducts.length - 1].id) + 1,
+			...req.body,
+			image: req.file.filename
+		}
+		dataProducts.push(datosProducto);
+		dataProductsJSON = JSON.stringify(dataProducts, null, 2);
+		fs.writeFileSync(path.join(__dirname, '../database/listado.json'), dataProductsJSON);
+        res.send("Producto Creado");
     },
     edit : function(req, res, next){
         var idProduct = req.params.id;
@@ -23,7 +47,7 @@ const productController = {
             }
         }
         if(idFound){
-            res.render("editProductFrom",{idFound})
+            res.render("products/editProduct",{idFound, title})
         }else{
             res.send("Producto no encontrado");
         }
@@ -62,28 +86,8 @@ const productController = {
             res.send("Producto no encontrado");
         }
     },
-    ver:function(req,res,next){
-        var productId = req.params.id;
-        var producto = dataProducts.filter(function(producto){
-            //condicion true/false
-            return productId == producto.id;
-        });
-        console.log(producto);
-        if(producto.length > 0){
-            res.render("product",{
-                producto:producto[0],
-                toThousand,
-                title
-            });
-        }else{
-            res.send("No hay producto con ese id");
-        }
-    },
     carrito: function (req, res, next){
-        res.render('carrito', {title})
+        res.render('products/carrito', {title})
     },
-    products: function (req, res, next){
-        res.render('products', {title})
-    }
 }
 module.exports = (productController)
