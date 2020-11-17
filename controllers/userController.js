@@ -16,7 +16,7 @@ const userController = {
         res.render('user/registerUserForm', { users, title })
     },
     store : function(req,res,next){
-        errors = validationResult(req);
+        console.log(validationResult(req));
         users.push(req.body);
         let usersJSON = JSON.stringify(users);
         fs.writeFileSync(__dirname + "/../database/users.json", usersJSON);

@@ -4,7 +4,7 @@ const userValidator = [
     check('username')
     .notEmpty().withMessage('El nombre de usuario está vacío.'),
     check('password')
-    .isLength({ min: 5 }).withMessage('must be at least 5 chars long')
+    .isLength({ min: 5 }).withMessage('Tiene que tener 5 caracteres')
     .matches(/\d/).withMessage('Tiene que contener un numero')
 ]
 
