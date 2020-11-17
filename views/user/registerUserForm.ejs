@@ -5,23 +5,21 @@
     <title>
         <%= title %>
     </title>
-    <%- include('./templates/cssbasic') %>
+    <%- include('../templates/cssbasic') %>
     <link rel="stylesheet" href="/stylesheets/register.css">
 </head>
 
 <body>
   <!-- HEADER -->
-  <%- include('./templates/header') %>
+  <%- include('../templates/header') %>
     <!-- Form -->
     <div class="body_container">
         <div class="form_login">
-            <!-- Formulario Login y Registro -->
             <form action="/user/register" method="POST"> 
                 <div class="con">
                     <section class="head-form">
                         <h2>Crea tu cuenta</h2>
                     </section>
-                    <!--     End  header Content  -->
                     <div class="field-config">
                         <input name="id" type="text" placeholder="id" required/>
                         <input name="username" type="text" placeholder="Usuario" required/>
@@ -40,7 +38,7 @@
         </div>
     </div>
   <!-- HEADER -->
-  <%- include('./templates/footer') %>
+  <%- include('../templates/footer') %>
 </body>
 <script src="/javascripts/log_reg.js"></script>
 

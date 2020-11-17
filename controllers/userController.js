@@ -1,25 +1,23 @@
+let title = 'Sportland';
+
 const fs = require('fs');
 let users = JSON.parse(fs.readFileSync(__dirname + "/../database/users.json"));
-let title = 'Sportland'
+const {check, validationResult, body} = require('express-validator');
+
 
 const userController = {
     main: function (req, res, next){
         res.redirect("/user/login")
     },
     login: function (req, res, next){
-        res.render('login', { title })
+        res.render('user/loginUserForm', { title })
     },
     register: function (req, res, next){
-        res.render('register', { users, title })
+        res.render('user/registerUserForm', { users, title })
     },
     store : function(req,res,next){
-        //req.body (POST)
-        //req.params (:RUTA)
-        //req.query (GET)
-
-        //agrego el usuario al array
+        errors = validationResult(req);
         users.push(req.body);
-        //sobreescribo el json con el array de usuarios
         let usersJSON = JSON.stringify(users);
         fs.writeFileSync(__dirname + "/../database/users.json", usersJSON);
         res.redirect("/user/list")
@@ -34,7 +32,7 @@ const userController = {
             }
         }
         if(userFound){
-            res.render("editUserForm",{userFound, title})
+            res.render("user/editUserForm",{userFound, title})
         }else{
             res.send("Usuario invalido");
         }
@@ -64,7 +62,7 @@ const userController = {
     },
     list: function(req,res,next){
         console.log(req.query);
-        res.render("list",{users, title});
+        res.render("user/listUsers",{users, title});
     }
 }
 
