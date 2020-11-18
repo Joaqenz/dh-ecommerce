@@ -20,12 +20,25 @@
                     <section class="head-form">
                         <h2>Crea tu cuenta</h2>
                     </section>
+                    <% if (typeof errors != 'undefined') { %>
+                        <div class="modalErrors">
+                            <p>Errores</p>
+                            <ul>
+                                <% for( let i = 0; i < errors.length; i++ ) { %>
+                                    <li>
+                                        <%= errors[i].msg%> 
+                                    </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                        
+                    <% } %>
                     <div class="field-config">
-                        <input name="username" type="text" placeholder="Usuario"/>
-                        <input name="firstname" type="text" placeholder="Nombre"/>
-                        <input name="lastname" type="text" placeholder="Apellido"/>
-                        <input name="cel" type="tel" placeholder="Celular"/>
-                        <input name="email" type="email" placeholder="E-mail"/>
+                        <input name="username" type="text" placeholder="Usuario" value="<% if(typeof errors != 'undefined'){%><%=req.body.username%><%}%>"/> 
+                        <input name="firstname" type="text" placeholder="Nombre" value="<% if(typeof errors != 'undefined'){%><%=req.body.firstname%><%}%>"/>
+                        <input name="lastname" type="text" placeholder="Apellido" value="<% if(typeof errors != 'undefined'){%><%=req.body.lastname%><%}%>"/>
+                        <input name="cel" type="number" placeholder="Celular" value="<% if(typeof errors != 'undefined'){%><%=req.body.cel%><%}%>"/>
+                        <input name="email" type="email" placeholder="E-mail" value="<% if(typeof errors != 'undefined'){%><%=req.body.email%><%}%>"/>
                         <input name="password" type="password" placeholder="Contraseña"/>
                         <input name="cpassword" type="password" placeholder="Repita contraseña"/>
                     </div>

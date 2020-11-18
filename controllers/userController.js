@@ -16,16 +16,20 @@ const userController = {
         res.render('user/registerUserForm', { users, title })
     },
     store : function(req,res,next){
-        errors = validationResult(req);
-        console.log(validationResult(req));
-        let userData = {
-			id: users.length == 0 ? 1 : Number(users[users.length - 1].id) + 1,
-			...req.body
-		}
-        users.push(userData);
-        let usersJSON = JSON.stringify(users, null, 2);
-        fs.writeFileSync(__dirname + "/../database/users.json", usersJSON);
-        res.redirect("/user/list")
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            let userData = {
+                id: users.length == 0 ? 1 : Number(users[users.length - 1].id) + 1,
+                ...req.body
+            }
+            users.push(userData);
+            let usersJSON = JSON.stringify(users, null, 2);
+            fs.writeFileSync(__dirname + "/../database/users.json", usersJSON);
+            res.redirect("/user/list")
+        } else {
+            res.render('user/registerUserForm', { req, title, errors: errors.errors })
+        }
+        
     },
     edit : function(req,res,next){
         var idUser = req.params.id;

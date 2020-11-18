@@ -1,34 +1,32 @@
-const readJSON = require('../helpers/readJSON')
+const readUsers = require('../helpers/readUsers')
 const {check, validationResult, body} = require('express-validator');
-let users = readJSON();
+let users = readUsers;
 
 const userValidator = [
     body('username')
-    .notEmpty().withMessage('Completa este campo.').bail().custom((value) => {
+    .notEmpty().withMessage('Completa el usuario.').bail().custom((value) => {
         for(var i=0;i < users.length;i++){
             if(value  == users[i].name){
               return false;
             }
             return true;
         }
-    }).withMessage('Ya existe un usuario.'),
+    }).withMessage('Ese usuario ya está en uso.'),
+    body('firstname').isLength({ min: 2 }).withMessage('El nombre requiere minimo 2 caracteres.'),
+    body('lastname').notEmpty().withMessage('Completa tu Apellido'),
+    body('cel').notEmpty().withMessage('Completa el telefono.'),
+    body('email').isEmail().withMessage('No es un email.')
+    .custom((value) => {
+      for(var i=0;i < users.length;i++){
+          if(value  == users[i].email){
+            return false;
+          }
+          return true;
+      }
+    }).withMessage('Ese email ya está en uso.'),
     body('password')
-    .isLength({ min: 5 }).withMessage('Tiene que tener minimo 5 caracteres.')
-    .matches(/\d/).withMessage('Tiene que contener al menos un numero.'),
-    body('cel')
-    .notEmpty().withMessage('Completa este campo.'),
-    body('email').isEmail().withMessage('Completa este campo.').custom((value) => {
-        for(var i=0;i < users.length;i++){
-            if(value  == users[i].email){
-              return false;
-            }
-            return true;
-        }
-    }).withMessage('Completa este campo.'),
-    body('firstname')
-    .notEmpty().withMessage('Completa este campo.'),
-    body('lastname')
-    .notEmpty().withMessage('Completa este campo.'),
+    .isLength({ min: 5 }).withMessage('La contraseña requiere minimo 5 caracteres.')
+    .matches(/\d/).withMessage('La contraseña requiere al menos un numero.'),
     body('cpassword').custom((value, { req }) => {
         if (value !== req.body.password) {
           throw new Error('No concuerdan las contraseñas.');

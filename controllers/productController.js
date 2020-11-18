@@ -2,21 +2,20 @@ const fs = require('fs');
 const path = require('path');
 const title = 'SportLand'
 
-const readJSON = require('../helpers/readJSON')
+const readProducts = require('../helpers/readProducts')
 const productsFilePath = path.join(__dirname, '../database/listado.json');
-const dataProducts = readJSON()
+const dataProducts = readProducts()
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 
 const productController = {
     index: (req, res) => {
-		const dataProducts = readJSON()
+		const dataProducts = readProducts()
 		return res.render('products/products', { dataProducts, title });
     },
     ver: (req, res) => {
 		let id = req.params.id;
 		for (let i = 0; i < dataProducts.length; i++) {
-			console.log("id producto: " + dataProducts[i].id + " id parametro; " + id)
 			if (dataProducts[i].id == id) {
 				return res.render('products/detailProduct', { producto: dataProducts[i], toThousand, title })
 			}
@@ -28,7 +27,7 @@ const productController = {
     },
     store : function(req, res, next){
         let datosProducto = {
-			id: Number(dataProducts[dataProducts.length - 1].id) + 1,
+            id: dataProducts.length == 0 ? 1 : Number(dataProducts[dataProducts.length - 1].id) + 1,
 			...req.body,
 			image: req.file.filename
 		}
