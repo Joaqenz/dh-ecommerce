@@ -16,9 +16,14 @@ const userController = {
         res.render('user/registerUserForm', { users, title })
     },
     store : function(req,res,next){
+        errors = validationResult(req);
         console.log(validationResult(req));
-        users.push(req.body);
-        let usersJSON = JSON.stringify(users);
+        let userData = {
+			id: users.length == 0 ? 1 : Number(users[users.length - 1].id) + 1,
+			...req.body
+		}
+        users.push(userData);
+        let usersJSON = JSON.stringify(users, null, 2);
         fs.writeFileSync(__dirname + "/../database/users.json", usersJSON);
         res.redirect("/user/list")
     },

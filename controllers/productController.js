@@ -2,15 +2,15 @@ const fs = require('fs');
 const path = require('path');
 const title = 'SportLand'
 
-
+const readJSON = require('../helpers/readJSON')
 const productsFilePath = path.join(__dirname, '../database/listado.json');
-const dataProducts = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const dataProducts = readJSON()
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 
 const productController = {
     index: (req, res) => {
-		const dataProducts = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		const dataProducts = readJSON()
 		return res.render('products/products', { dataProducts, title });
     },
     ver: (req, res) => {

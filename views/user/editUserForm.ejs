@@ -9,21 +9,21 @@
 
 <body>
 <!-- HEADER -->
-  <%- include('./templates/header') %>
+  <%- include('../templates/header') %>
   <div class="body_container">
     <h1>Edicion usuario</h1>
-    <form action="/user/edit/<%= idFound.id %>" method="POST">
-        <input type="text" name="username" value="<%= idFound.username %>" placeholder="Ingresa tu nombre">
+    <form action="/user/edit/<%= userFound.id %>" method="POST">
+        <input type="text" name="username" value="<%= userFound.username %>" placeholder="Ingresa tu nombre">
         <br>
-        <input type="text" name="lastname" value="<%= idFound.lastname %>" placeholder="Ingresa tu nombre">
+        <input type="text" name="lastname" value="<%= userFound.lastname %>" placeholder="Ingresa tu nombre">
         <br>
-        <input type="text" name="password" value="<%= idFound.password %>" placeholder="*****">
+        <input type="text" name="password" value="<%= userFound.password %>" placeholder="*****">
         <br>
-        <input type="text" name="email" value="<%= idFound.email %>" placeholder="Ingresa tu email">
+        <input type="text" name="email" value="<%= userFound.email %>" placeholder="Ingresa tu email">
         <br>
-        <input type="text" name="cel" value="<%= idFound.cel %>" placeholder="Ingresa tu telefono">
+        <input type="text" name="cel" value="<%= userFound.cel %>" placeholder="Ingresa tu telefono">
         <br>
-        <input type="text" name="email" value="<%= idFound.email %>" placeholder="Ingresa tu email">
+        <input type="text" name="email" value="<%= userFound.email %>" placeholder="Ingresa tu email">
         <br>      
         <button type="submit">Confirmar</button>
     </form>
