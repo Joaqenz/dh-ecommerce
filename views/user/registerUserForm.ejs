@@ -15,14 +15,14 @@
     <!-- Form -->
     <div class="body_container">
         <div class="form_login">
-            <form action="/user/register" method="POST"> 
+            <form action="/user/register" enctype="multipart/form-data" method="POST"> 
                 <div class="con">
                     <section class="head-form">
                         <h2>Crea tu cuenta</h2>
                     </section>
                     <% if (typeof errors != 'undefined') { %>
                         <div class="modalErrors">
-                            <p>Errores</p>
+                            <h2>Errores</h2>
                             <ul>
                                 <% for( let i = 0; i < errors.length; i++ ) { %>
                                     <li>
@@ -40,7 +40,7 @@
                         <input name="cel" type="number" placeholder="Celular" value="<% if(typeof errors != 'undefined'){%><%=req.body.cel%><%}%>"/>
                         <input name="email" type="email" placeholder="E-mail" value="<% if(typeof errors != 'undefined'){%><%=req.body.email%><%}%>"/>
                         <input name="password" type="password" placeholder="Contraseña"/>
-                        <input name="cpassword" type="password" placeholder="Repita contraseña"/>
+                        <input name="cpassword" type="password" placeholder="Repita la contraseña"/>
                     </div>
                     <button type="submit" class="log-in">Registrate</button>
                 </div>
