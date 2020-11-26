@@ -16,6 +16,7 @@ const userController = {
         res.render('user/registerUserForm', { users, title })
     },
     store : function(req,res,next){
+        console.log(validationResult(req));
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             let userData = {

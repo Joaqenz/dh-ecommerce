@@ -11,17 +11,17 @@
 
 <body>
   <!-- HEADER -->
-  <%- include('../templates/header') %>
+  <%- include('../templates/header_user') %>
     <!-- Form -->
     <div class="body_container">
         <div class="form_login">
-            <form action="/user/register" enctype="multipart/form-data" method="POST"> 
+            <form action="/user/register" method="POST"> 
                 <div class="con">
                     <section class="head-form">
                         <h2>Crea tu cuenta</h2>
                     </section>
                     <% if (typeof errors != 'undefined') { %>
-                        <div class="modalErrors">
+                        <div id="modalErrors" class="modalErrors">
                             <h2>Errores</h2>
                             <ul>
                                 <% for( let i = 0; i < errors.length; i++ ) { %>
@@ -30,8 +30,10 @@
                                     </li>
                                 <% } %>
                             </ul>
+                            <div class="cross">
+                                <i onclick="closeModal()" id="cross" class="fas fa-times"></i>
+                            </div>
                         </div>
-                        
                     <% } %>
                     <div class="field-config">
                         <input name="username" type="text" placeholder="Usuario" value="<% if(typeof errors != 'undefined'){%><%=req.body.username%><%}%>"/> 
@@ -53,5 +55,5 @@
   <%- include('../templates/footer') %>
 </body>
 <script src="/javascripts/log_reg.js"></script>
-
+<script src="/javascripts/register.js"></script>
 </html>
