@@ -24,5 +24,18 @@
     "fit": "Skinny",
     "desc": "asdasdasdaasd",
     "image": "img-1605464966983.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Lucia",
+    "cat": "lucai",
+    "brand": "lucia",
+    "size": "m",
+    "color": "White Red",
+    "quant": "15",
+    "price": "1500",
+    "fit": "Oversize",
+    "desc": "asdfasdfasd",
+    "image": "img-1606584359995.png"
   }
 ]

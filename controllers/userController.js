@@ -1,7 +1,10 @@
-let title = 'Sportland';
+const title = 'Sportland';
 
 const fs = require('fs');
-let users = JSON.parse(fs.readFileSync(__dirname + "/../database/users.json"));
+
+const readUsers = require('../helpers/readUsers')
+const users = readUsers();
+
 const {check, validationResult, body} = require('express-validator');
 
 
@@ -9,20 +12,45 @@ const userController = {
     main: function (req, res, next){
         res.redirect("/user/login")
     },
-    login: function (req, res, next){
+    showLoginForm: function (req, res, next){
         res.render('user/loginUserForm', { title })
     },
-    register: function (req, res, next){
+    login: function (req, res, next){
+        for (let i = 0; i < users.length; i++) {
+            if (req.body.id == users[i].id) {
+                if(req.body.password == users[i].password){
+                    req.session.userLogged == req.body.id;
+                    req.cookie('user',req.body.id)
+                    res.redirect("/")
+                }else{
+                    res.render('user/loginUserForm', {
+                        title,
+                        frase: "Usuario y/o contraseña invalidos",
+                        username: req.body.username,
+                    });
+                }
+            }
+        }
+        res.render('user/loginUserForm', {
+            title,
+            frase: "Usuario y/o contraseña invalidos",
+            username: req.body.username,
+        });
+    },
+    showRegisterForm: function (req, res, next){
         res.render('user/registerUserForm', { users, title })
     },
-    store : function(req,res,next){
-        console.log(validationResult(req));
+    register : function(req,res,next){
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            let userData = {
-                id: users.length == 0 ? 1 : Number(users[users.length - 1].id) + 1,
-                ...req.body
-            }
+            let userData = {}
+            userData.id = users.length == 0 ? 1 : Number(users[users.length - 1].id) + 1;
+            userData.username = req.body.username;
+            userData.firstname = req.body.firstname;
+            userData.lastname = req.body.lastname;
+            userData.cel = req.body.cel;
+            userData.email = req.body.email;
+            userData.password = req.body.password;
             users.push(userData);
             let usersJSON = JSON.stringify(users, null, 2);
             fs.writeFileSync(__dirname + "/../database/users.json", usersJSON);
@@ -57,7 +85,7 @@ const userController = {
             }
             return user;
         });
-        editUsersJSON = JSON.stringify(editUser);
+        editUsersJSON = JSON.stringify(editUser, null, 2);
         fs.writeFileSync(__dirname + "/../database/users.json",editUsersJSON);
         res.redirect("/user/list")
     },

@@ -13,27 +13,18 @@
   <div class="body_container">
     <h1>Edicion usuario</h1>
     <form action="/user/edit/<%= userFound.id %>" method="POST">
+        <input type="number" name="id" value="<%= userFound.id %>" hidden/> 
+        <input type="text" name="username" value="<%= userFound.username %>" placeholder="Edita tu Usuario"/> 
         <input type="text" name="firstname" value="<%= userFound.username %>" placeholder="Edita tu Nombre">
-        <br>
         <input type="text" name="lastname" value="<%= userFound.lastname %>" placeholder="Edita tu Apellido">
-        <br>
         <input type="text" name="cel" value="<%= userFound.cel %>" placeholder="Ingresa tu telefono">
-        <br>
         <input type="text" name="email" value="<%= userFound.email %>" placeholder="Ingresa tu email">
-        <br>    
+        <input name="password" type="password" hidden/>
+        <input name="cpassword" type="password" hidden/> 
         <button type="submit">Confirmar</button>
     </form>
   </div>
 <!-- FOOTER -->
     <%- include('../templates/footer') %>
 </body>
-
 </html>
-
-<input name="username" type="text" placeholder="Usuario" value="<% if(typeof errors != 'undefined'){%><%=req.body.username%><%}%>"/> 
-<input name="firstname" type="text" placeholder="Nombre" value="<% if(typeof errors != 'undefined'){%><%=req.body.firstname%><%}%>"/>
-<input name="lastname" type="text" placeholder="Apellido" value="<% if(typeof errors != 'undefined'){%><%=req.body.lastname%><%}%>"/>
-<input name="cel" type="number" placeholder="Celular" value="<% if(typeof errors != 'undefined'){%><%=req.body.cel%><%}%>"/>
-<input name="email" type="email" placeholder="E-mail" value="<% if(typeof errors != 'undefined'){%><%=req.body.email%><%}%>"/>
-<input name="password" type="password" placeholder="Contraseña"/>
-<input name="cpassword" type="password" placeholder="Repita contraseña"/>

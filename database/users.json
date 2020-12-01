@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": "1",
+    "username": "Joaqenz",
+    "firstname": "Joaqenz",
+    "lastname": "Garayzabal",
+    "cel": "2215927586",
+    "email": "joaquingarayzabal@outlook.com",
+    "password": "",
+    "cpassword": ""
+  },
+  {
+    "id": 2,
+    "username": "test1",
+    "firstname": "Diego",
+    "lastname": "Aasdd",
+    "cel": "2341413",
+    "email": "diego@hotmail.com",
+    "password": "12345a"
+  },
+  {
+    "id": 3,
+    "username": "asdaa",
+    "firstname": "Joaquin",
+    "lastname": "a",
+    "cel": "123",
+    "email": "11@asdas.com",
+    "password": "asd123"
+  }
+]

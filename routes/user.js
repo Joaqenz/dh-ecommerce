@@ -5,12 +5,13 @@ const userValidator = require('../middlewares/userValidator')
 
 /* GET users listing. */
 router.get('/', userController.main);
-router.get('/login', userController.login);
+
+router.get('/login', userController.showLoginForm);
+router.post('/login', userController.login);
 
 //mostrar un formulario de creacion
-router.get('/register',userController.register);
-//recibo los datos del formulario
-router.post('/register',userValidator,userController.store);
+router.get('/register',userController.showRegisterForm);
+router.post('/register',userValidator,userController.register);
 
 //mostrar un formulario de edicion
 router.get('/edit/:id',userController.edit);

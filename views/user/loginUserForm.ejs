@@ -16,22 +16,35 @@
   <div class="body_container">
     <div class="form_login">
         <!-- Formulario Login y Registro -->
-        <form>
+        <form action="/user/login" method="POST">
             <div class="con">
                 <section class="head-form">
                     <h2>Iniciar sesión</h2>
                     <p>Ingresa tu usuario y contraseña por favor.</p>
                 </section>
+                <% if (typeof frase != 'undefined') { %>
+                    <div id="modalErrors" class="modalErrors">
+                        <h2>Errores</h2>
+                        <ul>
+                                <li>
+                                    <%= frase %> 
+                                </li>
+                        </ul>
+                        <div class="cross">
+                            <i onclick="closeModal()" id="cross" class="fas fa-times"></i>
+                        </div>
+                    </div>
+                <% } %>
                 <div class="field-set">
                     <div class="field">
-                        <input name="username" type="text" placeholder="Usuario" required>
+                        <input name="username" type="text" placeholder="Usuario" value="<% if(typeof frase != 'undefined'){%><%=username%><%}%>" required>
                     </div>
                     <div class="field">
                         <input name="password" type="password" placeholder="Contraseña" id="pwd" required>
                         <i class="fa fa-eye" aria-hidden="true" type="button" id="eye"></i>
                     </div>
                     <div class="field">
-                        <button class="log-in"> Ingresar </button>
+                        <button type="submit" class="log-in">Ingresar</button>
                     </div>
                     <div class="other">
                         <a class="btn" href="">
@@ -53,5 +66,5 @@
   <%- include('../templates/footer') %>
 </body>
 <script src="/javascripts/log_reg.js"></script>
-
+<script src="/javascripts/register.js"></script>
 </html>
