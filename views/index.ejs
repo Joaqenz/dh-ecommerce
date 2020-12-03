@@ -10,7 +10,11 @@
 
 <body>
   <!-- HEADER -->
-  <%- include('./templates/header_user') %>
+  <% if(req.session.userId == undefined) {%> 
+    <%- include('./templates/header') %>
+  <% }else{ %>
+    <%- include('./templates/header_user') %>
+  <% } %>  
   <!-- BODY -->
   <div class="body_container">
     <!--MUJER-->

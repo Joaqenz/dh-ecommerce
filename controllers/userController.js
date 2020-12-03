@@ -20,6 +20,7 @@ const userController = {
             if (req.body.username == users[i].username) {
                 if(req.body.password == users[i].password){
                     req.session.userName = req.body.username;
+                    req.session.firstName = req.body.firstname;
                     req.session.userId = users[i].id;
                     if (req.body.remind != undefined) {
                         res.cookie('remind',users[i].id,{
@@ -106,6 +107,17 @@ const userController = {
     list: function(req,res,next){
         console.log(req.query);
         res.render("user/listUsers",{users, title});
+    },
+    check: function(req,res,next){
+        if (req.session.userId == undefined){
+            res.send('No estas logeado');
+        }else{
+            res.send('El usuario logeado es: ' + req.session.userName);
+        }
+    },
+    logout: function (req, res) {
+        req.session.destroy();
+        res.send("logout success!");
     }
 }
 
