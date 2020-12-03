@@ -17,13 +17,18 @@ const userController = {
     },
     login: function (req, res, next){
         for (let i = 0; i < users.length; i++) {
-            if (req.body.id == users[i].id) {
+            if (req.body.username == users[i].username) {
                 if(req.body.password == users[i].password){
-                    req.session.userLogged == req.body.id;
-                    req.cookie('user',req.body.id)
-                    res.redirect("/")
+                    req.session.userName = req.body.username;
+                    req.session.userId = users[i].id;
+                    if (req.body.remind != undefined) {
+                        res.cookie('remind',users[i].id,{
+                            maxAge: 60 * 1000
+                        })
+                    }
+                    return res.send("Felicidades " + users[i].username)
                 }else{
-                    res.render('user/loginUserForm', {
+                    return res.render('user/loginUserForm', {
                         title,
                         frase: "Usuario y/o contraseña invalidos",
                         username: req.body.username,
@@ -31,7 +36,7 @@ const userController = {
                 }
             }
         }
-        res.render('user/loginUserForm', {
+        return res.render('user/loginUserForm', {
             title,
             frase: "Usuario y/o contraseña invalidos",
             username: req.body.username,
