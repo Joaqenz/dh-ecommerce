@@ -26,5 +26,14 @@
     "cel": "123",
     "email": "11@asdas.com",
     "password": "asd123"
+  },
+  {
+    "id": 4,
+    "username": "asd123",
+    "firstname": "Joaquin",
+    "lastname": "Garayzabal",
+    "cel": "12398712398",
+    "email": "joacoasdf@asdljkfh.com",
+    "password": "12345a"
   }
 ]

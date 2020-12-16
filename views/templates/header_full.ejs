@@ -1,0 +1,5 @@
+<% if(req.session.userId == undefined) {%> 
+    <%- include('./header') %>
+  <% }else{ %>
+    <%- include('./header_user') %>
+<% } %>

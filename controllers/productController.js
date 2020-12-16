@@ -11,19 +11,19 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 const productController = {
     index: (req, res) => {
 		const dataProducts = readProducts()
-		return res.render('products/products', { dataProducts, title });
+		return res.render('products/products', { dataProducts, title, req});
     },
     ver: (req, res) => {
 		let id = req.params.id;
 		for (let i = 0; i < dataProducts.length; i++) {
 			if (dataProducts[i].id == id) {
-				return res.render('products/detailProduct', { producto: dataProducts[i], toThousand, title })
+				return res.render('products/detailProduct', { producto: dataProducts[i], toThousand, title, req })
 			}
 		}
 		return res.send("producto no encontrado");
 	},
     create: function (req, res, next){
-        res.render('products/addProduct', {title})
+        res.render('products/addProduct', {title, req})
     },
     store : function(req, res, next){
         let datosProducto = {
@@ -46,7 +46,7 @@ const productController = {
             }
         }
         if(idFound){
-            res.render("products/editProduct",{idFound, title})
+            res.render("products/editProduct",{idFound, title, req})
         }else{
             res.send("Producto no encontrado");
         }
@@ -86,7 +86,7 @@ const productController = {
         }
     },
     carrito: function (req, res, next){
-        res.render('products/carrito', {title})
+        res.render('products/carrito', {title, req})
     },
 }
 module.exports = (productController)

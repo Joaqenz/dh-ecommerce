@@ -37,5 +37,18 @@
     "fit": "Oversize",
     "desc": "asdfasdfasd",
     "image": "img-1606584359995.png"
+  },
+  {
+    "id": 4,
+    "name": "ari",
+    "cat": "ari",
+    "brand": "ari",
+    "size": "M",
+    "color": "White",
+    "quant": "1234",
+    "price": "15000",
+    "fit": "Oversize",
+    "desc": "producto prueba",
+    "image": "img-1607106799021.png"
   }
 ]
