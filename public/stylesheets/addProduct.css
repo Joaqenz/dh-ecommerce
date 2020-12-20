@@ -67,6 +67,18 @@
     justify-content: left;
 }
 
+.addPro div select {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    justify-content: left;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;

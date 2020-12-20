@@ -18,14 +18,32 @@
             <form class="form_add" enctype="multipart/form-data" action="/products/addproduct" method="POST">
                 <div class="addPro">
                     <div><label for="name">Nombre</label><input type="text" name="name" id="name" placeholder="Ingresa el nombre"></div>
-                    <div><label for="cat">Categoria</label><input type="text" name="cat" id="cat" placeholder="Ingresa la categoria"></div>
+                    <div>
+                        <label for="cat">Categoria</label>
+                        <select name="cat">
+                            <% for( let i = 0; i < categories.length; i++ ) { %>
+                                <option value="<%=categories[i].id%>">
+                                <%= categories[i].name %> 
+                                </option>
+                            <% } %>
+                        </select>
+                    </div>
                     <div><label for="brand">Marca</label><input type="text" name="brand" id="brand" placeholder="Ingresa la marca"></div>
                     <div><label for="size">Talle</label><input type="text" name="size" id="size" placeholder="Ingresa el talle"></div>
                     <div><label for="color">Color</label><input type="text" name="color" id="color" placeholder="Ingresa el color"></div>
                     <div><label for="quant">Cantidad</label><input type="number" name="quant" id="quant" placeholder="Ingresa la cantidad"></div>
-                    <div><label for="price">Precio</label> <input type="number" name="price" id="price" placeholder="Ingresa el precio"></div>
+                    <div><label for="price">Precio</label> <input type="number" name="price" id="price" placeholder="Ingresa el precio"></div>                    
                     <div><label for="img">Imagenes</label><input class="agregarImagen" type="file" name="img"></div>
-                    <div><label for="fit">Calce</label><input type="text" name="fit" id="fit" placeholder="Ingresa el calce"></div>
+                    <div>
+                        <label for="fit">Calce</label>
+                        <select name="fit">
+                            <% for( let i = 0; i < fit.length; i++ ) { %>
+                                <option value="<%=fit[i].id%>">
+                                <%= fit[i].name %> 
+                                </option>
+                            <% } %>
+                        </select>
+                    </div>
                     <div><label for="desc">Descripcion</label><input type="text" name="desc" id="desc" placeholder="Ingresa la descripcion"></div>
                 </div>
                 <section class="butt_add">
@@ -40,3 +58,10 @@
 </body>
 
 </html>
+
+<select name="cat">
+    <% for( let i = 0; i < categories.length; i++ ) { %>
+        <option value="<%=categories[i].id%>">
+        <%= categories[i].name %> 
+        </option>
+    <% } %>

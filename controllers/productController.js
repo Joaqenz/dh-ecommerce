@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const title = 'SportLand'
+const title = 'SportLand';
+
+let db = require('../database/models')
 
 const readProducts = require('../helpers/readProducts')
 const productsFilePath = path.join(__dirname, '../database/listado.json');
@@ -23,7 +25,11 @@ const productController = {
 		return res.send("producto no encontrado");
 	},
     create: function (req, res, next){
-        res.render('products/addProduct', {title, req})
+        db.Category.findAll()
+        db.Fit.findAll()
+            .then(function(categories,fit) {
+                return res.render('products/addProduct', {fit: fit,categories: categories, title, req})
+            })
     },
     store : function(req, res, next){
         let datosProducto = {
