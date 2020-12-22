@@ -66,7 +66,20 @@ module.exports = function(sequelize, dataTypes){
     };
     Product.associate = function(models) {
         Product.belongsTo(models.Fit, {
-            as: "fit",
+            as: "fits",
+            foreignKey: "id"
+        });
+    };
+
+    Product.associate = function(models) {
+        Product.belongsTo(models.Size, {
+            as: "sizes",
+            foreignKey: "id"
+        });
+    };
+    Product.associate = function(models) {
+        Product.belongsTo(models.Color, {
+            as: "colors",
             foreignKey: "id"
         });
     };

@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes){
-    let alias = "Fit"
+    let alias = "Size"
     let cols = {
         id:{
             type: dataTypes.INTEGER,
@@ -8,21 +8,24 @@ module.exports = function(sequelize, dataTypes){
         },
         name:{
             type: dataTypes.STRING
+        },
+        type:{
+            type: dataTypes.INTEGER
         }
     }
     let config = {
-        tableName: "fits",
+        tableName: "sizes",
         timestamps: false
     }
 
-    let Fit = sequelize.define(alias, cols, config);
+    let Size = sequelize.define(alias, cols, config);
 
-    Fit.associate = function(models) {
-        Fit.hasMany(models.Product, {
-            as: "products",
-            foreignKey: "fit_id"
+    Size.associate = function(models) {
+        Size.hasMany(models.Product, {
+            as: "sizes",
+            foreignKey: "size_id"    
         });
     }
     
-    return Fit;
+    return Size;
 }

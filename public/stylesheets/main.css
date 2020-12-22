@@ -2,38 +2,53 @@
     height: auto;
     flex-direction: column;
 }
-
 .body_contentW{
     display: flex;
     flex-direction: column;
+    background:black;
 }
-.mujer{
-    height:40%;
+.bannerWoman{
+    height: 550px;
     overflow: hidden;
     position: relative;
-    margin:-4px;
-    
+    object-fit: cover;
+    background-image: url('/images/pexels-ketut-subiyanto-44263252.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.mujer img{
+.bannerMen{
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+    background-image: url('/images/pexels-andrea-piacquadio-3771058 2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.multiply {
+    color: white;
+    mix-blend-mode: multiply;
+    background-color: rgba(0, 0, 0,0.6);
+}
+.title{
+    position: absolute;
+    height: 100%;
     width: 100%;
-    margin:0;
-    
+    padding-top: 50px;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 250px;
+    text-align: center;
+    text-transform: uppercase;
 }
-
-.mujer h2{
+.subtitle{
     position: absolute;
-    z-index:1;
-    top: 17%;
-    left: 11%;
-    font-size: xx-large;
-}
-.mujer p{
-    position: absolute;
-    z-index:1;
-    top:31%;
-    left: 11.3%;
-    font-size: small;
-    padding-right: 50%;
+    width: 100%;
+    padding-top: 350px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: white;
+    text-align: center;
 }
 .productmujerbloque{
     position: relative;
@@ -41,7 +56,6 @@
     background-color: white;
 
 }
-
 .productmujer{
     display: flex;
     justify-content: space-between;
@@ -50,9 +64,7 @@
     height: 420px;
     padding: 0px 5em;
     margin-top: 3em;
-    overflow-x: scroll;
-    
-    
+    overflow-x: scroll; 
 }
 .art{
     position: relative;
@@ -61,8 +73,7 @@
     width: 240px;
     height: 360px;
     border-radius: 16px;
-    margin-inline: 3.5%;
-    
+    margin-inline: 3.5%;  
 }
 .far.fa-heart{
     position: absolute;
@@ -77,7 +88,6 @@
 
 .art .imagen img {
     margin: auto;
-    
 }
 
 .art .textos {

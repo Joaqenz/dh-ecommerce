@@ -27,7 +27,9 @@ const productController = {
     create: function (req, res, next){
         category = db.Category.findAll()
         fit = db.Fit.findAll()
-        Promise.all([category,fit]).then(values => {
+        size = db.Size.findAll()
+        color = db.Color.findAll()
+        Promise.all([category, fit, size, color]).then(values => {
             console.log(values[1]);
             res.render('products/addProduct', {values, title, req})
         });
