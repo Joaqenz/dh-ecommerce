@@ -11,7 +11,7 @@ router.get('/', productController.index);
 router.get('/carrito', productController.carrito); 
 
 
-router.get('/addproduct',authMiddleware,productController.create);
+router.get('/addproduct',/* authMiddleware ,*/productController.create);
 
 router.post('/addproduct',upload.single("img"), productController.store);
 
@@ -25,3 +25,4 @@ router.get('/:id', productController.ver);
 
 module.exports = router;
 
+ 

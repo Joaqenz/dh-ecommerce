@@ -54,20 +54,20 @@ module.exports = function(sequelize, dataTypes){
 
     Product.associate = function(models) {
         Product.belongsTo(models.User, {
-            as: "products",
-            foreignKey: "user_id"
+            as: "users",
+            foreignKey: "id"
         });
     };
     Product.associate = function(models) {
         Product.belongsTo(models.Category, {
-            as: "products",
-            foreignKey: "user_id"
+            as: "categories",
+            foreignKey: "id"
         });
     };
     Product.associate = function(models) {
         Product.belongsTo(models.Fit, {
-            as: "products",
-            foreignKey: "fit_id"
+            as: "fit",
+            foreignKey: "id"
         });
     };
 

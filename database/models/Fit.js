@@ -11,7 +11,7 @@ module.exports = function(sequelize, dataTypes){
         }
     }
     let config = {
-        tableName: "categories",
+        tableName: "fit",
         timestamps: false
     }
 

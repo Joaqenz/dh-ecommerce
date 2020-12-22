@@ -25,11 +25,12 @@ const productController = {
 		return res.send("producto no encontrado");
 	},
     create: function (req, res, next){
-        db.Category.findAll()
-        db.Fit.findAll()
-            .then(function(categories,fit) {
-                return res.render('products/addProduct', {fit: fit,categories: categories, title, req})
-            })
+        category = db.Category.findAll()
+        fit = db.Fit.findAll()
+        Promise.all([category,fit]).then(values => {
+            console.log(values[1]);
+            res.render('products/addProduct', {values, title, req})
+        });
     },
     store : function(req, res, next){
         let datosProducto = {
@@ -96,3 +97,6 @@ const productController = {
     },
 }
 module.exports = (productController)
+
+
+

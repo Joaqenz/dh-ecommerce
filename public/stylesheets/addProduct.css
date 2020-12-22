@@ -31,9 +31,6 @@
     width: 100%;
     border-radius: 5px;
 }
-.addPro div{
-}
-
 .addPro div {
     display: flex;
     flex-wrap: wrap;
@@ -78,7 +75,6 @@
     padding: 10px;
     justify-content: left;
 }
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
