@@ -12,8 +12,10 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 
 const productController = {
     index: (req, res) => {
-		const dataProducts = readProducts()
-		return res.render('products/products', { dataProducts, title, req});
+        db.Product.findAll().then(function(products){
+            console.log(products)
+            res.render('products/products',{products:products, title, req})
+        });
     },
     ver: (req, res) => {
 		let id = req.params.id;
@@ -35,15 +37,23 @@ const productController = {
         });
     },
     store : function(req, res, next){
-        let datosProducto = {
-            id: dataProducts.length == 0 ? 1 : Number(dataProducts[dataProducts.length - 1].id) + 1,
-			...req.body,
-			image: req.file.filename
-		}
-		dataProducts.push(datosProducto);
-		dataProductsJSON = JSON.stringify(dataProducts, null, 2);
-		fs.writeFileSync(path.join(__dirname, '../database/listado.json'), dataProductsJSON);
-        res.send("Producto Creado");
+        db.Product.create({
+            name: req.body.name,
+            price: req.body.price,
+            discount: req.body.discount,
+            imglink: req.file.filename,
+            quantity: req.body.quant,
+            rating: 0,
+            description: req.body.desc,
+            category_id: req.body.cat,
+            shop_id: req.body.shop,
+            market_id: req.body.market,
+            city_id: req.body.city,
+            fit_id: req.body.fit,
+            user_id: req.body.user,
+            size_id: req.body.size,
+        })
+        res.redirect("/products");
     },
     edit : function(req, res, next){
         var idProduct = req.params.id;

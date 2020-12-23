@@ -44,11 +44,17 @@ module.exports = function(sequelize, dataTypes){
         },
         user_id:{
             type: dataTypes.INTEGER
+        },
+        size_id:{
+            type: dataTypes.INTEGER
+        },
+        color_id:{
+            type: dataTypes.INTEGER
         }
     }
     let config = {
         tableName: "products",
-        timestamps: true
+        timestamps: false
     }
     let Product = sequelize.define(alias, cols, config);
 

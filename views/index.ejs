@@ -5,7 +5,7 @@
         <%= title %>
     </title>
     <%- include('./templates/cssbasic') %>
-    <link rel='stylesheet' href='/stylesheets/main.css' />
+    <link rel='stylesheet' href='/stylesheets/main.css'/>
 </head>
 
 <body>
@@ -21,54 +21,67 @@
         <p class="subtitle">SHOP NOW</p>
       </div>
       <!--PRODUCTOS MUJER-->
-      <div class = "productmujerbloque">
-        <section class="productmujer">
-          <article class="art">
-            <i class="far fa-heart"></i>
-            <div class="imagen">
-              <img src="/images/Top.png" alt="">
-            </div>
-            <div class="textos">
-              <p class="nombreart">TOP DEPORTIVO</p>
-              <p class="precioart">$2.499,00</p>
-              <a href="/product" class="addbasket">COMPRAR</a>
-            </div>  
-          </article>
-          <article class="art">
-            <i class="far fa-heart"></i>
-            <div class="imagen">
-              <img src="/images/air-max-2090.png" alt="">
-            </div>
-            <div class="textos">
-              <p class="nombreart">ZAPATILLA NIKE RUN</p>
-              <p class="precioart">$12.499,00</p>
-              <a href="#" class="addbasket">COMPRAR</a>
-            </div>  
-          </article>
-          <article class="art">
-            <i class="far fa-heart"></i>
-            <div class="imagen">
-              <img src="/images/musculosa-primeblue.png " alt="">
-            </div>
-            <div class="textos">
-              <p class="nombreart">MUSC. PRIME BLUE</p>
-              <p class="precioart">$4.299,00</p>
-              <a href="#" class="addbasket">COMPRAR</a>
-            </div>  
-          </article>
-          <article class="art">
-            <i class="far fa-heart"></i>
-            <div class="imagen">
-              <img src="/images/Remera-Nike.png " alt="">
-            </div>
-            <div class="textos">
-              <p class="nombreart">REMERA ICON CLASH</p>
-              <p class="precioart">$4.799,00</p>
-              <a href="#" class="addbasket">COMPRAR</a>
-            </div> 
-          </article>            
-        </section>
-      </div>  
+      <div class="slider_container">
+        <ul class="slider">
+          <li id="slide1" class="slide1">
+            <% for( let index = 0; index < 4; index++ ) { %>
+              <article class="product">
+                <i class="far fa-heart"></i>
+                <div class="imagen">
+                  <img src="/images/Top.png" alt="">
+                </div>
+                <div class="textos">
+                  <p class="nombreart">TOP DEPORTIVO</p>
+                  <p class="precioart">$2.499,00</p>
+                  <a href="/product" class="addbasket">COMPRAR</a>
+                </div>  
+              </article>
+            <% } %>
+          </li>
+          <li id="slide2" class="slide2">
+            <% for( let index = 0; index < 4; index++ ) { %>
+              <article class="product">
+                <i class="far fa-heart"></i>
+                <div class="imagen">
+                  <img src="/images/Top.png" alt="">
+                </div>
+                <div class="textos">
+                  <p class="nombreart">ZAPATILLA NIKE</p>
+                  <p class="precioart">$2.499,00</p>
+                  <a href="/product" class="addbasket">COMPRAR</a>
+                </div>  
+              </article>
+            <% } %>
+          </li>
+          <li id="slide3" class="slide3">
+            <% for( let index = 0; index < 4; index++ ) { %>
+              <article class="product">
+                <i class="far fa-heart"></i>
+                <div class="imagen">
+                  <img src="/images/Top.png" alt="">
+                </div>
+                <div class="textos">
+                  <p class="nombreart">TOP DEPORTIVO</p>
+                  <p class="precioart">$2.499,00</p>
+                  <a href="/product" class="addbasket">COMPRAR</a>
+                </div>  
+              </article>
+            <% } %>
+          </li>
+        </ul>
+        <ul class="slider_menu">
+          <li>
+            <a href="#slide1"></a>
+          </li>
+          <li>
+            <a href="#slide2"></a>
+          </li>
+           <li>
+            <a href="#slide3"></a>
+          </li>
+        </ul>
+        
+      </div>
     </div>
     <!--BANNER PROMOS-->  
     <div class="bannerpromo">
@@ -93,53 +106,66 @@
           <p class="subtitle">SHOP NOW</p>
         </div>
         <!--PRODUCTOS HOMBRE-->
-        <div class="producthombrebloque">
-          <section class="producthombre">
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Short hombre.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">SHORT M10</p>
-                <p class="precioart">$2.299,00</p>
-                <a href="#" class="addbasket">COMPRAR</a>
-              </div>                    
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/nike-shoes hombre.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">ZAPATILLA NIKE RUN</p>
-                <p class="precioart">$12.499,00</p>
-                <a href="#" class="addbasket">COMPRAR</a>
-              </div> 
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/tracksuit-adidas.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">CAMPERA ADIDAS NEG.</p>
-                <p class="precioart">$3.250,00</p>
-                <a href="#" class="addbasket">COMPRAR</a>
-              </div> 
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Remera Hombre.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">REMERA TECH PACK</p>
-                <p class="precioart">$4.799,00</p>
-                <a href="#" class="addbasket">COMPRAR</a>
-              </div> 
-            </article>                     
-          </section>
+        <div class="slider_container">
+          <ul class="slider">
+            <li id="slide1" class="slide1">
+              <% for( let index = 0; index < 4; index++ ) { %>
+                <article class="product">
+                  <i class="far fa-heart"></i>
+                  <div class="imagen">
+                    <img src="/images/Top.png" alt="">
+                  </div>
+                  <div class="textos">
+                    <p class="nombreart">TOP DEPORTIVO</p>
+                    <p class="precioart">$2.499,00</p>
+                    <a href="/product" class="addbasket">COMPRAR</a>
+                  </div>  
+                </article>
+              <% } %>
+            </li>
+            <li id="slide2" class="slide2">
+              <% for( let index = 0; index < 4; index++ ) { %>
+                <article class="product">
+                  <i class="far fa-heart"></i>
+                  <div class="imagen">
+                    <img src="/images/Top.png" alt="">
+                  </div>
+                  <div class="textos">
+                    <p class="nombreart">ZAPATILLA NIKE</p>
+                    <p class="precioart">$2.499,00</p>
+                    <a href="/product" class="addbasket">COMPRAR</a>
+                  </div>  
+                </article>
+              <% } %>
+            </li>
+            <li id="slide3" class="slide3">
+              <% for( let index = 0; index < 4; index++ ) { %>
+                <article class="product">
+                  <i class="far fa-heart"></i>
+                  <div class="imagen">
+                    <img src="/images/Top.png" alt="">
+                  </div>
+                  <div class="textos">
+                    <p class="nombreart">TOP DEPORTIVO</p>
+                    <p class="precioart">$2.499,00</p>
+                    <a href="/product" class="addbasket">COMPRAR</a>
+                  </div>  
+                </article>
+              <% } %>
+            </li>
+          </ul>
+          <ul class="slider_menu">
+            <li>
+              <a href="#slide1"></a>
+            </li>
+            <li>
+              <a href="#slide2"></a>
+            </li>
+             <li>
+              <a href="#slide3"></a>
+            </li>
+          </ul>
+          
         </div>
     </div>
   </div>

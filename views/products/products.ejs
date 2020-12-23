@@ -21,7 +21,7 @@
               <a href="#">Los más vendidos</a>
             </div>
             <div class="h_filter_article">
-              <p>54 Articulos</p>
+              <p><%= products.length %> Articulos</p>
             </div>
           </div>
         </div>
@@ -78,116 +78,19 @@
           </div>
           <div class="products">
             <!-- Producto -->
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Top.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">TOP DEPORTIVO</p>
-                <p class="precioart">$2.499,00</p>
-                <a href="/product" class="addbasket">COMPRAR</a>
-              </div>  
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Top.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">TOP DEPORTIVO</p>
-                <p class="precioart">$2.499,00</p>
-                <a href="/product" class="addbasket">COMPRAR</a>
-              </div>  
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Top.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">TOP DEPORTIVO</p>
-                <p class="precioart">$2.499,00</p>
-                <a href="/product" class="addbasket">COMPRAR</a>
-              </div>  
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Top.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">TOP DEPORTIVO</p>
-                <p class="precioart">$2.499,00</p>
-                <a href="/product" class="addbasket">COMPRAR</a>
-              </div>  
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Top.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">TOP DEPORTIVO</p>
-                <p class="precioart">$2.499,00</p>
-                <a href="/product" class="addbasket">COMPRAR</a>
-              </div>  
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Top.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">TOP DEPORTIVO</p>
-                <p class="precioart">$2.499,00</p>
-                <a href="/product" class="addbasket">COMPRAR</a>
-              </div>  
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Top.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">TOP DEPORTIVO</p>
-                <p class="precioart">$2.499,00</p>
-                <a href="/product" class="addbasket">COMPRAR</a>
-              </div>  
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Top.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">TOP DEPORTIVO</p>
-                <p class="precioart">$2.499,00</p>
-                <a href="/product" class="addbasket">COMPRAR</a>
-              </div>  
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Top.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">TOP DEPORTIVO</p>
-                <p class="precioart">$2.499,00</p>
-                <a href="/product" class="addbasket">COMPRAR</a>
-              </div>  
-            </article>
-            <article class="art">
-              <i class="far fa-heart"></i>
-              <div class="imagen">
-                <img src="/images/Top.png" alt="">
-              </div>
-              <div class="textos">
-                <p class="nombreart">TOP DEPORTIVO</p>
-                <p class="precioart">$2.499,00</p>
-                <a href="/product" class="addbasket">COMPRAR</a>
-              </div>  
-            </article>
+            <% for( let i = 0; i < products.length; i++ ) { %>
+              <article class="art">
+                <i class="far fa-heart"></i>
+                <div class="imagen">
+                  <img src="/images/stock/<%= products[i].dataValues.imglink %>" alt="">
+                </div>
+                <div class="textos">
+                  <p class="nombreart"><%= products[i].dataValues.name %></p>
+                  <p class="precioart"><%= products[i].dataValues.price %></p>
+                  <a href="/product" class="addbasket">COMPRAR</a>
+                </div>  
+              </article>
+          <% } %>
           </div>
         </div>
       </div>
