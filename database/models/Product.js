@@ -58,35 +58,25 @@ module.exports = function(sequelize, dataTypes){
     Product.associate = function(models) {
         Product.belongsTo(models.User, {
             as: "users",
-            foreignKey: "id"
+            foreignKey: "user_id"
         });
-    };
-    Product.associate = function(models) {
         Product.belongsTo(models.Category, {
             as: "categories",
-            foreignKey: "id"
+            foreignKey: "category_id"
         });
-    };
-    Product.associate = function(models) {
         Product.belongsTo(models.Fit, {
             as: "fits",
-            foreignKey: "id"
+            foreignKey: "fit_id"
         });
-    };
-
-    Product.associate = function(models) {
         Product.belongsTo(models.Size, {
             as: "sizes",
-            foreignKey: "id"
+            foreignKey: "size_id"
         });
-    };
-    Product.associate = function(models) {
         Product.belongsTo(models.Color, {
             as: "colors",
-            foreignKey: "id"
+            foreignKey: "color_id"
         });
     };
-
 
     return Product;
 }

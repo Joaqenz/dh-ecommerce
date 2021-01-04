@@ -31,7 +31,7 @@
     width: 100%;
     border-radius: 5px;
 }
-.addPro div {
+.addPro .addPro_option {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -39,8 +39,7 @@
     align-items: center;
     width: 100%;
 }
-
-.addPro div label {
+.addPro .addPro_option .addPro_label {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 20px;
@@ -52,7 +51,7 @@
     justify-content: left;
 }
 
-.addPro div input {
+.addPro .addPro_option .option {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -61,19 +60,22 @@
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
-    justify-content: left;
+    justify-content: space-around;
 }
 
-.addPro div select {
+.size_check{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-end;
-    width: 60%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
+    justify-content: start;
+    align-items: center;
+    width: 50px;
+}
+.size_check .size_label{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
     justify-content: left;
+    padding-right: 5px;
 }
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {

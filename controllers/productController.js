@@ -18,7 +18,13 @@ const productController = {
         });
     },
     ver: (req, res) => {
-        db.Product.findByPk(req.params.id,{include: [{association: "categories"}]})
+        db.Product.findByPk(req.params.id,{include: [
+            {association: "users"},
+            {association: "categories"},
+            {association: "fits"},
+            {association: "sizes"},
+            {association: "colors"}
+        ]})
         .then(function(product){
             console.log(product)
             res.render('products/detailProduct',{product:product,toThousand, title, req})
