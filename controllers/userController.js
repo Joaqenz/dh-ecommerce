@@ -106,7 +106,7 @@ const userController = {
     },
     list: function(req,res,next){
         console.log(req.query);
-        res.render("user/listUsers",{users, title});
+        res.render("user/listUsers",{req, users, title});
     },
     check: function(req,res,next){
         if (req.session.userId == undefined){

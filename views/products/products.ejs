@@ -77,18 +77,20 @@
             </div>
           </div>
           <div class="products">
-            <!-- Producto -->
+            <!-- <!-- Producto -->
             <% for( let i = 0; i < products.length; i++ ) { %>
-              <article class="art">
+              <article class="product">
                 <i class="far fa-heart"></i>
-                <div class="imagen">
-                  <img src="/images/stock/<%= products[i].dataValues.imglink %>" alt="">
+                <div class="product_inside">
+                  <div class="product_image_conteiner">
+                    <img src="/images/stock/<%= products[i].dataValues.imglink%>" alt="">
+                  </div>
+                  <div class="product_text">
+                    <p class="product_name"><%= products[i].dataValues.name %></p>
+                    <p class="product_price">$<%= products[i].dataValues.price %></p>
+                    <a href="/products/<%= products[i].dataValues.id %>" class="addbasket">COMPRAR</a>
+                  </div>  
                 </div>
-                <div class="textos">
-                  <p class="nombreart"><%= products[i].dataValues.name %></p>
-                  <p class="precioart"><%= products[i].dataValues.price %></p>
-                  <a href="/product" class="addbasket">COMPRAR</a>
-                </div>  
               </article>
           <% } %>
           </div>

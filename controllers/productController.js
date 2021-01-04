@@ -18,13 +18,11 @@ const productController = {
         });
     },
     ver: (req, res) => {
-		let id = req.params.id;
-		for (let i = 0; i < dataProducts.length; i++) {
-			if (dataProducts[i].id == id) {
-				return res.render('products/detailProduct', { producto: dataProducts[i], toThousand, title, req })
-			}
-		}
-		return res.send("producto no encontrado");
+        db.Product.findByPk(req.params.id,{include: [{association: "categories"}]})
+        .then(function(product){
+            console.log(product)
+            res.render('products/detailProduct',{product:product,toThousand, title, req})
+        });
 	},
     create: function (req, res, next){
         category = db.Category.findAll()
@@ -52,7 +50,8 @@ const productController = {
             fit_id: req.body.fit,
             user_id: req.body.user,
             size_id: req.body.size,
-        })
+            color_id: req.body.color_id
+        });
         res.redirect("/products");
     },
     edit : function(req, res, next){

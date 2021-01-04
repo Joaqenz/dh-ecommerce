@@ -25,7 +25,7 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.STRING
         },
         create_time:{
-            type: dataTypes.STRING
+            type: dataTypes.DATE
         },
         type:{
             type: dataTypes.BOOLEAN

@@ -218,7 +218,7 @@
           <!-- Menu Foto -->
           <div class="photo_container">
             <div class="photo_box">
-              <img src="/images/products/<%=producto.image %> " alt="">
+              <img src="/images/products/<%=product.dataValues.imglink %> " alt="">
             </div>
             <div class="arrows_container">
               <i class="fas fa-chevron-left"></i>
@@ -228,13 +228,13 @@
           <!-- Menu Info -->
           <div class="info_container">
             <div class="info_tittle">
-              <h2><%= producto.name %></h2>
+              <h2><%= product.dataValues.name %></h2>
             </div>
             <div class="info_price">
-              <h3>$<%= toThousand(producto.price) %></h3>
+              <h3>$<%= toThousand(product.dataValues.price) %></h3>
             </div>
             <div class="info_disponible">
-              <% if (producto.quant > 0){ %>
+              <% if (product.dataValues.quantity > 0){ %>
                 <p>Disponible <i class="fas fa-check"></i></p>
               <% } else { %>
                 <p>Disponible <i class="fas fa-times"></i></p>
@@ -245,19 +245,19 @@
                 <p>Color:</p>
               </div>
               <div class="info_color_boxes">
-                <% if (producto.color.includes('Black')) { %>
+                <% if (product.dataValues.color_id == 1 ) { %>
                   <div class="color_box1"></div>
                 <% } %>
-                <% if (producto.color.includes('White')) { %>
+                <% if (product.dataValues.color_id == 2 ) { %>
                   <div class="color_box2"></div>
                 <% } %>
-                <% if (producto.color.includes('Red')) { %>
+                <% if (product.dataValues.color_id == 3 ) { %>
                   <div class="color_box3"></div>
                 <% } %>
-                <% if (producto.color.includes('Blue')) { %>
+                <% if (product.dataValues.color_id == 4 ) { %>
                   <div class="color_box4"></div>
                 <% } %>
-                <% if (producto.color.includes('Green')) { %>
+                <% if (product.dataValues.color_id == 5 ) { %>
                   <div class="color_box5"></div>
                 <% } %>
               </div>
@@ -267,22 +267,22 @@
                 <p>Selecciona tu talle</p>
               </div>
               <div class="info_size_boxes">
-                <% if (producto.size.includes('S')) { %>
+                <% if (product.dataValues.size == 1 ) { %>
                 <div class="size_box1">
                   <p>S</p>
                 </div>
                 <% } %>
-                <% if (producto.size.includes('M')) { %>
+                <% if (product.dataValues.size == 2 ) { %>
                 <div class="size_box2">
                   <p>M</p>
                 </div>
                 <% } %>
-                <% if (producto.size.includes('L')) { %>
+                <% if (product.dataValues.size == 3 ) { %>
                 <div class="size_box3">
                   <p>L</p>
                 </div>
                 <% } %>
-                <% if (producto.size.includes('XL')) { %>
+                <% if (product.dataValues.size == 4 ) { %>
                 <div class="size_box4">
                   <p>XL</p>
                 </div>
@@ -295,7 +295,7 @@
               </div>
               <div class="info_fit_boxes">
                 <div class="fit_box1">
-                  <% if (producto.fit == 'Skinny'){ %>                
+                  <% if (product.dataValues.fit_id == 2){ %>                
                     <div class="fit_bar_active"></div>
                   <% } else { %> 
                     <div class="fit_bar"></div>  
@@ -305,7 +305,7 @@
                   </div>
                 </div>
                 <div class="fit_box2">
-                  <% if (producto.fit == 'Slim'){ %>                
+                  <% if (product.dataValues.fit_id == 3){ %>                
                     <div class="fit_bar_active"></div>
                   <% } else { %> 
                     <div class="fit_bar"></div>  
@@ -315,7 +315,7 @@
                   </div>
                 </div>
                 <div class="fit_box3">
-                  <% if (producto.fit == 'Regular'){ %>                
+                  <% if (product.dataValues.fit_id == 4){ %>                
                     <div class="fit_bar_active"></div>
                   <% } else { %> 
                     <div class="fit_bar"></div>  
@@ -325,7 +325,7 @@
                   </div>
                 </div>
                 <div class="fit_box4">
-                  <% if (producto.fit == 'Oversize'){ %>                
+                  <% if (product.dataValues.fit_id == 5){ %>                
                     <div class="fit_bar_active"></div>
                   <% } else { %> 
                     <div class="fit_bar"></div>  

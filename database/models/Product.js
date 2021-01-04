@@ -33,9 +33,6 @@ module.exports = function(sequelize, dataTypes){
         shop_id:{
             type: dataTypes.INTEGER
         },
-        market_id:{
-            type: dataTypes.INTEGER
-        },
         city_id:{
             type: dataTypes.INTEGER
         },
