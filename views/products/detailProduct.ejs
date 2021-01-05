@@ -3,7 +3,7 @@
   <head>
     <title><%= title %></title>
     <%- include('../templates/cssbasic') %>
-    <link rel='stylesheet' href='/stylesheets/product.css' />
+    <link rel='stylesheet' href='/stylesheets/detailProduct.css' />
   </head>
   <body>
   <!-- HEADER -->
@@ -228,7 +228,7 @@
           <!-- Menu Info -->
           <div class="info_container">
             <div class="info_category">
-              <h5><%= product.categories.name %></h5>
+              <a href=""><%= product.categories.name %></a>
             </div>
             <div class="info_tittle">
               <h2><%= product.name %></h2>
