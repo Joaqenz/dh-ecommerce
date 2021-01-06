@@ -225,6 +225,7 @@
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
+    background-color: blue;
 }
 
 .photo_container img{
@@ -252,7 +253,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: green;
+    flex-grow: 0.2;
 }
 .info_category{
     background-color: red;
@@ -267,13 +268,34 @@
 
 }
 .info_tittle h2{
-    text-transform: uppercase   ;
+    text-transform: uppercase;
     font-family:"Roboto Condensed";
-    font-size: 64px;
+    font-size: 54px;
+}
+.info_price{
+    display: flex;
+    flex-direction: column;
+}
+.info_price_discount{
+    font-weight: 300;
+    padding-left: 10px;
+    color: #7443FE;
+}
+.info_price_old{
+    text-decoration-line: line-through;
+}
+.info_price_ok{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .info_price h3{
     font-weight: 300;
-    font-size: 56px;
+    font-size: 50px;
+}
+.info_price h4{
+    font-weight: 300;
+    font-size: 20px;
 }
 
 .info_disponible{
@@ -393,6 +415,7 @@
 .info_fit_boxes{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 .fit_box1,
 .fit_box2,
@@ -442,10 +465,11 @@
     background-color: #7443FE;
     height: 100%;
     border-radius: 10px;    
-}   
-.info_btn_buy{
-    width: 330px;
 }
+.info_btn_size{
+    width: 90%;
+}
+
 .info_btn_love{
     width: 50px;
 }

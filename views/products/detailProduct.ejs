@@ -227,19 +227,25 @@
           </div>
           <!-- Menu Info -->
           <div class="info_container">
-            <div class="info_category">
-              <a href=""><%= product.categories.name %></a>
-            </div>
             <div class="info_tittle">
+              <div class="info_category">
+                <a href=""><%= product.categories.name %></a>
+              </div>
               <h2><%= product.name %></h2>
             </div>
             <div class="info_price">
               <% if (product.discount == 0) { %>
-                <h3>$<%= toThousand(product.price) %></h3>
+                <div>
+                  <h3>$<%= toThousand(product.price) %></h3>
+                </div>
               <% }else{ %>
-                <h3>$<%= toThousand(product.price - (product.price / 100 * product.discount)) %></h3>
-                <h4><%= product.discount %>% OFF</h4>
-                <h4>$<%= toThousand(product.price) %></h4>
+                <div class="info_price_old">
+                  <h4>$<%= toThousand(product.price) %></h4>
+                </div>
+                <div class="info_price_ok">
+                  <h3>$<%= toThousand(product.price - (product.price / 100 * product.discount)) %></h3>
+                  <h4 class="info_price_discount"><%= product.discount %>% OFF</h4>
+                </div>
               <% } %> 
             </div>
             <div class="info_disponible">
@@ -351,7 +357,7 @@
               </div>
             </div>
             <div class="info_btn_container">
-              <a href="">
+              <a class="info_btn_size" href="">
                 <div class="info_btn_buy">
                   <p>Agregar al carrito</p>
                 </div>
