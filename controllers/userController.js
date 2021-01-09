@@ -1,11 +1,8 @@
 const title = 'Sportland';
-
-const fs = require('fs');
-
-const readUsers = require('../helpers/readUsers')
-const users = readUsers();
-
-const {check, validationResult, body} = require('express-validator');
+let db = require('../database/models')
+const {validationResult} = require("express-validator");
+const bcrypt = require('bcryptjs');
+const saltRounds = 10;
 
 
 const userController = {
@@ -15,104 +12,98 @@ const userController = {
     showLoginForm: function (req, res, next){
         res.render('user/loginUserForm', { title })
     },
-    login: function (req, res, next){
-        for (let i = 0; i < users.length; i++) {
-            if (req.body.username == users[i].username) {
-                if(req.body.password == users[i].password){
-                    req.session.userName = req.body.username;
-                    req.session.firstName = req.body.firstname;
-                    req.session.userId = users[i].id;
-                    if (req.body.remind != undefined) {
-                        res.cookie('remind',users[i].id,{
-                            maxAge: 60 * 1000
-                        })
-                    }
-                    return res.send("Felicidades " + users[i].username)
-                }else{
-                    return res.render('user/loginUserForm', {
-                        title,
-                        frase: "Usuario y/o contraseña invalidos",
-                        username: req.body.username,
-                    });
-                }
-            }
-        }
-        return res.render('user/loginUserForm', {
-            title,
-            frase: "Usuario y/o contraseña invalidos",
-            username: req.body.username,
-        });
-    },
     showRegisterForm: function (req, res, next){
-        res.render('user/registerUserForm', { users, title })
+        res.render('user/registerUserForm', { title })
     },
-    register : function(req,res,next){
+    login: function (req, res, next){
+        db.User.findOne({
+            where:{
+                username: req.body.username
+            }
+        }).then(function(user){
+            if(user != null && bcrypt.compareSync(req.body.password, user.password)){
+                console.log('pase x aca');
+                req.session.userLogged = user
+                if (req.body.remind != undefined) {
+                    res.cookie('remind',user.id,{
+                        maxAge: 60 * 1000
+                    })
+                }
+                console.log(req.session);
+                res.redirect("/")
+            }else{
+                console.log('tambien x aca');
+                res.render('user/loginUserForm', {
+                    title,
+                    frase: "Usuario y/o contraseña invalidos",
+                    username: req.body.username,
+                });
+            }
+        })
+    },
+    register: function(req,res,next){
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            let userData = {}
-            userData.id = users.length == 0 ? 1 : Number(users[users.length - 1].id) + 1;
-            userData.username = req.body.username;
-            userData.firstname = req.body.firstname;
-            userData.lastname = req.body.lastname;
-            userData.cel = req.body.cel;
-            userData.email = req.body.email;
-            userData.password = req.body.password;
-            users.push(userData);
-            let usersJSON = JSON.stringify(users, null, 2);
-            fs.writeFileSync(__dirname + "/../database/users.json", usersJSON);
-            res.redirect("/user/list")
+            db.User.create({
+                username: req.body.username,
+                firstname: req.body.firstname,
+                lastname: req.body.lastname,
+                email: req.body.email,
+                celular: req.body.cel,
+                password: bcrypt.hashSync(req.body.password, saltRounds),
+                create_time: Date.now(),
+                type: 0
+            }).then(function(user){
+                res.redirect('/user/list') 
+            })
         } else {
             res.render('user/registerUserForm', { req, title, errors: errors.errors })
         }
         
     },
     edit : function(req,res,next){
-        var idUser = req.params.id;
-        var userFound;
-        for(var i=0;i < users.length;i++){
-            if(users[i].id == idUser){
-                userFound = users[i];
-                break;
+        db.User.findByPk(req.params.id).then(function(user){
+            if(user != null){
+                res.render("user/editUserForm",{req, user, title})
+            }else{
+                res.send("Usuario invalido");
             }
-        }
-        if(userFound){
-            res.render("user/editUserForm",{userFound, title})
-        }else{
-            res.send("Usuario invalido");
-        }
+        })
+        
     },
     update:function(req,res,next){
-        var idUser = req.params.id;
-        var editUser = users.map(function(user){
-            if(user.id == idUser){
-                let userEditado = req.body;
-                userEditado.id = idUser;
-                return userEditado;
+        db.User.update({
+            username: req.body.username,
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            celular: req.body.cel,
+        },{
+            where: {
+                id: req.params.id
             }
-            return user;
         });
-        editUsersJSON = JSON.stringify(editUser, null, 2);
-        fs.writeFileSync(__dirname + "/../database/users.json",editUsersJSON);
-        res.redirect("/user/list")
+        res.redirect("/user/list"); 
     },
     delete : function(req,res,next){
-        var idUser = req.params.id;
-        var usersDestroy = users.filter(function(user){
-            return user.id != idUser;
-        });
-        usersDestroyJSON = JSON.stringify(usersDestroy);
-        fs.writeFileSync(__dirname + "/../database/users.json",usersDestroyJSON);
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
         res.redirect("/user/list")
     },
     list: function(req,res,next){
-        console.log(req.query);
-        res.render("user/listUsers",{req, users, title});
+        db.User.findAll().then(user => {
+            console.log(user);
+            res.render("user/listUsers",{user:user, req, title});
+        });
     },
     check: function(req,res,next){
-        if (req.session.userId == undefined){
+        if (req.session.userLogged == undefined){
             res.send('No estas logeado');
         }else{
-            res.send('El usuario logeado es: ' + req.session.userName);
+            res.send('El usuario logeado es: ' + req.session.userLogged.username);
         }
     },
     logout: function (req, res) {

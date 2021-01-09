@@ -12,13 +12,13 @@
 <%- include('../templates/header_full') %>
   <div class="body_container">
     <ul>
-        <% users.forEach(function(user){ %>
+        <% for( let i = 0; i < user.length; i++ ) { %>
             <li>
-                Nombre: <%= user.username %> - 
-                Email: <%= user.email %> - 
-                <a href="/user/edit/<%= user.id %>">EDITAR</a> - <a href="/user/delete/<%= user.id %>">BORRAR</a>        
+                Nombre: <%= user[i].username %> - 
+                Email: <%= user[i].email %> - 
+                <a href="/user/edit/<%= user[i].id %>">EDITAR</a> - <a href="/user/delete/<%= user[i].id %>">BORRAR</a>        
             </li>
-        <% }); %>
+        <% } %>
         </ul>
   </div>
 <!-- FOOTER -->

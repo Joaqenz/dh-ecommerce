@@ -22,7 +22,7 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.INTEGER
         },
         password:{
-            type: dataTypes.STRING
+            type: dataTypes.STRING(100)
         },
         create_time:{
             type: dataTypes.DATE
