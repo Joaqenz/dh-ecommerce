@@ -14,23 +14,102 @@
   <%- include('../templates/header_full') %>
     <div class="body_container">
         <div class="body_content">
-            <h1>Carga de Productos</h1>
-            <form class="form_add" enctype="multipart/form-data" action="/products/addproduct" method="POST">
+            <h1>Edicion del Producto N <%= product.id %> </h1>
+            <form class="form_add" enctype="multipart/form-data" action="/products/edit/<%= product.id %>" method="POST">
                 <div class="addPro">
-                    <div><label for="name">Nombre</label><input type="text" name="name" id="name" placeholder="Ingresa el nombre"></div>
-                    <div><label for="cat">Categoria</label><input type="text" name="cat" id="cat" placeholder="Ingresa la categoria"></div>
-                    <div><label for="brand">Marca</label><input type="text" name="brand" id="brand" placeholder="Ingresa la marca"></div>
-                    <div><label for="size">Talle</label><input type="text" name="size" id="size" placeholder="Ingresa el talle"></div>
-                    <div><label for="color">Color</label><input type="text" name="color" id="color" placeholder="Ingresa el color"></div>
-                    <div><label for="quant">Cantidad</label><input type="number" name="quant" id="quant" placeholder="Ingresa la cantidad"></div>
-                    <div><label for="price">Precio</label> <input type="number" name="price" id="price" placeholder="Ingresa el precio"></div>
-                    <div><label for="img">Imagenes</label><input class="agregarImagen" type="file" name="img" value="agregarImagen"></div>
-                    <div><label for="fit">Calce</label><input type="text" name="fit" id="fit" placeholder="Ingresa el calce"></div>
-                    <div><label for="desc">Descripcion</label><input type="text" name="desc" id="desc" placeholder="Ingresa la descripcion"></div>
+                    <div class="addPro">
+                        <div class="addPro_option">
+                            <label class="addPro_label" for="name">Nombre</label>
+                            <input class="option" type="text" name="name" id="name" value="<%= product.name %>">  
+                        </div>
+                        <div class="addPro_option">
+                            <label class="addPro_label" for="price">Precio</label>
+                            <input class="option" type="number" name="price" id="price" value="<%= product.price %>">
+                        <div class="addPro_option">
+                            <label class="addPro_label" for="discount">Descuento</label>
+                            <input class="option" type="number" name="discount" id="discount" value="<%= product.discount %>">
+                        </div>
+                        <div class="addPro_option">
+                            <label class="addPro_label" for="cat">Categoria</label>
+                            <select class="option" name="cat">
+                                <% for( let i = 0; i < category.length; i++ ) { %>
+                                    <% if (category[i].id == product.category_id) { %>
+                                        <option value="<%= product.category_id %>" selected>
+                                            <%= category[i].name %> 
+                                        </option>
+                                    <% } else { %>
+                                        <option value="<%= product.category_id %>">
+                                            <%= category[i].name %> 
+                                        </option>
+                                    <% } %> 
+                                <% } %>
+                            </select>
+                        </div>
+                        <div class="addPro_option">
+                            <label class="addPro_label" for="fit">Calce</label>
+                            <select class="option" name="fit">
+                                <% for( let i = 0; i < fit.length; i++ ) { %>
+                                    <% if (fit[i].id == product.fit_id) { %>
+                                        <option value="<%= product.fit_id %>" selected>
+                                            <%= fit[i].name %> 
+                                        </option>
+                                    <% } else { %>
+                                        <option value="<%= product.fit_id %>">
+                                            <%= fit[i].name %> 
+                                        </option>
+                                    <% } %> 
+                                <% } %>
+                            </select>
+                        </div>
+                        <div class="addPro_option">
+                            <label class="addPro_label" for="brand">Marca</label>
+                            <input class="option" type="text" name="brand" id="brand" value="<%= product.brand %>">
+                        </div>
+                        <div class="addPro_option">
+                            <label class="addPro_label" for="color_id">Color</label>
+                            <select class="option" name="color_id">
+                                <% for( let i = 0; i < color.length; i++ ) { %>
+                                    <% if (color[i].id == product.color_id) { %>
+                                        <option value="<%= product.color_id %>" selected>
+                                            <%= color[i].name %> 
+                                        </option>
+                                    <% } else { %>
+                                        <option value="<%= product.color_id %>">
+                                            <%= color[i].name %> 
+                                        </option>
+                                    <% } %> 
+                                <% } %>
+                            </select>
+                        </div>
+                        <div class="addPro_option">
+                            <label class="addPro_label" for="quant">Cantidad</label>
+                            <input class="option" type="number" name="quant" id="quant" value="<%= product.quantity %>">
+                        </div>                
+                        <div class="addPro_option">
+                            <label class="addPro_label" for="img">Imagen</label>
+                            <input class="option" class="agregarImagen" type="file" name="img" value="<%= product.imglink %>">
+                        </div>    
+                        <div class="addPro_option">
+                            <label class="addPro_label" for="desc">Descripcion</label>
+                            <input class="option" class="desc" type="text" name="desc" id="desc" value="<%= product.description %>">
+                            </div>
+                        <div class="addPro_option">
+                            <label class="addPro_label" for="size">Talle</label>
+                            <div class="option">
+                                    <% for( let i = 0; i < size.length; i++ ) { %>
+                                        <div class="size_check">
+                                            <label class="size_label" for="<%= size[i].id %>"><%= size[i].name %></label>
+                                            <input name="size[]" type="checkbox" id="<%= size[i].id %>" value="<%= size[i].id %>">
+                                        </div>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <section class="butt_add">
                     <button class="reset" type="reset">Resetear Formulario</button>
-                    <button class="agregarProducto" type="submit">Agregar Producto</button>
+                    <button class="agregarProducto" type="submit">Editar Producto</button>
                 </section>
             </form> 
         </div>

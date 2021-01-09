@@ -12,6 +12,9 @@ module.exports = function(sequelize, dataTypes){
         price:{
             type: dataTypes.INTEGER
         },
+        brand:{
+            type: dataTypes.STRING
+        },
         discount:{
             type: dataTypes.INTEGER
         },
