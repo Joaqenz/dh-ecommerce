@@ -22,7 +22,6 @@ const userController = {
             }
         }).then(function(user){
             if(user != null && bcrypt.compareSync(req.body.password, user.password)){
-                console.log('pase x aca');
                 req.session.userLogged = user
                 if (req.body.remind != undefined) {
                     res.cookie('remind',user.id,{
@@ -32,7 +31,6 @@ const userController = {
                 console.log(req.session);
                 res.redirect("/")
             }else{
-                console.log('tambien x aca');
                 res.render('user/loginUserForm', {
                     title,
                     frase: "Usuario y/o contraseña invalidos",
@@ -54,7 +52,7 @@ const userController = {
                 create_time: Date.now(),
                 type: 0
             }).then(function(user){
-                res.redirect('/user/list') 
+                res.redirect('/user/login') 
             })
         } else {
             res.render('user/registerUserForm', { req, title, errors: errors.errors })
@@ -71,7 +69,7 @@ const userController = {
         })
         
     },
-    update:function(req,res,next){
+    update: async function(req,res,next){
         db.User.update({
             username: req.body.username,
             firstname: req.body.firstname,
@@ -83,7 +81,7 @@ const userController = {
                 id: req.params.id
             }
         });
-        res.redirect("/user/list"); 
+        await res.redirect("/user/list"); 
     },
     delete : function(req,res,next){
         db.User.destroy({
