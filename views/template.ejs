@@ -4,17 +4,61 @@
     <title>
         <%= title %>
     </title>
+    <meta charset="UTF-8">
     <%- include('./templates/cssbasic') %>
+    <link rel='stylesheet' href='/stylesheets/acordeon.css'/>
+    <link rel='stylesheet' href='/stylesheets/main.css'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
 <!-- HEADER -->
-  <%- include('./templates/header_user') %>
-  <div class="body_container">
-      
+<%- include('./templates/header_full') %>
+  <div class="body_container">  
+    <div class="contenedor-acordeon" id="acordeon-content">
+      <div class="acordeon">
+        <div class="acordeon__head"><img class="acordeon__head--logo" src="https://image.flaticon.com/icons/svg/438/438981.svg" alt="web design"/>
+          <p class="acordeon__head--title">Web Design</p><span class="fa fa-chevron-down icon"></span>
+        </div>
+        <div class="acordeon__body">
+          <div class="acordeon__body__menu">
+            <li><a href="#">Photoshop</a></li>
+            <li><a href="#">Illustrator</a></li>
+            <li><a href="#">Web Layout</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="acordeon">
+        <div class="acordeon__head"><img class="acordeon__head--logo" src="https://image.flaticon.com/icons/svg/186/186303.svg" alt="development"/>
+          <p class="acordeon__head--title">FrontEnd Development</p><span class="fa fa-chevron-down icon"></span>
+        </div>
+        <div class="acordeon__body">
+          <div class="acordeon__body__menu">
+            <li><a href="#">HTML5</a></li>
+            <li><a href="#">CSS3</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="acordeon">
+        <div class="acordeon__head"><img class="acordeon__head--logo" src="https://image.flaticon.com/icons/svg/438/438949.svg" alt="responsive"/>
+          <p class="acordeon__head--title">Responsive Design</p><span class="fa fa-chevron-down icon"></span>
+        </div>
+        <div class="acordeon__body">
+          <div class="acordeon__body__menu">
+            <li><a href="#">Desktop</a></li>
+            <li><a href="#">Mobile</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Other</a></li>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 <!-- FOOTER -->
     <%- include('./templates/footer') %>
+    <script src="/javascripts/acordeon.js"></script>
 </body>
 
 </html>

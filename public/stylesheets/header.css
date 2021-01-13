@@ -37,21 +37,12 @@ header nav .menu .link .link_nov{
   padding: 16px 22px;
   color: black;
 }
-
-/* ? Hovers y Focus */
-.link_m:hover ~ .menu_desplegable._mujer{
+.link_ok{
+  display: flex;
+}
+.active{
   z-index: 99;
 }
-.link_m:focus ~ .menu_desplegable._mujer{
-  z-index: 99;
-}
-.link_h:hover ~ .menu_desplegable._hombre{
-  z-index: 99;
-}
-.link_h:focus ~ .menu_desplegable._hombre{
-  z-index: 99;
-}
-
 /** MENU DERECHA */
 .auth{
   display: flex;
