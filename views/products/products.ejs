@@ -4,6 +4,8 @@
     <title><%= title %></title>
     <%- include('../templates/cssbasic') %>
     <link rel='stylesheet' href='/stylesheets/products.css' />
+    <link rel='stylesheet' href='/stylesheets/acordeon.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
   </head>
   <body>
   <!-- HEADER -->
@@ -32,75 +34,81 @@
                 <a href="">aplicar filtros</a>
             </div>
             <div class="filter_bot">
-              <ul>
-                <div class="filter_sec">
-                  <div>
-                    <li>ordenar por</li>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div>
-                    <div>
-                      <li><a href="">opcion1</a></li>
-                      <li><a href="">opcion1</a></li>
-                      <li><a href="">opcion1</a></li>
-                      <li><a href="">opcion1</a></li>
-                    </div>
-                  </div>
-                </div>
-                <div class="filter_sec">
-                  <div>
-                    <li>categoria</li>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="filter_sec">
-                  <div>
-                    <li>precio</li>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="filter_sec">
-                  <div>
-                    <li>color</li>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="filter_sec">
-                  <div>
-                    <li>marca</li>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="filter_sec">
-                  <div>
-                    <li>talle</li>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="filter_sec">
-                  <div>
-                    <li>deporte</li>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="filter_sec">
-                  <div>
-                    <li>ranking</li>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="filter_sec">
-                  <div>
-                    <li>producto</li>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="filter_sec">
-                  <div>
-                    <li>sale</li>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                </div>
+              <ul id="accordion" class="accordion">
+                <li>
+                  <div class="link">CATEGORIA<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Photoshop</a></li>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Maquetacion web</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link">PRECIO<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">jQuery</a></li>
+                    <li><a href="#">Frameworks javascript</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link">COLOR<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Dispositivos mobiles</a></li>
+                    <li><a href="#">Medios de escritorio</a></li>
+                    <li><a href="#">Otros dispositivos</a></li>
+                  </ul>
+                </li>
+                <li><div class="link">MARCA<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Google</a></li>
+                    <li><a href="#">Bing</a></li>
+                    <li><a href="#">Yahoo</a></li>
+                    <li><a href="#">Otros buscadores</a></li>
+                  </ul>
+                </li>
+                <li><div class="link">TALLE<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Google</a></li>
+                    <li><a href="#">Bing</a></li>
+                    <li><a href="#">Yahoo</a></li>
+                    <li><a href="#">Otros buscadores</a></li>
+                  </ul>
+                </li>
+                <li><div class="link">DEPORTE<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Google</a></li>
+                    <li><a href="#">Bing</a></li>
+                    <li><a href="#">Yahoo</a></li>
+                    <li><a href="#">Otros buscadores</a></li>
+                  </ul>
+                </li>
+                <li><div class="link">RANKING<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Google</a></li>
+                    <li><a href="#">Bing</a></li>
+                    <li><a href="#">Yahoo</a></li>
+                    <li><a href="#">Otros buscadores</a></li>
+                  </ul>
+                </li>
+                <li><div class="link">PRODUCTO<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Google</a></li>
+                    <li><a href="#">Bing</a></li>
+                    <li><a href="#">Yahoo</a></li>
+                    <li><a href="#">Otros buscadores</a></li>
+                  </ul>
+                </li>
+                <li><div class="link">SALE<i class="fa fa-chevron-down"></i></div>
+                  <ul class="submenu">
+                    <li><a href="#">Google</a></li>
+                    <li><a href="#">Bing</a></li>
+                    <li><a href="#">Yahoo</a></li>
+                    <li><a href="#">Otros buscadores</a></li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
@@ -127,5 +135,32 @@
   <!-- FOOTER -->
   <%- include('../templates/footer') %>
   </body>
-  <script src="/javascripts/acordeon.js"></script>
+  <script>
+    $(function() {
+    var Accordion = function(el, multiple) {
+      this.el = el || {};
+      this.multiple = multiple || false;
+  
+      // Variables privadas
+      var links = this.el.find('.link');
+      // Evento
+      links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+    }
+  
+    Accordion.prototype.dropdown = function(e) {
+      var $el = e.data.el;
+        $this = $(this),
+        $next = $this.next();
+  
+      $next.slideToggle();
+      $this.parent().toggleClass('open');
+  
+      if (!e.data.multiple) {
+        $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+      };
+    }	
+  
+    var accordion = new Accordion($('#accordion'), false);
+  });
+  </script>
 </html>

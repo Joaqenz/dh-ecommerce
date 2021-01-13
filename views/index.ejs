@@ -92,14 +92,13 @@
     <div class="bannerpromo">
       <H1>SUSCRIBITE Y ENTERATE DE LAS NOVEDADES Y OBTENÉ 15% DE DESCUENTO </H1>
         <div class="boxemail">
-          <form action="meli.ejs" method="get">
-              <p><label for="email"></label></p>
-              <p><input type="email" id="email" name="email" placeholder="E-mail"></p>
+          <form class="emailform" action="meli" method="get">
+              <input type="email" id="email" name="email" placeholder="E-mail">
+              <div class="enviar">
+                <button type="submit" value=""></button>
+                <i class="fas fa-arrow-right"></i>
+              </div> 
           </form>
-          <div class="enviar">
-            <p><button type="submit" value=""></button></p>
-            <i class="fas fa-arrow-right"></i>
-          </div>  
       </div>
 
     </div>
