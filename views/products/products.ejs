@@ -115,19 +115,29 @@
           <div class="products">
             <!-- <!-- Producto -->
             <% for( let i = 0; i < products.length; i++ ) { %>
-              <article class="product">
-                <i class="far fa-heart" style="display: none;"></i>
-                <div class="product_inside">
-                  <div class="product_image_conteiner">
-                      <img src="/images/products/<%= products[i].imglink%>" alt="">
+              <a href="/products/<%= products[i].id %>">
+                <article class="product" style="background-image: url(/images/products/<%= products[i].imglink %>);"> 
+                  <div class="product_bot">
+                    <div class="product_title">
+                      <p><%= products[i].name %></p>
+                      <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="product_price">
+                      <p>ARS <%= products[i].price %></p>
+                    </div>
+                    <div class="product_btns">
+                      <a class="btn_love" href=""><i class="far fa-heart"></i></a>
+                      <a class="btn_buy" href="/products/<%= products[i].id%>">AGREGAR AL CARRITO</a>
+                    </div>
                   </div>
-                  <div class="product_text">
-                    <p class="product_name"><%= products[i].name %></p>
-                    <p class="product_price">$<%= products[i].price %></p>
-                    <a href="/products/<%= products[i].id %>" class="addbasket">COMPRAR</a>
-                  </div>  
-                </div>
-              </article>
+                </article>
+              </a>
           <% } %>
           </div>
         </div>
