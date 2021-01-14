@@ -105,7 +105,7 @@ input:focus {
 
 /* buttons  */
 
-button {
+.btnregister {
     display: inline-block;
     text-transform: uppercase;
     font-weight: 500;
@@ -125,7 +125,7 @@ button {
     letter-spacing: 0.05em;
 }
 
-button:hover {
+.btnregister:hover {
     transform: translatey(3px);
     box-shadow: none;
     animation: ani9 0.4s ease-in-out infinite alternate;

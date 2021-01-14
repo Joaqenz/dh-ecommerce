@@ -152,17 +152,32 @@
         </div>
         <!-- MENU DERECHA -->
         <div class="auth">
-            <input class="input_search" type="text" placeholder="Buscar">
-            <a href="/user/register" class="reg">
-                <div class="user_btn_arrow">
-                    <i class="fas fa-user-plus"></i>
-                </div>
-            </a>
-            <a href="/user/login" class="log">
-                <div class="user_btn_arrow">
-                    <i class="fas fa-sign-in-alt"></i>
-                </div>
-            </a>
+          <div class="search">
+            <input type="text" class="search__input" placeholder="Busqueda...">
+            <div class="search__icon">
+              <i name='search' class="fas fa-search"></i>
+            </div>
+          </div>
+          <div class="user_container" style="width: auto;">
+            <div class="container" style="justify-content: flex-end;">
+              <div class="user_section" style="width: 100px;">
+                <a href="/user/register" class="reg" target="_blank">
+                  <button class="btn social">
+                    <div class="icon-container">
+                      <i class="fas fa-user-plus"></i>
+                    </div>
+                  </button>
+                </a>
+                <a href="/user/login" class="reg" target="_blank">
+                  <button class="btn social">
+                    <div class="icon-container">
+                      <i class="fas fa-sign-in-alt"></i>
+                    </div>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
     </nav>
   </header>

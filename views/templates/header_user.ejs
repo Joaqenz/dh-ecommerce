@@ -152,39 +152,48 @@
     </div>
     <!-- MENU DERECHA -->
     <div class="auth">
-      <div class="search_bar">
-        <input class="input_search" type="text" placeholder="Buscar">
+      <div class="search">
+        <input type="text" class="search__input" placeholder="Busqueda...">
+        <div class="search__icon">
+          <i name='search' class="fas fa-search"></i>
+        </div>
       </div>
       <div class="user_container">
-          <div class="user_user_container">
-            <div class="user_photobox">
-              <img src="/images/17004.svg" alt="">
+        <div class="container">
+          <a href="/user/list" class="reg" target="_blank">
+            <div class="btn user">
+              <div class="user_img">
+                <img src="/images/users/unnamed.png" alt="">
+                <div class="shadow"></div>
+              </div>
+              <p><%= req.session.userLogged.username%></p>
             </div>
-            <p><%= req.session.userLogged.username%></p>
+          </a>
+          <div class="user_section">
+            <a href="/products/carrito" class="reg" target="_blank">
+              <button class="btn social">
+                <div class="icon-container">
+                  <i class="fas fa-shopping-bag"></i>
+                </div>
+              </button>
+            </a>
+            <a href="#" class="reg" target="_blank">
+              <button class="btn social">
+                <div class="icon-container">
+                  <div class="notification">1</div>
+                  <i class="fas fa-bell"></i>
+                </div>
+              </button>
+            </a>
+            <a href="/user/logout" class="reg" target="_blank">
+              <button class="btn social">
+                <div class="icon-container">
+                  <i class="fas fa-sign-out-alt"></i>
+                </div>
+              </button>
+            </a>
           </div>
-          <div class="user_btn_container">
-            <a href="/products/carrito">
-              <div class="user_btn_shop">
-                <i class="fas fa-shopping-bag"></i>
-              </div>
-            </a>
-            <a href="">
-              <div class="user_btn_notif">
-                <div class="notification">1</div>
-                <i class="fas fa-bell"></i>
-              </div>
-            </a>
-            <a href="">
-              <div class="user_btn_arrow">
-                <i class="fas fa-caret-down"></i>
-              </div>
-            </a>
-            <a href="/user/logout">
-              <div class="user_btn_arrow">
-                <i class="fas fa-sign-out-alt"></i>
-              </div>
-            </a>
-          </div>
+        </div>
       </div>
     </div>
   </nav>

@@ -116,14 +116,17 @@
             <!-- <!-- Producto -->
             <% for( let i = 0; i < products.length; i++ ) { %>
               <article class="product">
-                <i class="far fa-heart"></i>
+                <i class="far fa-heart" style="display: none;"></i>
                 <div class="product_inside">
                   <div class="product_image_conteiner">
-                    <img src="/images/products/<%= products[i].imglink%>" alt="">
+                    <div class="product_image_conteiner_inside">
+                      <img src="/images/products/<%= products[i].imglink%>" alt="">
+                      <div style="border-radius: 10px;"></div>
+                    </div>
                   </div>
                   <div class="product_text">
                     <p class="product_name"><%= products[i].name %></p>
-                      <p class="product_price">$<%= products[i].price %></p>
+                    <p class="product_price">$<%= products[i].price %></p>
                     <a href="/products/<%= products[i].id %>" class="addbasket">COMPRAR</a>
                   </div>  
                 </div>
