@@ -8,6 +8,9 @@
     background:black;
 }
 .bannerWoman{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 550px;
     overflow: hidden;
     position: relative;
@@ -17,6 +20,9 @@
     background-size: cover;
 }
 .bannerMen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 550px;
     overflow: hidden;
     position: relative;
@@ -42,13 +48,31 @@
     text-transform: uppercase;
 }
 .subtitle{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    width: 100%;
-    padding-top: 350px;
+    width: 200px;
+    height: 50px;
+    background-color: white;
     font-family: 'Roboto';
     font-weight: 500;
-    color: white;
+    color: black;
     text-align: center;
+    margin-top: 260px;
+    font-weight: 300;
+    font-size: 28px;
+    border-radius: 4px;
+}
+.subtitlebottom{
+    z-index: 1;
+    margin-left: 10px;
+    margin-top: 270px;  
+    width: 200px;
+    height: 50px;
+    background-color: #7443FE;
+    border-radius: 4px;
 }
 /* ! SLIDER */
 .slider_container{

@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <%- include('../templates/cssbasic') %>
     <link rel='stylesheet' href='/stylesheets/detailProduct.css' />
+    <link rel='stylesheet' href='/stylesheets/carousel.css'/>
   </head>
   <body>
   <!-- HEADER -->
@@ -218,11 +219,23 @@
           <!-- Menu Foto -->
           <div class="photo_container">
             <div class="photo_box">
-              <img src="/images/products/<%=product.imglink %> " alt="">
+              <div class="carousel" style="height: 100%;">
+                <div class="slides">
+                    <div class="slide">
+                      <img src="/images/products/<%=product.imglink %> " alt="">
+                    </div>
+                    <div class="slide">
+                      <img src="/images/products/<%=product.imglink %> " alt="">
+                    </div>
+                    <div class="slide">
+                      <img src="/images/products/<%=product.imglink %> " alt="">
+                    </div>
+                </div>
+              </div>
             </div>
-            <div class="arrows_container">
-              <i class="fas fa-chevron-left"></i>
-              <i class="fas fa-chevron-right"></i>
+            <div class="controls arrows_container">
+              <i class="control fas fa-chevron-left prev-slide"></i>
+              <i class="control fas fa-chevron-right next-slide"></i>
             </div>
           </div>
           <!-- Menu Info -->
@@ -373,5 +386,6 @@
       </div>
   <!-- FOOTER -->
   <%- include('../templates/footer') %>
+  <script src="/javascripts/carousel.js"></script>
   </body>
 </html>

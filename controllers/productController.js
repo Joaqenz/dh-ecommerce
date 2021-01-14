@@ -5,7 +5,13 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 
 const productController = {
     index: (req, res) => {
-        db.Product.findAll().then(function(products){
+        let priceFrom = 0;
+        let priceTo = 20000;
+        var options = {where: {}};
+        if(priceFrom && priceTo) {
+        options.where.price = {$between: [priceFrom, priceTo]}
+        }
+        db.Product.findAll(options).then(function(products){
             console.log(products)
             res.render('products/products',{products:products, title, req})
         });

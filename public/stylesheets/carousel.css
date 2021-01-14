@@ -8,7 +8,7 @@
     opacity: 1;
   }
   .controls {
-    opacity: 0;
+    opacity: 1;
     display: flex;
     position: absolute;
     top: 50%;

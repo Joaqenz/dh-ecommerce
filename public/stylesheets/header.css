@@ -174,9 +174,8 @@ header nav .menu .link .link_nov{
 /*! MENU DESPLEGABLE */
 .menu_desplegable{
   height: 365px;
-  background-color: red;
+
   display: flex;
-  align-items: center;
   position: absolute;
   top: 86px;
   left: 0px;
@@ -184,19 +183,19 @@ header nav .menu .link .link_nov{
 /*tamaños*/
 .menu_desplegable .sec1{
   background-color: white;
-  height: 100%;
+  height: 365px;
   flex-grow: 1;
   flex-basis: 0;
 }
 .menu_desplegable .sec2{
   background-color: white;
-  height: 100%;
+  height: 365px;
   flex-grow: 3;
   flex-basis: 0;
 }
 .menu_desplegable .sec3{
   background-color: white;
-  height: 100%;
+  height: 365px;
   flex-grow: 2;
   flex-basis: 0;
 }

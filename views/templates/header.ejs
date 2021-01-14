@@ -165,8 +165,11 @@
             </a>
         </div>
     </nav>
-</header>
-<script>
+  </header>
+  <script>
+    let logo = document.querySelector('.brand')
+    let acc = document.querySelector('.link_acc')
+    let nov = document.querySelector('.link_nov')
     let link_m = document.querySelector('.link_m')
     let desp_m = document.querySelector('.menu_desplegable._mujer')
     let link_h = document.querySelector('.link_h')
@@ -178,6 +181,38 @@
     }
       desp_m.classList.add('active')
     })
+    nov.addEventListener('mouseover', () => {
+      if (desp_h.classList.contains('active') || desp_m.classList.contains('active')) {
+        desp_h.classList.remove('active')
+        desp_m.classList.remove('active')
+      }
+    })
+    acc.addEventListener('mouseover', () => {
+      if (desp_h.classList.contains('active') || desp_m.classList.contains('active')) {
+        desp_h.classList.remove('active')
+        desp_m.classList.remove('active')
+      }
+    })
+    logo.addEventListener('mouseover', () => {
+      if (desp_h.classList.contains('active') || desp_m.classList.contains('active')) {
+        desp_h.classList.remove('active')
+        desp_m.classList.remove('active')
+      }
+    })
+    /* Event close */
+    desp_m.addEventListener('mouseleave', () => {
+      if (desp_h.classList.contains('active') || desp_m.classList.contains('active')) {
+        desp_h.classList.remove('active')
+        desp_m.classList.remove('active')
+      }
+    })
+    desp_h.addEventListener('mouseleave', () => {
+      if (desp_h.classList.contains('active') || desp_m.classList.contains('active')) {
+        desp_h.classList.remove('active')
+        desp_m.classList.remove('active')
+      }
+    })
+
     window.addEventListener('click', () => {
       desp_m.classList.remove('active')
     })

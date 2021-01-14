@@ -191,24 +191,59 @@
 </header>
   
 <script>
-  let link_m = document.querySelector('.link_m')
-  let desp_m = document.querySelector('.menu_desplegable._mujer')
-  let link_h = document.querySelector('.link_h')
-  let desp_h = document.querySelector('.menu_desplegable._hombre')
+  let logo = document.querySelector('.brand')
+    let acc = document.querySelector('.link_acc')
+    let nov = document.querySelector('.link_nov')
+    let link_m = document.querySelector('.link_m')
+    let desp_m = document.querySelector('.menu_desplegable._mujer')
+    let link_h = document.querySelector('.link_h')
+    let desp_h = document.querySelector('.menu_desplegable._hombre')
+    
+    link_m.addEventListener('mouseover', () => {
+      if (desp_h.classList.contains('active')) {
+      desp_h.classList.remove('active')
+    }
+      desp_m.classList.add('active')
+    })
+    nov.addEventListener('mouseover', () => {
+      if (desp_h.classList.contains('active') || desp_m.classList.contains('active')) {
+        desp_h.classList.remove('active')
+        desp_m.classList.remove('active')
+      }
+    })
+    acc.addEventListener('mouseover', () => {
+      if (desp_h.classList.contains('active') || desp_m.classList.contains('active')) {
+        desp_h.classList.remove('active')
+        desp_m.classList.remove('active')
+      }
+    })
+    logo.addEventListener('mouseover', () => {
+      if (desp_h.classList.contains('active') || desp_m.classList.contains('active')) {
+        desp_h.classList.remove('active')
+        desp_m.classList.remove('active')
+      }
+    })
+    /* Event close */
+    desp_m.addEventListener('mouseleave', () => {
+      if (desp_h.classList.contains('active') || desp_m.classList.contains('active')) {
+        desp_h.classList.remove('active')
+        desp_m.classList.remove('active')
+      }
+    })
+    desp_h.addEventListener('mouseleave', () => {
+      if (desp_h.classList.contains('active') || desp_m.classList.contains('active')) {
+        desp_h.classList.remove('active')
+        desp_m.classList.remove('active')
+      }
+    })
 
-  link_m.addEventListener('mouseover', () => {
-    if (desp_h.classList.contains('active')) {
-    desp_h.classList.remove('active')
-  }
-    desp_m.classList.add('active')
-  })
-  window.addEventListener('click', () => {
-    desp_m.classList.remove('active')
-  })
-  link_h.addEventListener('mouseover', () => {
-    desp_h.classList.add('active')
-  });
-  window.addEventListener('click', () => {
-    desp_h.classList.remove('active')
-  })
+    window.addEventListener('click', () => {
+      desp_m.classList.remove('active')
+    })
+    link_h.addEventListener('mouseover', () => {
+      desp_h.classList.add('active')
+    });
+    window.addEventListener('click', () => {
+      desp_h.classList.remove('active')
+    })
 </script>
