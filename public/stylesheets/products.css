@@ -137,14 +137,6 @@
     background-color: white;
     box-shadow: 0px -6px 10px white, 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-.product_image_conteiner_inside{
-    position: relative;
-    width: 210px;
-    height: 205px;
-    display: flex;
-    border-radius: 10px;
-    overflow: hidden;
-}
 
 .product_image_conteiner img{
     width: 100%;
@@ -182,11 +174,12 @@
     width: 90%;
     align-self: center;
     text-align: center;
-    background-color: #7443FE;
     padding: 4%;
+    background-color:#7443FE;
     border-radius: 4px;
     color: white;
-    box-shadow: 0.3rem 0.3rem 0.6rem #ebebeb, -0.2rem -0.2rem 0.5rem #FFFFFF;
+    box-shadow:  5px 5px 10px #bababa,
+    -5px -5px 10px #ffffff;
 }
 
 .filter{
