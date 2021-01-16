@@ -1,59 +1,70 @@
-  .carousel {
+.slider_container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.slider_container h2{
+  font-size: 48px;
+  text-align: center;
+  padding: 30px 0px 40px;
+  background-color: var(--var-background);
+}
+.slider {
   width: 100%;
   height: 450px;
   overflow: hidden;
   position: relative;
-  }
-  .carousel:hover .controls {
-    opacity: 1;
-  }
-  .controls {
-    opacity: 1;
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    justify-content: space-between;
-    width: 100%;
-    z-index: 99999;
-    transition: all ease 0.5s;
+  background-color: var(--var-background);
+}
+.slider:hover .controls {
+  opacity: 1;
+}
+.controls {
+  opacity: 1;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 99999;
+  transition: all ease 0.5s;
 
-    
-  }
-  .control {
-    font-size: 25px;
-    margin: 0 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.7);
-    opacity: 0.5;
-    transition: ease 0.3s;
-    cursor: pointer;
-  }
-  .control:hover {
-    opacity: 1;
-  }
-  .slides {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    display: flex;
-    width: 100%;
-    height: 100%;
-    transition: 1s ease-in-out all;
-  }
-  .slide {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    min-width: 100%;
-    min-height: 250px;
-    height: auto;
-  }
+  
+}
+.control {
+  font-size: 25px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+.control:hover {
+  opacity: 1;
+}
+.slides {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out all;
+}
+.slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 100%;
+  min-height: 250px;
+  height: auto;
+}
 

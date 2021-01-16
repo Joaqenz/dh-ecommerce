@@ -7,6 +7,7 @@
     <%- include('./templates/cssbasic') %>
     <link rel='stylesheet' href='/stylesheets/main.css'/>
     <link rel='stylesheet' href='/stylesheets/carousel.css'/>
+    <link rel='stylesheet' href='/stylesheets/destacado.css'/>
 </head>
 
 <body>
@@ -17,15 +18,31 @@
     <!--MUJER-->
     <div class="body_contentW"> 
       <!--FOTO Y TEXTO MUJER-->
-      <div class="bannerWoman">
-        <div class="subtitlebottom"></div>
-        <h2 class="title multiply">innovacion</h2>
-        <a href="/products/" class="subtitle">OFERTAS</a>  
+      <div class="featured_product_container">
+        <div class="circle_product">
+          <div class="circle_texture">
+            <img class="circle_product_inside" src="/images/products/running-shoes-5.png" alt="">
+          </div>
+        </div>
+        <div class="featured_product">
+          <div class="featured_product_text_container">
+            <div class="featured_product_texts">
+              <h2>NOVA RUN</h2>
+              <h3>MEN'S RUNNING</h3>
+            </div>
+
+          </div>
+        </div>
       </div>
+                                              <!-- <div class="bannerWoman">
+                                                <div class="subtitlebottom"></div>
+                                                <h2 class="title multiply">innovacion</h2>
+                                                <a href="/products/" class="subtitle">OFERTAS</a>  -->
+    </div> 
       <!--PRODUCTOS MUJER-->
       <div class="slider_container">
         <h2>LO MEJOR DE SPORTLAND</h2>
-        <div class="carousel">
+        <div class="slider">
           <div class="slides">
               <div class="slide">
                   <% for( let index = 0; index < 5; index++ ) { %>
@@ -116,31 +133,28 @@
       </div>
     </div>
     <!--BANNER PROMOS-->  
-    <div class="bannerpromo">
-      <H1>SUSCRIBITE Y ENTERATE DE LAS NOVEDADES Y OBTENÉ 15% DE DESCUENTO </H1>
-        <div class="boxemail">
-          <form class="emailform" action="meli" method="get">
-              <input type="email" id="email" name="email" placeholder="E-mail">
-              <div class="enviar">
-                <button type="submit" value=""></button>
-                <i class="fas fa-arrow-right"></i>
-              </div> 
+    <div class="bannercontainer">
+      <div class="bannerpromo">
+        <H1>SUSCRIBITE Y ENTERATE DE LAS NOVEDADES Y OBTENÉ 15% DE DESCUENTO </H1>
+        <div class="email">
+          <form action="">
+            <input type="text" class="email__input" placeholder="Email...">
+            <div class="email__icon">
+              <i name='email' class="far fa-envelope"></i>
+            </div>
+            <button class="btn" type="submit"><i class="fas fa-share"></i></button>
           </form>
+        </div>
       </div>
-
     </div>
     <!--HOMBRE-->
     <div class="body_contentM">
         <!--FOTO Y TEXTO HOMBRE-->
-        <div class="bannerMen">
-          <div class="subtitlebottom"></div>
-          <h2 class="title multiply">innovacion</h2>
-          <a href="#" class="subtitle">OFERTAS</a>  
-        </div>
+        
         <!--PRODUCTOS HOMBRE-->
         <div class="slider_container">
           <h2>PRODUCTOS DESTACADOS HOMBRE</h2>
-          <div class="carousel">
+          <div class="slider">
             <div class="slides">
                 <div class="slide">
                     <% for( let index = 0; index < 5; index++ ) { %>
