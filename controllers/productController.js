@@ -5,15 +5,15 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 
 const productController = {
     index: (req, res) => {
-        let priceFrom = 0;
-        let priceTo = 20000;
-        var options = {where: {}};
-        if(priceFrom && priceTo) {
-        options.where.price = {$between: [priceFrom, priceTo]}
-        }
-        db.Product.findAll(options).then(function(products){
-            console.log(products)
-            res.render('products/products',{products:products, title, req})
+        products = db.Product.findAll()
+        category = db.Category.findAll()
+        color = db.Color.findAll()
+        brand = db.Size.findAll()
+        fit = db.Size.findAll()
+        color = db.Color.findAll()
+        Promise.all([products,category,color,brand,fit,color]).then(values => {
+            console.log(values[1]);
+            res.render('products/products',{values, title, req})
         });
     },
     ver: (req, res) => {

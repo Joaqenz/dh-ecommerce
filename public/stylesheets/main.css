@@ -11,54 +11,42 @@ body{
     flex-direction: column;
     overflow: hidden;
 }
-.bannerWoman{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 550px;
-    overflow: hidden;
-    position: relative;
-    object-fit: cover;
-    background-image: url('/images/pexels-ketut-subiyanto-44263252.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.bannerMen{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 550px;
-    overflow: hidden;
-    position: relative;
-    object-fit: cover;
-    background-image: url('/images/pexels-andrea-piacquadio-3771058 2.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .product{
     display: flex;
     position: relative;
     flex-direction: column;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
     width: 230px;
     height: 360px;
     border-radius: 16px;
-    background-image: url('/images/pexels-photo-4194672.jpeg');
-    background-size: cover;
-    box-shadow: 0px -6px 10px white, 0px 4px 15px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, #e6e6e6, var(--var-background));
+    box-shadow:  7px 8px 15px #d9d9d9,
+                 -5px -5px 10px white;
     overflow: hidden;
 }
-.product img{
+.product_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow:  7px 8px 15px #d9d9d9,
+                -5px -5px 10px white;
+    overflow: hidden;
+}
+.product_img img{
     width: 100%;
 }
 .product_bot{
     display: flex;
+    z-index: 1;
     flex-direction: column;
     justify-content: space-between;
     width: 230px;
     height: 160px;
-    background-color: var(--var-background);
-    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5), 5px 5px 20px #D6D6D6;
     border-radius: 10px;
     padding: 10px;
 }
@@ -102,14 +90,14 @@ justify-content: space-between;
     width: 36px;
     height: 36px;
     background-color: var(--var-background);
-    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.75), 5px 5px 20px #D6D6D6;
+    box-shadow: 5px 5px 10px #d9d9d9,-5px -5px 10px white;
     border-radius: 10px;
 }
 .btn_buy{
     width: 164px;
     height: 36px;
     background-color: var(--var-background);
-    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.75), 5px 5px 20px #D6D6D6;
+    box-shadow: 5px 5px 10px #d9d9d9,-5px -5px 10px white;
     border-radius: 10px;
     color: #1F1F1F;
     font-weight: bold;
@@ -124,49 +112,8 @@ justify-content: space-between;
     display: flex;
     flex-direction: column;
 }
-.hombre{
-    height:40%;
-    position: relative;
-    margin-bottom: -4px;
-}
-.hombre img{
-    width: 100%;
-    margin:0;
-}
-
-.hombre h2{
-    position: absolute;
-    z-index:1;
-    top: 29%;
-    left: 61%;
-    font-size: xx-large;
-}
-
-.hombre p{
-    position: absolute;
-    z-index:1;
-    top:42%;
-    left: 61.3%;
-    font-size: small;
-    padding-right: 10px;
-}    
-.producthombrebloque{
-    position: relative;
-    justify-content: space-between;
-    background-color: white;
-
-}
-.producthombre{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 420px;
-    padding: 0px 5em;
-    margin-top: 3em;
-    overflow-x: scroll;
-}
 .bannercontainer{
+    background: var(--var-background);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,21 +123,17 @@ justify-content: space-between;
 .bannerpromo{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     border-radius: 20px;
     height:200px;
     width: 1650px;
-    background: linear-gradient(145deg, #e6e6e6, #ffffff);
-    box-shadow:  37px 37px 75px #d9d9d9,
+    background: linear-gradient(145deg, #e6e6e6, var(--var-background));
+    box-shadow:  15px 15px 25px #d9d9d9,
                  -10px -10px 25px white;
 }
-
-.bannerpromo h1 {
-    color: black;
-	width: 50%;
-	align-self: center;
-    padding-left: 4%;
-    font-size: 150%;
+.bannerpromo h2 {
+    font-size: 32px;
+    color: #1F1F1F;
 }
 .email {
     position: relative;
@@ -209,10 +152,9 @@ justify-content: space-between;
     border-radius: 50px;
     font-size: 20px;
     padding-left: 3.8rem;
-    box-shadow: inset 0.2rem 0.2rem 0.5rem #ebebeb, inset -0.2rem -0.2rem 0.5rem #FFFFFF;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem #dddddd, inset -0.2rem -0.2rem 0.5rem #FFFFFF;
     background: none;
     font-family: inherit;
-    color: black;
 }
 .email__input::-moz-placeholder {
     color: #c4c4c4;
@@ -225,7 +167,7 @@ justify-content: space-between;
 }
 .email__input:focus {
     outline: none;
-    box-shadow: 0.3rem 0.3rem 0.6rem #ebebeb, -0.2rem -0.2rem 0.5rem #FFFFFF;
+    box-shadow: 0.3rem 0.3rem 0.6rem #dddddd, -0.2rem -0.2rem 0.5rem #FFFFFF;
     transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 .email__input:focus + .email__icon {
@@ -245,7 +187,7 @@ justify-content: space-between;
     width: 40px;
     height: 40px;
     border-radius: 50px;
-    background: white;
+    background: var(--var-background);
     transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0px -6px 10px white, 0px 4px 15px rgba(0, 0, 0, 0.15);
     cursor: pointer;
@@ -265,4 +207,47 @@ justify-content: space-between;
 }
 .btn:active:after {
     box-shadow: inset 0px -2px 5px white, inset 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+.btn i{
+    color: #66676B;
+}
+
+/* ! Sponsors */
+.sponsors_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--var-background);
+}
+.sponsors_container h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 70px 0px 40px;
+    text-transform: uppercase;
+
+}
+.sponsors{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.sponsor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+.sponsor img{
+    opacity: 0.3;
+    width: 100%;
+    transition: opacity 1s;
+}
+.sponsor img:hover{
+    opacity: 1;
+    width: 100%;
+
 }

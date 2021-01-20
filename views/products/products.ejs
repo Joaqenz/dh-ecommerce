@@ -38,43 +38,39 @@
                 <li>
                   <div class="link">CATEGORIA<i class="fa fa-chevron-down"></i></div>
                   <ul class="submenu">
-                    <li><a href="#">Photoshop</a></li>
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">Maquetacion web</a></li>
+                    <% for( let i = 0; i < values[1].length; i++ ) { %>
+                      <li><a href="#"><%= values[1][i].name %> </a></li>
+                    <% } %>
                   </ul>
                 </li>
                 <li>
                   <div class="link">PRECIO<i class="fa fa-chevron-down"></i></div>
                   <ul class="submenu">
-                    <li><a href="#">Javascript</a></li>
-                    <li><a href="#">jQuery</a></li>
-                    <li><a href="#">Frameworks javascript</a></li>
+                    <% for( let i = 0; i < values[2].length; i++ ) { %>
+                      <li><a href="#"><%= values[2][i].name %> </a></li>
+                    <% } %>
                   </ul>
                 </li>
                 <li>
                   <div class="link">COLOR<i class="fa fa-chevron-down"></i></div>
                   <ul class="submenu">
-                    <li><a href="#">Tablets</a></li>
-                    <li><a href="#">Dispositivos mobiles</a></li>
-                    <li><a href="#">Medios de escritorio</a></li>
-                    <li><a href="#">Otros dispositivos</a></li>
+                    <% for( let i = 0; i < values[2].length; i++ ) { %>
+                      <li><a href="#"><%= values[2][i].name %> </a></li>
+                    <% } %>
                   </ul>
                 </li>
                 <li><div class="link">MARCA<i class="fa fa-chevron-down"></i></div>
                   <ul class="submenu">
-                    <li><a href="#">Google</a></li>
-                    <li><a href="#">Bing</a></li>
-                    <li><a href="#">Yahoo</a></li>
-                    <li><a href="#">Otros buscadores</a></li>
+                    <% for( let i = 0; i < values[3].length; i++ ) { %>
+                      <li><a href="#"><%= values[3][i].name %> </a></li>
+                    <% } %>
                   </ul>
                 </li>
                 <li><div class="link">TALLE<i class="fa fa-chevron-down"></i></div>
                   <ul class="submenu">
-                    <li><a href="#">Google</a></li>
-                    <li><a href="#">Bing</a></li>
-                    <li><a href="#">Yahoo</a></li>
-                    <li><a href="#">Otros buscadores</a></li>
+                    <% for( let i = 0; i < values[4].length; i++ ) { %>
+                      <li><a href="#"><%= values[4][i].name %> </a></li>
+                    <% } %>
                   </ul>
                 </li>
                 <li><div class="link">DEPORTE<i class="fa fa-chevron-down"></i></div>

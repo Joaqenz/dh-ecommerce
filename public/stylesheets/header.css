@@ -127,10 +127,13 @@ header nav .menu .link .link_nov{
   padding-left: 3em;
   padding-bottom: 1em;
 }
-
 .menu_desplegable div div ul li a{
   color: black;
   text-decoration: none;
+  transition: border.1s linear;
+}
+.menu_desplegable div div ul li a:hover{
+  border-bottom: 1.5px black solid;
 }
 .menu_desplegable div div ul .h_null{
   padding-top: 3em;
@@ -174,7 +177,7 @@ header nav .menu .link .link_nov{
   padding-top: 48px;
 }
 .leftlink ul li a{
-  padding-left: 3em;
+  margin-left: 3em;
 }
 
 
@@ -322,4 +325,18 @@ button:focus {
   display: flex;
   color: #c4c4c4;
   transition: 0.3s ease;
+}
+
+.transition-four  ul li a{
+  text-decoration:none;
+  color:white;
+  -webkit-transition: color.3s linear,border.3s linear;
+  -moz-transition: color  .3s linear,border.3s linear;
+  -ms-transition: color  .3s linear,border.3s linear;
+  -o-transition: color .3s linear,border.3s linear;
+  transition: color .3s linear,border.3s linear;
+}
+.transition-four  ul li a:hover{
+  color:black;
+  border-bottom:solid;
 }
