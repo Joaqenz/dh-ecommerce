@@ -23,105 +23,46 @@
           <div class="prod_sum_conteiner">
             <!-- ·* Productos  -->
             <div class="products">
-               <div class="product_content">
-                 <div class="product_left">
-                     <div class="product_imgbox">
-                      <img src="/images/top.jpeg" alt="">
-                     </div>
-                     <div class="product_desc">
-                        <h2>Remera top sierna</h2>
-                        <ul>
-                          <li>Sexo: Mujer</li>
-                          <li>Color: Negro</li>
-                          <li>Talle: M</li>
-                        </ul>
-                        <p>Disponible</p>
-                        <p class="product_love">Mover a lista de deseados</p>
-                     </div>
-                 </div>
-                 <div class="product_right">
-                   <div class="product_right_content">
-                     <div class="product_end_cant">
-                       <input type="number" name="quantity" id="quantity" min="0" class="quantity_btn" placeholder="Cantidad">
-                       <label for="quantity" class="btn_search"><i class="fas fa-arrow-down"></i></label>
-                     </div>
-                     <div class="product_end_price">
-                        <p>2.499</p>
-                     </div>
-                   </div>
-                 </div>
-                 <div class="cross_container">
-                  <div class="crossbox">
-                    <i class="fas fa-times"></i>
+              <% products.forEach(product => { %>
+                <div class="product_content">
+                  <div class="product_left">
+                      <div class="product_imgbox">
+                       <img src="/images/products/<%=product.imglink %> " alt="">
+                      </div>
+                      <div class="product_desc">
+                         <h2><%= product.name %></h2>
+                         <ul>
+                           <li>Calce: <%= product.fits.name %> </li>
+                           <li>Color: <%= product.colors.name %> </li>
+                           <li>Talle: <%= product.sizes.name %> </li>
+                         </ul>
+                         <% if (product.quantity > 0){ %>
+                          <p>Disponible <i class="fas fa-check"></i></p>
+                          <% } else { %>
+                            <p>Disponible <i class="fas fa-times"></i></p>
+                          <% } %>
+                         <p class="product_love">Mover a lista de deseados</p>
+                      </div>
                   </div>
-               </div>
-               </div>
-               <div class="product_content">
-                 <div class="product_left">
-                     <div class="product_imgbox">
-                      <img src="/images/top.jpeg" alt="">
-                     </div>
-                     <div class="product_desc">
-                        <h2>Remera top sierna</h2>
-                        <ul>
-                          <li>Sexo: Mujer</li>
-                          <li>Color: Negro</li>
-                          <li>Talle: M</li>
-                        </ul>
-                        <p>Disponible</p>
-                        <p class="product_love">Mover a lista de deseados</p>
-                     </div>
-                 </div>
-                 <div class="product_right">
-                   <div class="product_right_content">
-                     <div class="product_end_cant">
-                       <input type="number" name="quantity" id="quantity" min="0" class="quantity_btn" placeholder="Cantidad">
-                       <label for="quantity" class="btn_search"><i class="fas fa-arrow-down"></i></label>
-                     </div>
-                     <div class="product_end_price">
-                        <p>2.499</p>
-                     </div>
-                   </div>
-                 </div>
-                 <div class="cross_container">
-                  <div class="crossbox">
-                    <i class="fas fa-times"></i>
+                  <div class="product_right">
+                    <div class="product_right_content">
+                      <div class="product_end_cant">
+                        <p>Cantidad:</p>
+                      </div>
+                      <div class="product_end_price">
+                         <p><%= toThousand(product.price)%> $</p>
+                      </div>
+                    </div>
                   </div>
-               </div>
-               </div>
-               <div class="product_content">
-                <div class="product_left">
-                    <div class="product_imgbox">
-                     <img src="/images/top.jpeg" alt="">
-                    </div>
-                    <div class="product_desc">
-                       <h2>Remera top sierna</h2>
-                       <ul>
-                         <li>Sexo: Mujer</li>
-                         <li>Color: Negro</li>
-                         <li>Talle: M</li>
-                       </ul>
-                       <p>Disponible</p>
-                       <p class="product_love">Mover a lista de deseados</p>
-                    </div>
+                  <div class="cross_container">
+                    <a href="/cart/deleteProduct/<%= product.id %>" >
+                      <div class="crossbox">
+                        <i class="fas fa-times"></i>
+                      </div>
+                    </a>
                 </div>
-                <div class="product_right">
-                  <div class="product_right_content">
-                    <div class="product_end_cant">
-                      <input type="number" name="quantity" id="quantity" min="0" class="quantity_btn" placeholder="Cantidad">
-                      <label for="quantity" class="btn_search"><i class="fas fa-arrow-down"></i></label>
-                    </div>
-                    <div class="product_end_price">
-                       <p>2.499</p>
-                    </div>
-                  </div>
                 </div>
-                <div class="cross_container">
-                 <div class="crossbox">
-                   <i class="fas fa-times"></i>
-                 </div>
-              </div>
-              </div>
+              <% }) %> 
             </div>
             <!-- ·* Resumen  -->
             <div class="summary_acc_container">
@@ -131,14 +72,19 @@
                 </div>
                 <div class="summary_content">
                   <div class="summary_products">
-                    <p>3 Productos</p>
+                    <p> <%= products.length %><% if (products.length > 1) {%>
+                     <%= 'Productos' %> 
+                    <%}else{%>
+                      <%= 'Producto' %> 
+                      <% } %> 
+                    </p>
                   </div>
                   <div class="summary_cash">
                     <div class="sleft">
                       <p>Monto de la compra</p>
                     </div>
                     <div class="sright">
-                      <p>18.497,00</p>
+                      <p>$</p>
                     </div>
                   </div>
                   <div class="summary_ship">
@@ -154,7 +100,7 @@
                       <p>Total</p>
                     </div>
                     <div class="sright">
-                      <p>18.497,00</p>
+                      <p>$</p>
                     </div>
                   </div>
                   <div class="summary_fac">
@@ -162,7 +108,7 @@
                       <p>Opciones de financiacion</p>
                     </div>
                     <div class="sright">
-                      <p>3 cuotas sin interes de $6165,66</p>
+                      <p>3 cuotas sin interes de</p>
                     </div>
                   </div>
                   <div class="summary_dir">

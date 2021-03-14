@@ -12,29 +12,29 @@
 <!-- HEADER -->
   <%- include('../templates/header_full') %>
   <div class="body_container">
-    <h1>Edicion usuario</h1>
+    <h1>Ver usuario</h1>
     <form class="form_container" action="/user/edit/<%= user.id %>" method="POST">
       <div class="edit_field">
         <label class="form_label" for="username">Usuario:</label>
-        <input class="form_input" type="text" name="username" value="<%= user.username %>" placeholder="Edita tu Usuario"/>
+        <input class="form_input" type="text" name="username" value="<%= user.username %>" placeholder="Edita tu Usuario" disabled>
       </div>
       <div class="edit_field">
         <label class="form_label" for="">Nombre:</label>
-        <input class="form_input" type="text" name="firstname" value="<%= user.firstname %>" placeholder="Edita tu Nombre">
+        <input class="form_input" type="text" name="firstname" value="<%= user.firstname %>" placeholder="Edita tu Nombre" disabled>
       </div>
       <div class="edit_field">
         <label class="form_label" for="">Apellido:</label>
-        <input class="form_input" type="text" name="lastname" value="<%= user.lastname %>" placeholder="Edita tu Apellido">
+        <input class="form_input" type="text" name="lastname" value="<%= user.lastname %>" placeholder="Edita tu Apellido" disabled>
       </div>
       <div class="edit_field">
         <label class="form_label" for="">Celular:</label>
-        <input class="form_input" type="text" name="cel" value="<%= user.celular %>" placeholder="Ingresa tu telefono">
+        <input class="form_input" type="text" name="cel" value="<%= user.celular %>" placeholder="Ingresa tu telefono" disabled>
       </div>
       <div class="edit_field">
         <label class="form_label" for="">Email:</label>
-        <input class="form_input" type="text" name="email" value="<%= user.email %>" placeholder="Ingresa tu email">
+        <input class="form_input" type="text" name="email" value="<%= user.email %>" placeholder="Ingresa tu email" disabled>
       </div>
-        <button type="submit">Confirmar</button>
+        <a class="edit_form" href="/user/edit/<%= req.session.userLogged.id %>">Editar</a>
     </form>
   </div>
 <!-- FOOTER -->

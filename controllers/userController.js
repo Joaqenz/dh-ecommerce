@@ -24,12 +24,22 @@ const userController = {
             if(user != null && bcrypt.compareSync(req.body.password, user.password)){
                 req.session.userLogged = user
                 if (req.body.remind != undefined) {
-                    res.cookie('remind',user.id,{
-                        maxAge: 60 * 1000
-                    })
+                    res.cookie('remind', user.id,{expire : new Date() + 200})
                 }
-                console.log(req.session);
-                res.redirect("/")
+                db.Cart.findOne({
+                    where: {
+                        user_id: user.id,
+                        status: 0
+                    }
+                  }).then(cart => {
+                    if(cart == null) {      
+                      db.Cart.create({
+                          user_id: user.id,
+                          status: 0
+                      });
+                    }
+                    res.redirect("/")
+                  });
             }else{
                 res.render('user/loginUserForm', {
                     title,
@@ -59,6 +69,16 @@ const userController = {
         }
         
     },
+    view : function(req,res,next){
+        db.User.findByPk(req.params.id).then(function(user){
+            if(user != null){
+                res.render("user/viewUserForm",{req, user, title})
+            }else{
+                res.send("Usuario invalido");
+            }
+        })
+        
+    },
     edit : function(req,res,next){
         db.User.findByPk(req.params.id).then(function(user){
             if(user != null){
@@ -70,7 +90,7 @@ const userController = {
         
     },
     update: async function(req,res,next){
-        db.User.update({
+        await db.User.update({
             username: req.body.username,
             firstname: req.body.firstname,
             lastname: req.body.lastname,
@@ -80,8 +100,9 @@ const userController = {
             where: {
                 id: req.params.id
             }
-        });
-        await res.redirect("/user/list"); 
+        })
+        req.session.userLogged.username = req.body.username
+        res.redirect("/user/list"); 
     },
     delete : function(req,res,next){
         db.User.destroy({

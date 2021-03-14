@@ -42,9 +42,6 @@ module.exports = function(sequelize, dataTypes){
         fit_id:{
             type: dataTypes.INTEGER
         },
-        user_id:{
-            type: dataTypes.INTEGER
-        },
         size_id:{
             type: dataTypes.INTEGER
         },
@@ -56,13 +53,9 @@ module.exports = function(sequelize, dataTypes){
         tableName: "products",
         timestamps: false
     }
-    let Product = sequelize.define(alias, cols, config);
+    const Product = sequelize.define(alias, cols, config);
 
     Product.associate = function(models) {
-        Product.belongsTo(models.User, {
-            as: "users",
-            foreignKey: "user_id"
-        });
         Product.belongsTo(models.Category, {
             as: "categories",
             foreignKey: "category_id"
@@ -79,6 +72,14 @@ module.exports = function(sequelize, dataTypes){
             as: "colors",
             foreignKey: "color_id"
         });
+        Product.belongsToMany(models.Cart, {
+            as: "carts",
+            through: "cart_product",
+            foreignKey: "product_id",
+            otherKey: "cart_id",
+            timestamps: false,
+          });
+      
     };
 
     return Product;

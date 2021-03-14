@@ -8,8 +8,6 @@ const upload = require('../middlewares/multer');
 
 /* GET products listing. */
 router.get('/', productController.index);
-router.get('/carrito', productController.carrito); 
-
 
 router.get('/addproduct',/* authMiddleware ,*/productController.create);
 

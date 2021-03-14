@@ -160,7 +160,7 @@
       </div>
       <div class="user_container">
         <div class="container">
-          <a href="/user/list" class="reg" target="_blank">
+          <a href="/user/view/<%= req.session.userLogged.id %>" class="reg">
             <div class="btn user">
               <div class="user_img">
                 <img src="/images/users/unnamed.png" alt="">
@@ -170,14 +170,14 @@
             </div>
           </a>
           <div class="user_section">
-            <a href="/products/carrito" class="reg" target="_blank">
+            <a href="/cart/productCart" class="reg">
               <button class="btn social">
                 <div class="icon-container">
                   <i class="fas fa-shopping-bag"></i>
                 </div>
               </button>
             </a>
-            <a href="#" class="reg" target="_blank">
+            <a href="#" class="reg" >
               <button class="btn social">
                 <div class="icon-container">
                   <div class="notification">1</div>
@@ -185,7 +185,7 @@
                 </div>
               </button>
             </a>
-            <a href="/user/logout" class="reg" target="_blank">
+            <a href="/user/logout" class="reg">
               <button class="btn social">
                 <div class="icon-container">
                   <i class="fas fa-sign-out-alt"></i>

@@ -8,17 +8,13 @@ const productController = {
         products = db.Product.findAll()
         category = db.Category.findAll()
         color = db.Color.findAll()
-        brand = db.Size.findAll()
         fit = db.Size.findAll()
-        color = db.Color.findAll()
-        Promise.all([products,category,color,brand,fit,color]).then(values => {
-            console.log(values[1]);
+        Promise.all([products,category,color,fit]).then(values => {
             res.render('products/products',{values, title, req})
         });
     },
     ver: (req, res) => {
         db.Product.findByPk(req.params.id,{include: [
-            {association: "users"},
             {association: "categories"},
             {association: "fits"},
             {association: "sizes"},
@@ -54,7 +50,6 @@ const productController = {
             market_id: req.body.market,
             city_id: req.body.city,
             fit_id: req.body.fit,
-            user_id: req.body.user,
             size_id: req.body.size,
             color_id: req.body.color_id
         });
@@ -94,7 +89,6 @@ const productController = {
             market_id: req.body.market,
             city_id: req.body.city,
             fit_id: req.body.fit,
-            user_id: req.body.user,
             size_id: req.body.size,
             color_id: req.body.color_id
         },{

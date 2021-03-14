@@ -369,18 +369,20 @@
                 </div>
               </div>
             </div>
-            <div class="info_btn_container">
-              <a class="info_btn_size" href="">
-                <div class="info_btn_buy">
-                  <p>Agregar al carrito</p>
-                </div>
-              </a>
-              <a href="">
-                <div class="info_btn_love">
-                  <i class="far fa-heart"></i>
-                </div>
-              </a>
-            </div>
+            <form action="/cart/addProduct/<%= product.id %>" method="POST">
+              <div class="info_btn_container">
+                <button class="info_btn_size" type="submit">
+                  <div class="info_btn_buy">
+                    <p>Agregar al carrito</p>
+                  </div>
+                </button>
+                <a href="">
+                  <div class="info_btn_love">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </a>
+              </div>
+            </form>
           </div>
         </div>
       </div>

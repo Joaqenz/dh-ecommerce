@@ -17,7 +17,8 @@ router.get('/register',guestMiddleware,userController.showRegisterForm);
 router.post('/register',userValidator,userController.register);
 
 //mostrar un formulario de edicion
-router.get('/edit/:id',userController.edit);
+router.get('/view/:id',authMiddleware,userController.view);
+router.get('/edit/:id',authMiddleware,userController.edit);
 //recibo los datos del formulario
 router.post('/edit/:id',userController.update);
 
@@ -25,7 +26,7 @@ router.post('/edit/:id',userController.update);
 router.get("/delete/:id",userController.delete);
 
 //listado de usuario
-router.get("/list",authMiddleware,adminMiddleware,userController.list);
+router.get("/list",adminMiddleware,userController.list);
 
 router.get('/check',userController.check);
 

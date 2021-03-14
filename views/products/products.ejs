@@ -23,7 +23,7 @@
               <a href="#">Los más vendidos</a>
             </div>
             <div class="h_filter_article">
-              <p><%= products.length %> Articulos</p>
+              <p><%= values[0].length %> Articulos</p>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@
                   </ul>
                 </li>
                 <li>
-                  <div class="link">PRECIO<i class="fa fa-chevron-down"></i></div>
+                  <div class="link">COLOR<i class="fa fa-chevron-down"></i></div>
                   <ul class="submenu">
                     <% for( let i = 0; i < values[2].length; i++ ) { %>
                       <li><a href="#"><%= values[2][i].name %> </a></li>
@@ -52,10 +52,10 @@
                   </ul>
                 </li>
                 <li>
-                  <div class="link">COLOR<i class="fa fa-chevron-down"></i></div>
+                  <div class="link">Talle<i class="fa fa-chevron-down"></i></div>
                   <ul class="submenu">
-                    <% for( let i = 0; i < values[2].length; i++ ) { %>
-                      <li><a href="#"><%= values[2][i].name %> </a></li>
+                    <% for( let i = 0; i < values[3].length; i++ ) { %>
+                      <li><a href="#"><%= values[3][i].name %> </a></li>
                     <% } %>
                   </ul>
                 </li>
@@ -68,8 +68,8 @@
                 </li>
                 <li><div class="link">TALLE<i class="fa fa-chevron-down"></i></div>
                   <ul class="submenu">
-                    <% for( let i = 0; i < values[4].length; i++ ) { %>
-                      <li><a href="#"><%= values[4][i].name %> </a></li>
+                    <% for( let i = 0; i < values[3].length; i++ ) { %>
+                      <li><a href="#"><%= values[3][i].name %> </a></li>
                     <% } %>
                   </ul>
                 </li>
@@ -110,12 +110,12 @@
           </div>
           <div class="products">
             <!-- <!-- Producto -->
-            <% for( let i = 0; i < products.length; i++ ) { %>
-              <a href="/products/<%= products[i].id %>">
-                <article class="product" style="background-image: url(/images/products/<%= products[i].imglink %>);"> 
+            <% for( let i = 0; i <  values[0].length; i++ ) { %>
+              <a href="/products/<%=  values[0][i].id %>">
+                <article class="product" style="background-image: url(/images/products/<%=  values[0][i].imglink %>);"> 
                   <div class="product_bot">
                     <div class="product_title">
-                      <p><%= products[i].name %></p>
+                      <p><%=  values[0][i].name %></p>
                       <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -125,16 +125,16 @@
                       </div>
                     </div>
                     <div class="product_price">
-                      <p>ARS <%= products[i].price %></p>
+                      <p>ARS <%=  values[0][i].price %></p>
                     </div>
                     <div class="product_btns">
                       <a class="btn_love" href=""><i class="far fa-heart"></i></a>
-                      <a class="btn_buy" href="/products/<%= products[i].id%>">AGREGAR AL CARRITO</a>
+                      <a class="btn_buy" href="/products/<%=  values[0][i].id%>">AGREGAR AL CARRITO</a>
                     </div>
                   </div>
                 </article>
               </a>
-          <% } %>
+            <% } %>
           </div>
         </div>
       </div>

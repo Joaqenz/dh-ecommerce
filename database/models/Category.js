@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes){
-    let alias = "Category"
+    let alias = "Category";
     let cols = {
         id:{
             type: dataTypes.INTEGER,
@@ -15,7 +15,7 @@ module.exports = function(sequelize, dataTypes){
         timestamps: false
     }
 
-    let Category = sequelize.define(alias, cols, config);
+    const Category = sequelize.define(alias, cols, config);
 
     Category.associate = function(models) {
         Category.hasMany(models.Product, {
@@ -25,4 +25,4 @@ module.exports = function(sequelize, dataTypes){
     }
     
     return Category;
-}
+}   

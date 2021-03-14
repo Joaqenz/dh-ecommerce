@@ -1,0 +1,33 @@
+.body_container{
+    flex-direction: column;
+    align-items: center;
+}
+.form_container{
+    display: flex;
+    flex-direction: column;
+}
+.edit_field{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.form_label{
+    font-size: 24px;
+    margin-right: 10px;
+}
+.form_input{
+    width: 500px;
+}
+.edit_form,button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    height: 30px;
+    width: 150px;
+    background-color: #7443FE;
+    border-radius: 5px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+}
